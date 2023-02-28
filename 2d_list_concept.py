@@ -22,3 +22,7 @@ print(number_grid[1][2])
 #here the [1][2]:
 # the [1] is the index of the row and the [2] is the index of the colomn... both indicates the element 6.
 #
+
+'''
+this code will be improved while i will be learning new ways of using the 2d_list
+'''
