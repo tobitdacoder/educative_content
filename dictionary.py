@@ -7,14 +7,15 @@ monthDictionary={
    "apr": "april",
    "ma": "may",
    "jun": "june",
-   "jul": "jully",
+   "jul": " this is jully",
    "aug": "august",
-   "sep": "september",
+   "sep": "this month is called september", #just trying to diversify the output
    "oct": "october",
    "nov": "november",
    "dec": "december",
 #here in this dictionary : "jan" is a key and "january is it's value"
 #these keys can also be numbers like 1: "january" or 2:"february"
+
    
 }
 
