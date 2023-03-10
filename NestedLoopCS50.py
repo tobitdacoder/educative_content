@@ -61,7 +61,7 @@ main()
 #ANOTHER WAY OF WRITING THE SAME CODE IS BY DOING THIS:
 
 def main():
-   print_square(3)
+   print_square(7)
    
 def print_square(size):
    
@@ -122,4 +122,7 @@ match name:
       print("IT")
    case "other":
       print("other course")
+
+   case _:
+      print("not found")
 
