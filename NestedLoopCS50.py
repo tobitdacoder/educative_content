@@ -92,16 +92,16 @@ def main():
    else:
       print("odd")
 def is_even(n):
-   #if n%2==0:
-   #  return True
-   #else:
-   #   return False
+   if n%2==0:
+     return True
+   else:
+      return False
 #here this program is using a fuction that specifies wether the input number is odd or even
 #we return the True or The false so that while using this custom function, the condition will eithr be
 #trie or false in the main function (if is_even(5): [this is true by default and means "if it is true that 5 is even"])
 
 #THIS CAN BE WRITEN LIKE THIS AGAIN:
-   #return True if n%2==0 else False
+   return True if n%2==0 else False
    #this will act just like the above statement of if and else
 
 #THIS CAN BE WRITTEN ALSO LIKE THIS:
