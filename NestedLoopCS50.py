@@ -116,13 +116,14 @@ main()
 
 name=str(input("enter your name here: "))
 match name:
-   case "tobit":
+   case "tobit" | "seth" | "amos" | "diana" | "angela"
       print("computer science")
-   case "theo":
+   case "theo" | "josh" | "grady"| "mandela": #here the | is the logic gate "or" which means "or in the if statement"
       print("IT")
    case "other":
       print("other course")
 
-   case _:
+   case _: #this underscore sign specifies that "if the input value does not match any of the wanted words
+      #then the default value "not found" will be printed
       print("not found")
 
