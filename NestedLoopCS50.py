@@ -109,5 +109,17 @@ def is_even(n):
 
 
 
+#now we are going to see how to se the match keywork which replaces the switch used in C:
+
+
 main()
+
+name=str(input("enter your name here: "))
+match name:
+   case "tobit":
+      print("computer science")
+   case "theo":
+      print("IT")
+   case "other":
+      print("other course")
 
