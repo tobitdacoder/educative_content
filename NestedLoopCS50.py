@@ -1,7 +1,11 @@
-#for _ in range(5):
-#   print("#")
+#this file contains topics about function creation and nested loop but also their simplification to make the
+# code much more easier and less expensive in term of memory consumption
+
+for _ in range(5):
+   print("#")
    
 #get used to create my own functions
+#
 
 
 def main():
@@ -15,7 +19,8 @@ def print_column(height):
    #'print("#"*height,end="")' and we remove the for loop, thats gonnawork too  
 main()
 
-#the good thing with the functions that we create for ourself is that, even if someone else is using my function, is that you can change the underline implementations without them to notice'''
+#the good thing with the functions that we create for ourself is that, even if someone
+# else is using my function, is that you can change the underline implementations without them to notice'''
 
 
 
@@ -45,8 +50,9 @@ def print_square(size):
       print()
 
 main()
-#HERE BASICALLY, WE ARE PRINTING THE INNER LOOP "for j in range(size)" TIMES THE NUMBER OF TIMES THE OUTEER LOOP "for i in range(size)" WANT'S IT TO BE PRINTED
-# THERE THE print() JUST HELPS US TO GO TO A NEW LINE EVERYTIME WHEN THE INNER LOOP IS PRINTED .. there we used the nested loop theory 😁
+#HERE BASICALLY, WE ARE PRINTING THE INNER LOOP "for j in range(size)" TIMES THE NUMBER OF TIMES THE OUTEER LOOP
+# "for i in range(size)" WANT'S IT TO BE PRINTED THERE THE print() JUST HELPS US TO GO TO A NEW LINE EVERYTIME WHEN
+# THE INNER LOOP IS PRINTED .. there we used the nested loop theory 😁
 
 
 
