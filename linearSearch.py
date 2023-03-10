@@ -16,3 +16,12 @@ else:
    print("not in")
 
 #here we are performing a linear search (basic and needs improvement with time)
+
+my_list=[34,-65,88,3,56,74,33,78,-9,7,29,-54,76,71,26]
+
+def linearsearch(value):
+   if value in my_list:
+      print(f"yes {value} is in my list")
+   else:
+      print("no it is not")
+linearsearch(45)
