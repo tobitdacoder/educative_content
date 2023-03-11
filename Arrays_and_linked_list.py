@@ -67,10 +67,7 @@ array=np.array(data)
 print(array) #here we will have an output of an array of those two lists
 print(array * array) #here we are multiplying the array by itself using the matrix theory about multiplication
 print(array**2) #here we are squaring the matrix ( which is our array)
-print(array - array) #here the output will be a matrix of zeros coz weve substracted every element if the matrix by it self
-
-
-
+print(array - array) #here the output will be a matrix of zeros coz weve substracted every element if the matrix by it self.
 
 
 data = [[2, 4,6, 8, 10], [1, 2, 3, 4, 5]]
@@ -78,4 +75,18 @@ array2=np.array(data)
 print(array2>array) #here the output will be a matrix of boolean values (true or false)
 #abd that is because with that expression we are comparing each element if the array2 matrix with the elements if the array matrix, if its greater than the output will be true
 
+array_copy=array[4:7].copy() # this will copy the elements in the index range we choosed
+print(array_copy)
 
+
+array = np.arange(10)
+print(array) #here the output will be a row matrix with one row and 10 colums with elements from 0 to 9
+print(array[7]) #here also we xan use the index to licalize an element from the array
+print(array[2:5]) #elements of index 2 to 5 with the fifth element excluded
+array[6:8]=15 #herr we say that the elements from idex 6 to 8 exclided are going to be 15
+
+################################################################################ 
+
+array_slice=array[4:7]
+print(array_slice) #here the output will be the sliced array that we took feom the main one using indexes
+array_slice[2]=500 #the element at index 2 of the array_slice array will be equal to 500
