@@ -29,5 +29,7 @@ print(array.dtype) # here we want to print the data type of the array contents
 print(array.shape) # this will print the number of elements in the array
 print(array.ndim) # this will print the dimension of the vector (which is an array and we know that an array can be accessed as a vector and vectors have dimmensions ... a  vector of one row and "n" column is of dimmension 1, a vector of 2 or 3 or 4 or n+1 rows and many columns is a 2 dimension vector or array)
 
-########################################################################
+#########################################################################
+
+
 
