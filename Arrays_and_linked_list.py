@@ -57,5 +57,25 @@ print(array)
 
 #########################################################################
 
+array=np.random.randint(0,100,(3,5))
+print(array) #this program will print an aray (matrix of 3 rows and 5 columns) with random values inside between 0 and 100 which was specified coz we wrote "random.randint()"
+
+#########################################################################
+
+data=[[3,5,4,3,6,8,5],[8,6,9,5.4,3,6,8,]]
+array=np.array(data)
+print(array) #here we will have an output of an array of those two lists
+print(array * array) #here we are multiplying the array by itself using the matrix theory about multiplication
+print(array**2) #here we are squaring the matrix ( which is our array)
+print(array - array) #here the output will be a matrix of zeros coz weve substracted every element if the matrix by it self
+
+
+
+
+
+data = [[2, 4,6, 8, 10], [1, 2, 3, 4, 5]]
+array2=np.array(data)
+print(array2>array) #here the output will be a matrix of boolean values (true or false)
+#abd that is because with that expression we are comparing each element if the array2 matrix with the elements if the array matrix, if its greater than the output will be true
 
 
