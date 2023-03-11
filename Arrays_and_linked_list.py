@@ -90,3 +90,11 @@ array[6:8]=15 #herr we say that the elements from idex 6 to 8 exclided are going
 array_slice=array[4:7]
 print(array_slice) #here the output will be the sliced array that we took feom the main one using indexes
 array_slice[2]=500 #the element at index 2 of the array_slice array will be equal to 500
+
+
+
+################################################################################
+
+array2d=np.array([[4,3,5,9,7],[9,4,5,2,6],[7,6,5,9,1]])
+print(array2d[2][2])
+print(array2d[2,2]) #these are the same and prodice the same output which is the value locsted at the row of index 2 and the column of index two (5)
