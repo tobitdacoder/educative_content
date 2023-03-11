@@ -31,5 +31,8 @@ print(array.ndim) # this will print the dimension of the vector (which is an arr
 
 #########################################################################
 
-
+data = [[2, 4,7.5, 8, 1], [23, 5, 9, 3, 9]] #here we've created a list of lists and we want to convert it into an array (also, remember that it will bea matrix of two rows and 5 columns after)
+array = np.array(data) #here is the conversion code of the list called "data"
+print(array.shape) # here we will print the number of rows and columns (row,columns)
+print(array.ndim) #here we will print the dimmension of the matrix (we have two rows and 5 columns so its a 2 dimension matrix (here its an array which acts like a matrix))
 
