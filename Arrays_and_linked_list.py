@@ -31,8 +31,17 @@ print(array.ndim) # this will print the dimension of the vector (which is an arr
 
 #########################################################################
 
-data = [[2, 4,7.5, 8, 1], [23, 5, 9, 3, 9]] #here we've created a list of lists and we want to convert it into an array (also, remember that it will bea matrix of two rows and 5 columns after)
+data = [[2, 4,7, 8, 1], [23, 5, 9, 3, 9], [4, 10, 43, 12, 0]] #here we've created a list of lists and we want to convert it into an array (also, remember that it will bea matrix of two rows and 5 columns after)
 array = np.array(data) #here is the conversion code of the list called "data"
+print(array) #here we simply print the array created
 print(array.shape) # here we will print the number of rows and columns (row,columns)
 print(array.ndim) #here we will print the dimmension of the matrix (we have two rows and 5 columns so its a 2 dimension matrix (here its an array which acts like a matrix))
+
+#########################################################################
+
+array = np.zeros((3, 5))
+print(array)
+#this small program will create an array of zeros which will have 3 rows and 5 columns
+# remeber that here we used the numpy library to call the "zeros" function which
+# here weve used the abreviated form of numpy which is "np" as we specified while we impored the library
 
