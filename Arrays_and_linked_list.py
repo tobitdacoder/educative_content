@@ -45,3 +45,17 @@ print(array)
 # remeber that here we used the numpy library to call the "zeros" function which
 # here weve used the abreviated form of numpy which is "np" as we specified while we impored the library
 
+array = np.ones((3, 5)) #this program will do the same but instead of zeros it will be a matrix of ones
+print(array)
+
+
+array = np.eye(4) #this special function "eye" will print a 4 by 4 matrix (an array) where the main diagonal is filled by ones and the other places will be zeros 
+print(array)
+
+array = np.eye(4, dtype=int) #this is the same as the previous one but here the elements will be integer coz we specified the datatype by writing "dtype=int"
+print(array)
+
+#########################################################################
+
+
+
