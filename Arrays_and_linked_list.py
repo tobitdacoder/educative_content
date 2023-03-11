@@ -25,5 +25,9 @@ print(array) #the output here will be an ARRAY ... and the first difference we c
 data = [2, 4,7.5, 8, 1]
 array = np.array(data)
 print(array) #here we are converting a list into an array. the np (is the library 'numpy' and np.array(data) means "convert data into array")
+print(array.dtype) # here we want to print the data type of the array contents
+print(array.shape) # this will print the number of elements in the array
+print(array.ndim) # this will print the dimension of the vector (which is an array and we know that an array can be accessed as a vector and vectors have dimmensions ... a  vector of one row and "n" column is of dimmension 1, a vector of 2 or 3 or 4 or n+1 rows and many columns is a 2 dimension vector or array)
 
 ########################################################################
+
