@@ -134,4 +134,15 @@ stock_prices.insert(1,444)
 
 #here the array insertion complexity are of order of n or O(n).
 
-#when we create an epmty list like "list=[] it alocate a memory space for that list, python lists are dynamic arrays and here is allocated a space capacity of 5 element " and when we start inserting values in the list, the values are filling those spaces allocated for the list
+#when we create an epmty list like "list=[] it alocate a memory space for that list, python lists are dynamic arrays and here is allocated a space capacity of 5 element " and when we start inserting (here we are appending, adding values to the end of the list) values in the list, the values are filling those spaces allocated for the list... when we added three values and we want to add another value but at the location of an existing value, it will puch the existing to make a space for the new value
+
+#now lets imagine that our array is full of capacity (capacity is = 5 and all the five are filled), when we want to insert a new value.. the way dynamic array works now is, since it cannot use other values memory location, it will go in some area of the memory (RAM) then it will allocate more capacity and then will copy all those elements one by one, so if the initial capacity is 5, it will allocate additional 5*2 =10 (or additional capacity 5*2=10) memory locations... now there are 15 capacity or memory locations
+
+
+#THIS IS NOT THAT EFFICIENT THO 😥
+
+#lets imagine a structure where values are stored into different areas of memory (linked list) .. here we have the    "| value | next value adress |" 
+
+# first, arrays store the value in contegious mem. location while this (linked list) is storing them into random memory locations which are linked with a pointer which point to the next adress  ... so the first value has a reference side to the adress of the next value or element ... those are the links we are creating here.
+
+#here it become muc easier to insert a new value coz there is not a li,itation of capacity for the array... now we are not copying from one lication to another
