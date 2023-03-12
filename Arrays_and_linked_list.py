@@ -119,5 +119,19 @@ class LinkedList:
         self.next = next
 
 first = LinkedList(3) #this is our first objext created and we provided value for data (which is three and the default value for next (which is none))... here we created the object by first writing the class name then in the () we put tje values for the parameters we created in the innit function
-print(first.data)
-print(first.next)
+print(first.data) #this will print 3 (which is the argument assigned to "data")
+print(first.next) #this will print none (which is the argument assigned to "next") 
+
+
+########
+
+#more about linked list (frol a tutorial)
+
+stock_prices=[235,654,879,345,888,769,871] #here is an array we create (we have to look first into arrays coz linked list are helping to solve the arrays problems and limitation)
+
+stock_prices.insert(1,444)
+# so here we are inserting the number 444 in the list at the index 1, which will push the e xisting numbers back to leavr a space for the inserted number
+
+#here the array insertion complexity are of order of n or O(n).
+
+#when we create an epmty list like "list=[] it alocate a memory space for that list, python lists are dynamic arrays and here is allocated a space capacity of 5 element " and when we start inserting values in the list, the values are filling those spaces allocated for the list
