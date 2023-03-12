@@ -1,4 +1,5 @@
 import numpy as np
+
 lst = list(range(100))
 print(lst)
 
@@ -14,6 +15,11 @@ a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
 print(a[-5:-3]) #here we can see that we can use nrgative indexes and that will work in the inverse
                 # of normal positive indexes (here "corge" is at index [-1] and also index [5])
                 # here the [-5:-3] specifies a range of values to be printed except the value at index  [-3]
+array=np.array(a)
+print(array.dtype)
+print(array.shape)
+sub_array=array[1:4].copy() #to copy and get a new array whic will be the slice of the previous one
+                            #in the index range 1:4 where is 4 excluded
 
 ########################################################################
 
@@ -31,7 +37,7 @@ print(array.ndim) # this will print the dimension of the vector (which is an arr
 
 #########################################################################
 
-data = [[2, 4,7, 8, 1], [23, 5, 9, 3, 9], [4, 10, 43, 12, 0]] #here we've created a list of lists and we want to convert it into an array (also, remember that it will bea matrix of two rows and 5 columns after)
+data = [[2, 4,7, 8, 1], [23, 5, 9, 3, 9], [4, 10, 43, 12, 0]] #here we've created a list of lists and we want to convert it into an array (also, remember that it will be a matrix of two rows and 5 columns after)
 array = np.array(data) #here is the conversion code of the list called "data"
 print(array) #here we simply print the array created
 print(array.shape) # here we will print the number of rows and columns (row,columns)
@@ -47,7 +53,6 @@ print(array)
 
 array = np.ones((3, 5)) #this program will do the same but instead of zeros it will be a matrix of ones
 print(array)
-
 
 array = np.eye(4) #this special function "eye" will print a 4 by 4 matrix (an array) where the main diagonal is filled by ones and the other places will be zeros 
 print(array)
@@ -76,7 +81,7 @@ print(array2>array) #here the output will be a matrix of boolean values (true or
 #abd that is because with that expression we are comparing each element if the array2 matrix with the elements if the array matrix, if its greater than the output will be true
 
 array_copy=array[4:7].copy() # this will copy the elements in the index range we choosed
-print(array_copy)
+print(array_copy) #this will print the sub_array we copied from the original one
 
 
 array = np.arange(10)
@@ -97,4 +102,22 @@ array_slice[2]=500 #the element at index 2 of the array_slice array will be equa
 
 array2d=np.array([[4,3,5,9,7],[9,4,5,2,6],[7,6,5,9,1]])
 print(array2d[2][2])
-print(array2d[2,2]) #these are the same and prodice the same output which is the value locsted at the row of index 2 and the column of index two (5)
+print(array2d[2,2]) #these are the same and produce the same output which is the value locsted at the row of index 2 and the column of index two (5)
+
+
+
+
+###########################################################
+
+#                     LINKED LISTS
+
+
+# single node linked list -- single linked list
+class LinkedList:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+first = LinkedList(3) #this is our first objext created and we provided value for data (which is three and the default value for next (which is none))... here we created the object by first writing the class name then in the () we put tje values for the parameters we created in the innit function
+print(first.data)
+print(first.next)
