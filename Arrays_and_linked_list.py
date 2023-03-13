@@ -177,10 +177,12 @@ class LinkedList:
 
 #so now we start by adding a method (function called insert_at_begining)
 
-   def insert_at_begining(self,data): #this is taking the data value and insert it at the beginning of the linked-list
+   def insert_at_begining(self,data): #this is taking the data value and insert it at the beginning of the linked-list !!! THIS IS THE FIRST FUNCTION TO INSERT AT THE BEGINING OF A LINKED-LIST
       
       #LET US CREATE A NODE TO EXPLAIN HOW IT WORKS
       node= Node(data,self.head) #this "self.head" is taking the place of the "next" which is the pointer to the next value of the list and her the "self head is the first pointer"
+      
+      #just to make things easier,lets say there is an exiating head, when we add a new element(data), it will create a node where the "next" value will be the previous head which was pushed. (now it become the adress of the next value and the current value is now the new node we created)  here the self.head is now the adress of the next value (which was our head value before we inserted anoter at the front) 
       
       #!!! REMEMBER, HERE THE "node" is an object we are creating and the "Node" is the class of the first value we created before 
       
@@ -193,4 +195,6 @@ class LinkedList:
       self.head=node
       #here, its easy, we are simply saying that , now, since the new node is created, it become our new head (so that, if we want to insert another new element, this one will be pushed also and let the new node be the new head, and the self.head of that new new element will be the adress of the previously created element)
       
-      #in other words, here we are saying that our new head adress is the adress of the newuly created "node", this will be used when we will create a new element so thst it will be the "next" adress of the newly created node(which has a data and the adress of the pushed node) ... I REPEAT 🙏 the self.head of the newuly created node will be the adress of the node we inserted earlier
+      #in other words, here we are saying that our new head adress is the adress of the newuly created "node", this will be used when we will create a new element so thst it will be the "next" adress of the newly created node(which has a data and the adress of the pushed node) ... I REPEAT 🙏 the self.head of the newly created node will be the adress of the node we inserted earlier.
+      
+      #!!!!! PAY ATTENTION!!! in all the functions we are creating,we are using the "self" keyword in the parameter parentheses (i will explain it a bit later 😊)
