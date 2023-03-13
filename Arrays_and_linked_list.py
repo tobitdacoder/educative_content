@@ -145,4 +145,31 @@ stock_prices.insert(1,444)
 
 # first, arrays store the value in contegious mem. location while this (linked list) is storing them into random memory locations which are linked with a pointer which point to the next adress  ... so the first value has a reference side to the adress of the next value or element ... those are the links we are creating here.
 
-#here it become muc easier to insert a new value coz there is not a li,itation of capacity for the array... now we are not copying from one lication to another
+#here it become muc easier to insert a new value coz there is not a li,itation of capacity for the array... now we are not copying from one lication to another.
+
+#here when we insert or delete element at the begining, the complexity is = O(1)  [this one is just because while inserting, its creating a node for the new element and the adress of the next element, so its iterating only once coz its the elements at the index 1]  and    when we want to insert or delete element at the end the complexoty is = O(n) because we have to iterate between all the elements of th list
+
+#so, linked list has two main benefits over an array: 
+# 1. you dont need to pre-allocate space and 2. insertion is easier
+
+#there are also double linked-list (where its no longer |value adress |next address| but now its |previus adress| current value adress | next value adress) this allows to comeback easier, the backward traversal is easier .... the traversall of a list is O(n)
+
+#the only advantage an array has is, if you know the index of the element in array on order of 1 (O(1)) ehich is a constant time operation.. so in array if you want to access the fifth element you just have to specify the index of the element into [] and it will go directly to it, bit for lnked list, ir has to go through all the elements to follow the links 
+
+#inserting/deleting elements at start in array is O(n) cos u have to copy all the elements, but for linked list it is O(1) ,  you dont need to.add()
+
+#inserting elements in the middle is O(n) for both.add()
+
+#    IN PYTHON NOW 😃:
+
+#lets create two classes:
+
+class node: 
+   def __innit__(self,data=None,next=None):
+      self.data=data #this can contain integers, numbers, or complex objects
+      self.next=next #this is a pointed to the next eelement
+      #this "node"class represent a single element in the linked-list (it has two class members which are data and next)
+      
+class LinkedList: #this class is a class where we need a head variable which points to the head of the linked list (beginning)
+   def __innit__(self):
+      self.head=None
