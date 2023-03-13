@@ -165,7 +165,7 @@ stock_prices.insert(1,444)
 #lets create two classes:
 
 class Node: 
-   def __innit__(self,data=None,next=None):
+   def __innit__(self,data=None,next=None): #this is the constructor of the Node class and has got two elements which construct the class (they are "data" and "next")
       self.data=data #this can contain integers, numbers, or complex objects
       self.next=next #this is a pointed to the next eelement
       #this "node"class represent a single element in the linked-list (it has two class members which are data and next)
@@ -178,6 +178,14 @@ class LinkedList:
 #so now we start by adding a method (function called insert_at_begining)
 
    def insert_at_begining(self,data): #this is taking the data value and insert it at the beginning of the linked-list
+      
+      #LET US CREATE A NODE TO EXPLAIN HOW IT WORKS
       node= Node(data,self.head) #this "self.head" is taking the place of the "next" which is the pointer to the next value of the list and her the "self head is the first pointer"
       
       #!!! REMEMBER, HERE THE "node" is an object we are creating and the "Node" is the class of the first value we created before 
+      
+      #so, here the self.head will be used in a case where, when we want to insert a new value or element, this self.head will be automatically the pointer to the value that was pushed (here will be the adress of the value we pushed so that the next value will be this one we pushed and that is by using its adress to point at it) and
+      
+      #so, the data in "node=Node(data,self.head)" is the new value we are inserting and the adress which will be in that node will be the adress of the next value (or next element)
+      
+      #so, lets say we already have a head, and if we are inserting anything (any new data) infront of it, what gonna happen is, we will create a new "node" element (which is an object from the Node class) and the next value of that node will be the current head of the exiating value that will be pushed
