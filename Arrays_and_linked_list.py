@@ -164,12 +164,20 @@ stock_prices.insert(1,444)
 
 #lets create two classes:
 
-class node: 
+class Node: 
    def __innit__(self,data=None,next=None):
       self.data=data #this can contain integers, numbers, or complex objects
       self.next=next #this is a pointed to the next eelement
       #this "node"class represent a single element in the linked-list (it has two class members which are data and next)
       
-class LinkedList: #this class is a class where we need a head variable which points to the head of the linked list (beginning)
+class LinkedList: 
    def __innit__(self):
       self.head=None
+      #this class is a class where we need a head variable which points to the head of the linked list (beginning)
+
+#so now we start by adding a method (function called insert_at_begining)
+
+   def insert_at_begining(self,data): #this is taking the data value and insert it at the beginning of the linked-list
+      node= Node(data,self.head) #this "self.head" is taking the place of the "next" which is the pointer to the next value of the list and her the "self head is the first pointer"
+      
+      #!!! REMEMBER, HERE THE "node" is an object we are creating and the "Node" is the class of the first value we created before 
