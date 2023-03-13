@@ -198,3 +198,9 @@ class LinkedList:
       #in other words, here we are saying that our new head adress is the adress of the newuly created "node", this will be used when we will create a new element so thst it will be the "next" adress of the newly created node(which has a data and the adress of the pushed node) ... I REPEAT 🙏 the self.head of the newly created node will be the adress of the node we inserted earlier.
       
       #!!!!! PAY ATTENTION!!! in all the functions we are creating,we are using the "self" keyword in the parameter parentheses (i will explain it a bit later 😊)
+      
+      #so here we still in the same class remember, and to verify this insert_at_begining() function, we have to use the utility function called print:
+      def print(self):
+         if self.head is None:
+            print("linked list is empty")
+            #here, what we just did is that we create this function print so that, if the linked list, where we want to insert a new element or data, is empty, then it will tell us
