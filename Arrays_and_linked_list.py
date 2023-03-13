@@ -188,4 +188,9 @@ class LinkedList:
       
       #so, the data in "node=Node(data,self.head)" is the new value we are inserting and the adress which will be in that node will be the adress of the next value (or next element)
       
-      #so, lets say we already have a head, and if we are inserting anything (any new data) infront of it, what gonna happen is, we will create a new "node" element (which is an object from the Node class) and the next value of that node will be the current head of the exiating value that will be pushed
+      #so, lets say we already have a head, and if we are inserting anything (any new data) infront of it, what gonna happen is, we will create a new "node" element (which is an object from the Node class) and the next value of that node will be the current head of the exiating value that will be pushed (here there is not yet another element which is pusshing the new element)
+      
+      self.head=node
+      #here, its easy, we are simply saying that , now, since the new node is created, it become our new head (so that, if we want to insert another new element, this one will be pushed also and let the new node be the new head, and the self.head of that new new element will be the adress of the previously created element)
+      
+      #in other words, here we are saying that our new head adress is the adress of the newuly created "node", this will be used when we will create a new element so thst it will be the "next" adress of the newly created node(which has a data and the adress of the pushed node) ... I REPEAT 🙏 the self.head of the newuly created node will be the adress of the node we inserted earlier
