@@ -201,6 +201,11 @@ class LinkedList:
       
       #so here we still in the same class remember, and to verify this insert_at_begining() function, we have to use the utility function called print:
       def print(self):
-         if self.head is None:
+         if self.head is None: #means there is not any alredy existing head in the lonked-list
             print("linked list is empty")
+            return #this return is to break the condition after its verified
             #here, what we just did is that we create this function print so that, if the linked list, where we want to insert a new element or data, is empty, then it will tell us
+            #whith this return, we dont need to use the elif again, we can just set the other condition directly
+         itr=self.head #here we mean, if had exist, we store it in itr (itterator)
+         while itr: #while its true or its exist .. we will itterate through the whole list
+            itr=itr.next #here we say, now since there are an existing head, that head will become the "next" of the new "self.head =  the new value... so the itr become itr.next (next of the self.head or the new head) remember that it is like that coz we stored the self.head in itr (we stored the alredy exiating one in itr so that we can easily transform it into the "next" or the adress of the next value)
