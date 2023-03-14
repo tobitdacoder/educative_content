@@ -165,13 +165,13 @@ stock_prices.insert(1,444)
 #lets create two classes:
 
 class Node: 
-   def __innit__(self,data=None,next=None): #this is the constructor of the Node class and has got two elements which construct the class (they are "data" and "next")
+   def __init__(self,data=None,next=None): #this is the constructor of the Node class and has got two elements which construct the class (they are "data" and "next")
       self.data=data #this can contain integers, numbers, or complex objects
       self.next=next #this is a pointed to the next eelement
       #this "node"class represent a single element in the linked-list (it has two class members which are data and next)
       
 class LinkedList: 
-   def __innit__(self):
+   def __init__(self):
       self.head=None
       #this class is a class where we need a head variable which points to the head of the linked list (beginning)
 
@@ -221,10 +221,15 @@ class LinkedList:
          
          #NOW WE ARE TRYING TO INSERT AND PRINT THE LINKED LIST
          #THERE IS A SMALL PROBLEM WITH THE PROGRAM THAT WE ARE GOING TO FIND OUT SOON BUT FOR NOW, THIS IS HOW THE CODE IS SUPPOSED TO E WRITEN and printed
-if __name__=='__main__':
-   ll=LinkedList()
-   ll.insert_at_begining(4)
-   ll.insert_at_begining(6)
-   ll.insert_at_begining(54)
-   ll.insert_at_begining(88)
-   ll.print()
+         
+         #😁 The error was finally solved, it was a syntax error and not a logical error 😁
+
+
+ll=LinkedList()
+ll.insert_at_begining(4)
+ll.insert_at_begining(6)
+ll.insert_at_begining(54)
+ll.insert_at_begining(88)
+ll.print()
+
+         #so now our out put will be : 88-->54-->6-->4-->
