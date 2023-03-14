@@ -160,7 +160,7 @@ stock_prices.insert(1,444)
 
 #inserting elements in the middle is O(n) for both.add()
 
-#    IN PYTHON NOW 😃:
+#    IN PYTHON NOW 😃: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #lets create two classes:
 
@@ -200,14 +200,31 @@ class LinkedList:
       #!!!!! PAY ATTENTION!!! in all the functions we are creating,we are using the "self" keyword in the parameter parentheses (i will explain it a bit later 😊)
       
       #so here we still in the same class remember, and to verify this insert_at_begining() function, we have to use the utility function called print:
-      def print(self):
-         if self.head is None: #means there is not any alredy existing head in the lonked-list
-            print("linked list is empty")
-            return #this return is to break the condition after its verified
+   def print(self):
+      if self.head is None: #means there is not any alredy existing head in the lonked-list
+         print("linked list is empty")
+         return #this return is to break the condition after its verified
             #here, what we just did is that we create this function print so that, if the linked list, where we want to insert a new element or data, is empty, then it will tell us
             #whith this return, we dont need to use the elif again, we can just set the other condition directly
-         itr=self.head #here we mean, if head exist, we store it in itr (itterator)
-         while itr: #while its true or its exist .. we will itterate through the whole list
-            itr=itr.next #here we say, now since there are an existing head, that head will become the "next" of the new "self.head =  the new value... so the itr become itr.next (next of the self.head or the new head) remember that it is like that coz we stored the self.head in itr (we stored the already exiating one in itr so that we can easily transform it into the "next" or the adress of the next value)
+      itr=self.head #here we mean, if head exist, we store it in itr (itterator)
+      llstr="" # "linkedliststring", this is the list where all the elements will be stored after being itterated
+      while itr: #while its true or its exist .. we will itterate through the whole list
+         llstr+=str(itr.data) + '-->' #so here the data which is being itterated will be stored in llstr then we go to the next value ( <-- : this is the direction of itteration)
+            #the '-->' is just to show the link (it can be removed without problem 😊)
+         itr=itr.next #here we say, now since there are an existing head, that head will become the "next" of the new "self.head =  the new value... so the itr become itr.next (next of the self.head or the new head) remember that it is like that coz we stored the self.head in itr (we stored the already exiating one in itr so that we can easily transform it into the "next" or the adress of the next value)
             
             #anoher way to undrstand it very well is that, while printing, it will start by the last value in the list, verify if it is a head, then turn it into the "next" adress of the coming value to be analised by the printing function... for it, it will be iterrated and become the "next" then we go to the other value (from right to left <-- ) and keep itterating until it reaches the last value to see if there is a head which keep existing after the value we are at, if there is not any value, then the while loop is broken (no head existing after the value we are at so it cannot make the current value the "next" adress of a non existing value)
+            
+            #WE ARE ITTERATING THROUGH ELEMENTS ONE BU ONE (dirrection: <-- )
+            #and for each itteration, the value that is made "next" will be printed after being itterated (and that will make our output)
+      print(llstr) #here, after the loop was broken, we print the linked list with the added elements #!!! SO NOW, TO CHECK THIS, WE HAVE TO CREATE A LINKED LIST NAME TO BE USED IN THE PRINTING PROCCESS!!!
+         
+         #NOW WE ARE TRYING TO INSERT AND PRINT THE LINKED LIST
+         #THERE IS A SMALL PROBLEM WITH THE PROGRAM THAT WE ARE GOING TO FIND OUT SOON BUT FOR NOW, THIS IS HOW THE CODE IS SUPPOSED TO E WRITEN and printed
+if __name__=='__main__':
+   ll=LinkedList()
+   ll.insert_at_begining(4)
+   ll.insert_at_begining(6)
+   ll.insert_at_begining(54)
+   ll.insert_at_begining(88)
+   ll.print()
