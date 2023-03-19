@@ -275,7 +275,9 @@ class LinkedList:
             #here we are going to point at the "next" of the previous element (the previous element is the element at index-1)... then its "next" will point at the element we want to remove (is the element we want to remove)
             itr.next=itr.next.next
             #here is the "next" of the previous value (at index-1) which we modify and make it the next of the next (now the new "next" will be the element coming after the element we want to remove)
-         itr=itr.next
+            break #after the element has been removed, we csn break the loop
+         itr=itr.next #this itr.next we are using here is the new itr.next from the if statement !!
+         count+=1
          #here we have to iterrate through the list to reach that index (and the value under it)... this go through each of the elements in my linked list.
          
          #note this: in linked list, you have to stop exactly at the element that is prior to the element you want to remove and in that prior element you can modify the links that i have (the next link that i have) so that after modifying the "next" link, it will remove that original "next", and then the element will be removed.
@@ -292,7 +294,13 @@ ll.insert_at_end(100) #this will be the first one to be added at the end of our 
 ll.insert_at_end(130) #the this will come and be addedd after the (100) and become the "next" of (100)
 ll.insert_at_end(141) #then this will also come and become the "next" of (130) 
                       # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
-ll.insert_values(["babane ","mangue ","tomato ","garlic"]) #here, as we saw, we erased all the previous content of the previous linked lists and created a new one with the inputed content,
+#ll.insert_values(["babane ","mangue ","tomato ","garlic"]) #here, as we saw, we erased all the previous content of the previous linked lists and created a new one with the inputed content,
+ll.print()
+length=ll.get_length()
+print(f"the length is equal to {length} ")
+
+ll.remove_at(2) #here we are now using our new module to remove an element at a specific index
+
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
 length=ll.get_length()
 print(f"the length is equal to {length} ") #now we print the length like this after weve already stored it into a variable to use it in a much easier way.
