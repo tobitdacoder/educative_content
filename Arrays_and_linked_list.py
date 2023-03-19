@@ -265,13 +265,20 @@ class LinkedList:
       if index==0: #here we just say "if the index is equal to the head element (index 0)" then we remove it (WE ARE REMOVING THE HEAD AT THE BEGGINNING OF THE LIST)
          self.head=self.head.next #and this is how we remove the head, by making our next element our new head (this will remove our previous head of index 0)
          return
-      count=0 #this because in linked list you have to manualy msintain the count to reach that index (here we are dealing with O(n) )
+      count=0 #this because in linked list you have to manualy maintain the count to reach that particular index (here we are dealing with O(n) ), here, since we are not dealing with an array, we have to count manualy the index count since the elements are in different locations 
       
       #so as usual, to itterate through the list, we do:
       itr=self.head
       while itr:
+         
+         if count==index-1:
+            #here we are going to point at the "next" of the previous element (the previous element is the element at index-1)... then its "next" will point at the element we want to remove (is the element we want to remove)
+            itr.next=itr.next.next
+            #here is the "next" of the previous value (at index-1) which we modify and make it the next of the next (now the new "next" will be the element coming after the element we want to remove)
          itr=itr.next
-         #here we have to iterrate through the list to reach that index (and the value under it)... this go through each of the elements in my linked list
+         #here we have to iterrate through the list to reach that index (and the value under it)... this go through each of the elements in my linked list.
+         
+         #note this: in linked list, you have to stop exactly at the element that is prior to the element you want to remove and in that prior element you can modify the links that i have (the next link that i have) so that after modifying the "next" link, it will remove that original "next", and then the element will be removed.
       
       
 ll=LinkedList()
