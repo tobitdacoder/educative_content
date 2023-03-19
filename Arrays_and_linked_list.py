@@ -281,6 +281,14 @@ class LinkedList:
          #here we have to iterrate through the list to reach that index (and the value under it)... this go through each of the elements in my linked list.
          
          #note this: in linked list, you have to stop exactly at the element that is prior to the element you want to remove and in that prior element you can modify the links that i have (the next link that i have) so that after modifying the "next" link, it will remove that original "next", and then the element will be removed.
+   #NOW WE KNOW HOW TO REMOVE AN ELEMENT FROM A LINKED LIST, USING ITS INDEX, LET US NOW LEARN HOW  TO CREATE A FUNCTION WHICH WILL INSERT AN ELEMENT AT A SPECIFIC INDEX 😃:
+   
+   def insert_at(self,index,data): 
+      if index < 0 or index >= self.get_length():
+         raise Exception ("invalid index 😥") #here we are just reusing our raise exception again (you now know why)
+      if index==0:
+         self.insert_at_begining(data)
+         return  #here we are jusr specifying what the program will do if the provided index is 0... now we are reusing our previously created function "add_at_begining" as the default function to be executed for this particular condition
       
       
 ll=LinkedList()
@@ -300,7 +308,7 @@ length=ll.get_length()
 print(f"the length is equal to {length} ")
 
 ll.remove_at(2) #here we are now using our new module to remove an element at a specific index
-
+# ll.remove_at(20)  or ll.remove_at(-1) ...  for these ones, we will reveive an error message or raise exception error message "invalid index" coz we created a condition for such cases if you remember ...   
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
 length=ll.get_length()
 print(f"the length is equal to {length} ") #now we print the length like this after weve already stored it into a variable to use it in a much easier way.
