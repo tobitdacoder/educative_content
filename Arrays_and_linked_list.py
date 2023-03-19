@@ -289,6 +289,15 @@ class LinkedList:
       if index==0:
          self.insert_at_begining(data)
          return  #here we are jusr specifying what the program will do if the provided index is 0... now we are reusing our previously created function "add_at_begining" as the default function to be executed for this particular condition
+      count=0 #so, for all other cases we need to keep a count
+      itr=self.head
+      while itr:
+         if count==index-1:
+            node=Node(data,itr.next) #so, this node we are adding here is the new data that we wand to insert and its "itr.next" is the "itr.next" of the elelemt at index-1 (which means that, the element which came after the elelemt at index-1 will now be the next element if the newly added node or data)
+            itr.next=node #which means that, now the new "itr.next" of the index-1 element is this new data we added just after the index-1 element 
+            break #here we break the while loop once the condition is met
+         itr=itr.next
+         count+=1
       
       
 ll=LinkedList()
@@ -308,7 +317,8 @@ length=ll.get_length()
 print(f"the length is equal to {length} ")
 
 ll.remove_at(2) #here we are now using our new module to remove an element at a specific index
-# ll.remove_at(20)  or ll.remove_at(-1) ...  for these ones, we will reveive an error message or raise exception error message "invalid index" coz we created a condition for such cases if you remember ...   
+# ll.remove_at(20)  or ll.remove_at(-1) ...  for these ones, we will reveive an error message or raise exception error message "invalid index" coz we created a condition for such cases if you remember ... 
+ll.insert_at(1,"kwanga")  
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
 length=ll.get_length()
 print(f"the length is equal to {length} ") #now we print the length like this after weve already stored it into a variable to use it in a much easier way.
