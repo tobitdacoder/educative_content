@@ -12,13 +12,13 @@ print(lst)
 
 a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
 
-print(a[-5:-3]) #here we can see that we can use nrgative indexes and that will work in the inverse
+print(a[-5:-3]) #here we can see that we can use negative indexes and that will work in the inverse
                 # of normal positive indexes (here "corge" is at index [-1] and also index [5])
                 # here the [-5:-3] specifies a range of values to be printed except the value at index  [-3]
 array=np.array(a)
 print(array.dtype)
 print(array.shape)
-sub_array=array[1:4].copy() #to copy and get a new array whic will be the slice of the previous one
+sub_array=array[1:4].copy() #to copy and get a new array which will be the slice of the previous one
                             #in the index range 1:4 where is 4 excluded
 
 ########################################################################
@@ -37,7 +37,7 @@ print(array.ndim) # this will print the dimension of the vector (which is an arr
 
 #########################################################################
 
-data = [[2, 4,7, 8, 1], [23, 5, 9, 3, 9], [4, 10, 43, 12, 0]] #here we've created a list of lists and we want to convert it into an array (also, remember that it will be a matrix of two rows and 5 columns after)
+data = [[2, 4,7, 8, 1], [23, 5, 9, 3, 9], [4, 10, 43, 12, 0]] #here we've created a list of lists and we want to convert it into an array (also, remember that it will be a matrix of three rows and 5 columns after)
 array = np.array(data) #here is the conversion code of the list called "data"
 print(array) #here we simply print the array created
 print(array.shape) # here we will print the number of rows and columns (row,columns)
@@ -102,7 +102,7 @@ array_slice[2]=500 #the element at index 2 of the array_slice array will be equa
 
 array2d=np.array([[4,3,5,9,7],[9,4,5,2,6],[7,6,5,9,1]])
 print(array2d[2][2])
-print(array2d[2,2]) #these are the same and produce the same output which is the value locsted at the row of index 2 and the column of index two (5)
+print(array2d[2,2]) #these are the same and produce the same output which is the value located at the row of index 2 and the column of index two (5)
 
 
 
@@ -123,14 +123,14 @@ print(first.data) #this will print 3 (which is the argument assigned to "data")
 print(first.next) #this will print none (which is the argument assigned to "next") 
 
 
-########
+################################################
 
-#more about linked list (frol a tutorial)
+#more about linked list (from a tutorial)
 
 stock_prices=[235,654,879,345,888,769,871] #here is an array we create (we have to look first into arrays coz linked list are helping to solve the arrays problems and limitation)
 
 stock_prices.insert(1,444)
-# so here we are inserting the number 444 in the list at the index 1, which will push the e xisting numbers back to leavr a space for the inserted number
+# so here we are inserting the number 444 in the list at the index 1, which will push the existing numbers back to leave a space for the inserted number
 
 #here the array insertion complexity are of order of n or O(n).
 
@@ -145,7 +145,7 @@ stock_prices.insert(1,444)
 
 # first, arrays store the value in contegious mem. location while this (linked list) is storing them into random memory locations which are linked with a pointer which point to the next adress  ... so the first value has a reference side to the adress of the next value or element ... those are the links we are creating here.
 
-#here it become muc easier to insert a new value coz there is not a li,itation of capacity for the array... now we are not copying from one lication to another.
+#here it become much easier to insert a new value coz there is not a limitation of capacity for the array... now we are not copying from one location to another.
 
 #here when we insert or delete element at the begining, the complexity is = O(1)  [this one is just because while inserting, its creating a node for the new element and the adress of the next element, so its iterating only once coz its the elements at the index 1]  and    when we want to insert or delete element at the end the complexoty is = O(n) because we have to iterate between all the elements of th list
 
@@ -154,9 +154,9 @@ stock_prices.insert(1,444)
 
 #there are also double linked-list (where its no longer |value adress |next address| but now its |previus adress| current value adress | next value adress) this allows to comeback easier, the backward traversal is easier .... the traversall of a list is O(n)
 
-#the only advantage an array has is, if you know the index of the element in array on order of 1 (O(1)) ehich is a constant time operation.. so in array if you want to access the fifth element you just have to specify the index of the element into [] and it will go directly to it, bit for lnked list, ir has to go through all the elements to follow the links 
+#the only advantage an array has is, if you know the index of the element in array on order of 1 (O(1)) which is a constant time operation.. so in array if you want to access the fifth element you just have to specify the index of the element into [] and it will go directly to it, but for linked list, it has to go through all the elements to follow the links 
 
-#inserting/deleting elements at start in array is O(n) cos u have to copy all the elements, but for linked list it is O(1) ,  you dont need to.add()
+#inserting/deleting elements at start in array is O(n) coz u have to copy all the elements, but for linked list it is O(1) ,  you dont need to.add()
 
 #inserting elements in the middle is O(n) for both.add()
 
@@ -182,7 +182,7 @@ class LinkedList:
       #LET US CREATE A NODE TO EXPLAIN HOW IT WORKS
       node= Node(data,self.head) #this "self.head" is taking the place of the "next" which is the pointer to the next value of the list and her the "self head is the first pointer"
       
-      #just to make things easier,lets say there is an exiating head, when we add a new element(data), it will create a node where the "next" value will be the previous head which was pushed. (now it become the adress of the next value and the current value is now the new node we created)  here the self.head is now the adress of the next value (which was our head value before we inserted anoter at the front) 
+      #just to make things easier,lets say there is an existing head, when we add a new element(data), it will create a node where the "next" value will be the previous self.head which was pushed. (now it become the address of the next value and the current value is now the new node we created)  here the self.head is now the adress of the next value (which was our head value before we inserted anoter at the front) 
       
       #!!! REMEMBER, HERE THE "node" is an object we are creating and the "Node" is the class of the first value we created before 
       
@@ -209,7 +209,7 @@ class LinkedList:
       itr=self.head #here we mean, if head exist, we store it in itr (itterator)
       llstr="" # "linkedliststring", this is the list where all the elements will be stored after being itterated
       while itr: #while its true or its exist .. we will itterate through the whole list
-         llstr+=str(itr.data) + '-->' #so here the data which is being itterated will be stored in llstr then we go to the next value ( <-- : this is the direction of itteration)
+         llstr+=str(itr.data) + ' --> ' #so here the data which is being itterated will be stored in llstr then we go to the next value ( <-- : this is the direction of itteration)
             #the '-->' is just to show the link (it can be removed without problem 😊)
          itr=itr.next #here we say, now since there are an existing head, that head will become the "next" of the new "self.head =  the new value... so the itr become itr.next (next of the self.head or the new head) remember that it is like that coz we stored the self.head in itr (we stored the already exiating one in itr so that we can easily transform it into the "next" or the adress of the next value)
             
@@ -223,13 +223,73 @@ class LinkedList:
          #THERE IS A SMALL PROBLEM WITH THE PROGRAM THAT WE ARE GOING TO FIND OUT SOON BUT FOR NOW, THIS IS HOW THE CODE IS SUPPOSED TO E WRITEN and printed
          
          #😁 The error was finally solved, it was a syntax error and not a logical error 😁
+   
+   
+   def insert_at_end(self,data):
+      if self.head is None: #if the list is empty, or there is not any head node in the list
+                            # then the data we insert now will be the new head and after it there is not any value which can be the next (that is why we used the None)
+         self.head=Node(data,None) #here we just mean that "now, the new head is the new entered
+                                 # data" which does not have any next value or is not pointing at any value since it is the only value in the linked list
+                                 
+                                 #reemeber for the insertion at the begining we used the "node" object Node(data,self.head) whith the self head as the next value, here, since we want to ad a value at the end if the list, there is not any "next" value that has to be after the adedd value
+         return #this is to show that, since there is now only one value added, we will break the condition just after we added the the single value
+      itr=self.head
+      
+      while itr.next: #while there is another value as the "next", then we are not yet at the end of the list.
+         
+         itr=itr.next  #her we mean : since there is a "next" vlue to the current head, lets make that next value our new itr (self.head) and check again the condition in the loop to see if there is another value after the new itr (which was the previous itr.next), 
+      itr.next=Node(data,None) #here it means that we reached the last element and for that element there is not a next value, then its next value will be the bew node we've created which does not have a next[ Node(data,None)], so after the loop is broken, which means that there is not another next value existing after, we can now add our new element (which will be the "next" of the nast element which did not have a "next" before we added the new data)
+      
+#!!!!! 👆👆👆UNTIL NOW, WE'VE LEARNT THE METHODS (insert_at_begining, print, insert_at_end) 😃😃
+#!!!!! NOW LETS STUDY OTHER INTERESTING METHODS (OR FUNCTIONS)
 
+# SO, THE NEXT METHOD WILL BE A METHOD THAT ALLOW US TAKE A LIST OF VALUES AS AN INPUT AND IT WILL CREATE A NEW FRESH LINKED LIST.
 
+   def insert_values(self,data_list):
+      self.head=None #here we dont use the conditional "if" to check wether the list is empty or not because we are going to wipe up all the current value from the list and input new values in that list
+      for data in data_list:
+         self.insert_at_end(data) #here this loop comes to use our previous function (method we created called "insert_at_end")
+                                  #and it is using it so that, when we want to input a list of values at the same time, each value from that inputed list will come after another until we reach the last value which will be added at the end (coz we used the insert_at_end method)
+                                  
+   def get_length(self): #this function will basically help us to get the lenght of the linked list
+      count=0 #here we initiate the count so that if there is a head which exist, we will incremement by one for each head
+      itr=self.head
+      while itr: #here is the loop that will help us find the total count of the element
+         count+=1
+         itr=itr.next
+      return count #if the loop is broken, the count will then be retrieved
+   
+   def remove_at(self,index): #this function will remove the element at the wanted index
+      if index < 0 or index >= self.get_length(): #here we are just specifying that if the index is negative or above the index range of the list, it will be an invalid one. here  "index >= self.get_length()" means that if the length of the list is 6 then the last element is of index 5 (so 6 is >= index and is invalid )
+         raise Exception("invalid index 😥") #this is the exception that will be raised if the if statement's condition is met (learn more about this one) 
+      if index==0: #here we just say "if the index is equal to the head element (index 0)" then we remove it (WE ARE REMOVING THE HEAD AT THE BEGGINNING OF THE LIST)
+         self.head=self.head.next #and this is how we remove the head, by making our next element our new head (this will remove our previous head of index 0)
+         return
+      count=0 #this because in linked list you have to manualy msintain the count to reach that index (here we are dealing with O(n) )
+      
+      #so as usual, to itterate through the list, we do:
+      itr=self.head
+      while itr:
+         itr=itr.next
+         #here we have to iterrate through the list to reach that index (and the value under it)... this go through each of the elements in my linked list
+      
+      
 ll=LinkedList()
-ll.insert_at_begining(4)
-ll.insert_at_begining(6)
-ll.insert_at_begining(54)
-ll.insert_at_begining(88)
-ll.print()
+ll.insert_at_begining(34) #this will be the first element to be inserted in the linkedlist
+ll.insert_at_begining(23) #this will be the second and will push the (34) value and become the head
+ll.insert_at_begining(44) #then this will come and push the (23) and then become the head
+ll.insert_at_begining(20) #then this (20) will be inserted at the beginning too and push the (44) and become the head. 
+#notice that, for the "insert_at_begining" the one which is inserted after the other is the one which become the head (so it is aded at the beginning of the linked list)
 
-         #so now our out put will be : 88-->54-->6-->4-->
+ll.insert_at_end(100) #this will be the first one to be added at the end of our list
+ll.insert_at_end(130) #the this will come and be addedd after the (100) and become the "next" of (100)
+ll.insert_at_end(141) #then this will also come and become the "next" of (130) 
+                      # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
+ll.insert_values(["babane ","mangue ","tomato ","garlic"]) #here, as we saw, we erased all the previous content of the previous linked lists and created a new one with the inputed content,
+ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
+length=ll.get_length()
+print(f"the length is equal to {length} ") #now we print the length like this after weve already stored it into a variable to use it in a much easier way.
+
+
+
+
