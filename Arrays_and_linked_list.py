@@ -261,7 +261,7 @@ class LinkedList:
    
    def remove_at(self,index): #this function will remove the element at the wanted index
       if index < 0 or index >= self.get_length(): #here we are just specifying that if the index is negative or above the index range of the list, it will be an invalid one. here  "index >= self.get_length()" means that if the length of the list is 6 then the last element is of index 5 (so 6 is >= index and is invalid )
-         raise Exception("invalid index 😥") #this is the exception that will be raised if the if statement's condition is met (learn more about this one) 
+         raise Exception("invalid index 😥") #this is the exception that will be raised if the if statement's condition is met (learn more about this one) , this will appear as an error message if the condition above is met
       if index==0: #here we just say "if the index is equal to the head element (index 0)" then we remove it (WE ARE REMOVING THE HEAD AT THE BEGGINNING OF THE LIST)
          self.head=self.head.next #and this is how we remove the head, by making our next element our new head (this will remove our previous head of index 0)
          return
@@ -295,7 +295,7 @@ class LinkedList:
          if count==index-1:
             node=Node(data,itr.next) #so, this node we are adding here is the new data that we wand to insert and its "itr.next" is the "itr.next" of the elelemt at index-1 (which means that, the element which came after the elelemt at index-1 will now be the next element if the newly added node or data)
             itr.next=node #which means that, now the new "itr.next" of the index-1 element is this new data we added just after the index-1 element 
-            break #here we break the while loop once the condition is met
+            break #here we break the while loop once the condition is met.
          itr=itr.next
          count+=1
       
