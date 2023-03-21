@@ -307,7 +307,14 @@ class LinkedList:
    
    def insert_after_value(self,data_after,data_to_insert):
       #we have first to search for first occurance of "data_after" value in linked list
-      #Now insert "data_to_insert" after node
+      #Now insert "data_to_insert" after node (try first, then look for the answer after in the description of the video by code basics)
+      pass
+      
+   #SECOND EXERCICE:
+   
+   def remove_by_value(self,data):
+      #remove first node that contains data
+      pass
       
       
       
