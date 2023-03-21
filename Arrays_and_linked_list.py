@@ -313,8 +313,20 @@ class LinkedList:
    #SECOND EXERCICE:
    
    def remove_by_value(self,data):
-      #remove first node that contains data
-      pass
+      #remove first node  that contains data
+      pass # i suggest you to review the above code before to attempt these exercices
+   
+   #THIRD EXERCICE: implementing a double linked list:
+   
+   class Node:
+      def __init__(self,data=None,next=None,prev=None):
+         self.data=data
+         self.next=next
+         self.prev=prev
+         
+         #it is the same process as the prvious linked list, pass through the previous code before to start these questions please
+   
+   
       
       
       
