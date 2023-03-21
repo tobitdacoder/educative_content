@@ -275,7 +275,7 @@ class LinkedList:
             #here we are going to point at the "next" of the previous element (the previous element is the element at index-1)... then its "next" will point at the element we want to remove (is the element we want to remove)
             itr.next=itr.next.next
             #here is the "next" of the previous value (at index-1) which we modify and make it the next of the next (now the new "next" will be the element coming after the element we want to remove)
-            break #after the element has been removed, we csn break the loop
+            break #after the element has been removed, we can break the while loop
          itr=itr.next #this itr.next we are using here is the new itr.next from the if statement !!
          count+=1
          #here we have to iterrate through the list to reach that index (and the value under it)... this go through each of the elements in my linked list.
@@ -289,7 +289,8 @@ class LinkedList:
       if index==0:
          self.insert_at_begining(data)
          return  #here we are jusr specifying what the program will do if the provided index is 0... now we are reusing our previously created function "add_at_begining" as the default function to be executed for this particular condition
-      count=0 #so, for all other cases we need to keep a count
+         ''' here we wan also use another way if we don't want to use the "self.insert_at_begining(data)" and that is by creating a note and the "next" of that node will be the self.head just like we did with the "insert_at_beginning()" function''' 
+      count=0 #so, for all other cases we need to keep a count.
       itr=self.head
       while itr:
          if count==index-1:
@@ -298,6 +299,19 @@ class LinkedList:
             break #here we break the while loop once the condition is met.
          itr=itr.next
          count+=1
+         
+# 👇👇👇EXERCICES TO PRACTICE (ANSWERS ARE AVAILABLE ON THE GITHUB OF THE TUTOR OF "CODE BASICS" ... SEE IT IN T HE VIDEO ABOUT LINKED LISTS .. BUT TRY IT AFTER FIRST) 👇👇👇'''
+   
+   
+   #FIRST EXERCICE:
+   
+   def insert_after_value(self,data_after,data_to_insert):
+      #we have first to search for first occurance of "data_after" value in linked list
+      #Now insert "data_to_insert" after node
+      
+      
+      
+      
       
       
 ll=LinkedList()
