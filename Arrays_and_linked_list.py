@@ -318,13 +318,26 @@ class LinkedList:
    
    #THIRD EXERCICE: implementing a double linked list:
    
-   class Node:
-      def __init__(self,data=None,next=None,prev=None):
-         self.data=data
-         self.next=next
-         self.prev=prev
+class Node:
+   def __init__(self,data=None,next=None,prev=None):
+      self.data=data
+      self.next=next
+      self.prev=prev
          
-         #it is the same process as the prvious linked list, pass through the previous code before to start these questions please
+         #it is the same process as the prvious linked list, pass through the previous code before to start these questions please.
+         
+   # then implement these two methods: 
+   def print_forward(self):
+      #this method prints lists in forward direction. use node.next.
+      pass
+   
+   def print_backward(self):
+      #print linked list in reverse direction. use node.prev for this.
+      pass
+   
+#‼️‼️ implement all other methods in regular linked list class and make necessary changes for doubly linked list (you need to populate node.prev in all those methods)
+   
+   
    
    
       
