@@ -32,7 +32,7 @@ data = [2, 4,7.5, 8, 1]
 array = np.array(data)
 print(array) #here we are converting a list into an array. the np (is the library 'numpy' and np.array(data) means "convert data into array")
 print(array.dtype) # here we want to print the data type of the array contents
-print(array.shape) # this will print the number of elements in the array
+print(array.shape) # this will print the number of elements in the array (the dimensions in a tuple)
 print(array.ndim) # this will print the dimension of the vector (which is an array and we know that an array can be accessed as a vector and vectors have dimmensions ... a  vector of one row and "n" column is of dimmension 1, a vector of 2 or 3 or 4 or n+1 rows and many columns is a 2 dimension vector or array)
 
 #########################################################################
@@ -78,22 +78,22 @@ print(array - array) #here the output will be a matrix of zeros coz weve substra
 data = [[2, 4,6, 8, 10], [1, 2, 3, 4, 5]]
 array2=np.array(data)
 print(array2>array) #here the output will be a matrix of boolean values (true or false)
-#abd that is because with that expression we are comparing each element if the array2 matrix with the elements if the array matrix, if its greater than the output will be true
+#and that is because with that expression we are comparing each element in the array2 matrix with the elements in the array matrix, if its greater then the output will be true.
 
 array_copy=array[4:7].copy() # this will copy the elements in the index range we choosed
-print(array_copy) #this will print the sub_array we copied from the original one
+print(array_copy) #this will print the sub_array we copied from the original one.
 
 
 array = np.arange(10)
 print(array) #here the output will be a row matrix with one row and 10 colums with elements from 0 to 9
-print(array[7]) #here also we xan use the index to licalize an element from the array
+print(array[7]) #here also we can use the index to licalize an element from the array
 print(array[2:5]) #elements of index 2 to 5 with the fifth element excluded
-array[6:8]=15 #herr we say that the elements from idex 6 to 8 exclided are going to be 15
+array[6:8]=15 #here we say that the elements from idex 6 to 8 exclided are going to be 15.
 
 ################################################################################ 
 
-array_slice=array[4:7]
-print(array_slice) #here the output will be the sliced array that we took feom the main one using indexes
+array_slice=array[4:7].copy()
+print(array_slice) #here the output will be the sliced array that we took from the main one using indexes
 array_slice[2]=500 #the element at index 2 of the array_slice array will be equal to 500
 
 
