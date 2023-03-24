@@ -343,7 +343,20 @@ class LinkedList:
    
    def remove_by_value(self,data):
       #remove first node  that contains data
-      pass # i suggest you to review the above code before to attempt these exercices
+      # i suggest you to review the above code before to attempt these exercices
+      if self.head==None:
+         return
+      if self.head.data==data:
+         self.head=self.head.next
+         return
+      
+      itr=self.head
+      while itr.next:
+         if itr.next.data==data:
+            itr.next=itr.next.next
+            break
+            
+         itr=itr.next
    
    #THIRD EXERCICE: implementing a double linked list:
    
@@ -387,6 +400,13 @@ ll.insert_at_end(130) #the this will come and be addedd after the (100) and beco
 ll.insert_at_end(141) #then this will also come and become the "next" of (130) 
                       # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
 #ll.insert_values(["babane ","mangue ","tomato ","garlic"]) #here, as we saw, we erased all the previous content of the previous linked lists and created a new one with the inputed content,
+
+
+ll.insert_after_value(54.6,400)
+ll.insert_after_value(400,400)
+ll.remove_by_value(65)
+
+
 ll.print()
 length=ll.get_length()
 print(f"the length is equal to {length} ")
