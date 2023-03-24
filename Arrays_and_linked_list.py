@@ -344,17 +344,17 @@ class LinkedList:
    def remove_by_value(self,data):
       #remove first node  that contains data
       # i suggest you to review the above code before to attempt these exercices
-      if self.head==None:
+      if self.head==None: #so, as usual we first check if the list is empty
          return
-      if self.head.data==data:
-         self.head=self.head.next
+      if self.head.data==data: #then we chwck if the value we want to remove is the head of our list. if yes then..
+         self.head=self.head.next # ... then we make its "next" the new head authomatically
          return
       
-      itr=self.head
-      while itr.next:
+      itr=self.head #here, is the condition when we want to remove a value which is in the list but is not the head...
+      while itr.next: # ... and we do that by itterating in the list (here we are going to use the itr to eliminate the itr.next when it is equal to our value we want to remove, then make the "next.next" of the itr into the new "next")
          if itr.next.data==data:
-            itr.next=itr.next.next
-            break
+            itr.next=itr.next.next #here is where we delete the value by replacing it with its next
+            break #then we break the loop
             
          itr=itr.next
    
