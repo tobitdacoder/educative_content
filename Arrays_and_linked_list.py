@@ -307,6 +307,21 @@ class LinkedList:
    #FIRST EXERCICE:
    
    def insert_after_value(self,data_after,data_to_insert):
+      if self.head==None:
+         return
+      if self.head.data==data_after:
+         self.head.next=Node(data_to_insert,self.head.next)
+         return
+      itr=self.head
+      while itr:
+         if itr.data==data_after:
+            itr.next=Node(data_to_insert,itr.next)
+            break
+         itr=itr.next
+         
+         # HERE 👇 IS THE CODE EXPLAINED IN MORE DETAILS AND HOW IT WORKS.
+   
+   def insert_after_value(self,data_after,data_to_insert):
       #we have first to search for first occurance of "data_after" value in linked list
       #Now insert "data_to_insert" after data_after node (try first, then look for the answer after in the description of the video by code basics)
       if self.head is None: #first we check if the list is empty or not, if it is empty, then we return empty (coz we cannot add a value after a value which does not exist)
