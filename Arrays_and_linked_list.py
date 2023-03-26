@@ -1,3 +1,6 @@
+''' ALWAYS REMEMBER TO TRY BY YOURSELF TO SEE IF YOU;VE IMPLEMENTED THE CONCEPT IN EACH PROGRAM, ALSO, DONT LUNCH THE CODE DIRECTLY FROM THIS FILE BECAUSE IT IS AN EXPLANATORY FILE WHERE WE ARE MIXING SOME BASICS CODES ... ALWAYS REMEMBER TO COMMENT THE PART YOU DON'T WANT TO EXECUTE 😁'''
+
+
 import numpy as np
 
 lst = list(range(100))
@@ -330,7 +333,7 @@ class LinkedList:
          self.head.next=Node(data_to_insert,self.head.next) #here we are now defining what is our node that will be inserted. if you noticed, now we are saying that, if the value that we are going to add another after it is equal to the data of the existing head, then we are going to insert the "data_to_insert" after it and the "next" of the "data_to_insert" will be the "next" of the head or the value after (since the condition is "when the self.head.data==data_after").
          return
       itr=self.head #here we iterate through our list when self.head is not equal to data_after
-      while itr:
+      while itr: #here we are just mensioning "if the self.head exist"
          
          if itr.data == data_after: #another condition (we gonna go deep)
                itr.next = Node(data_to_insert, itr.next)
@@ -358,7 +361,15 @@ class LinkedList:
             
          itr=itr.next
    
+   
+   
+   
    #THIRD EXERCICE: implementing a double linked list:
+   
+   
+   
+   
+   
    
 class Node:
    def __init__(self,data=None,next=None,prev=None):
@@ -366,7 +377,7 @@ class Node:
       self.next=next
       self.prev=prev
          
-         #it is the same process as the prvious linked list, pass through the previous code before to start these questions please.
+         #it is the same process as the prvious linked list, pass through the previous code before to start these questions please. FOR THESE ONES, TRY THEM LATER THEN FIND THE ANSWER IN THE DESCRIPTION OF THE VIDEO "LINKED LIST : CODE BASICS channel"
          
    # then implement these two methods: 
    def print_forward(self):
