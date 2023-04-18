@@ -167,4 +167,18 @@ else:
 for i in reversed(range(100)): #this "reversed" make the order reversed while we print the result of our loop
     if i%3==0:
         print(i) 
+        
+        
+#########################################################
+
+def main():
+    multiplier(12)
+    
+def multiplier(size):
+    for i in range(1, size+1):
+        for j in range(1, size+1):
+            print(f"{str(i*j):>4}", end="")
+        print()
+        
+main()
 
