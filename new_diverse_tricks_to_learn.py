@@ -194,11 +194,16 @@ print(res)
 
 
 vowels=["a",'e','i','o','u']
-
+# 1. so here we first created our list of the vowels that exist
 def Checker():
-   userIn=str(input("give me a word: "))
-   if vowels[0] and vowels[1] and vowels[2] and vowels[3] and vowels[4] in userIn:
+   userIn=str(input("give me a word: ")) #2. here we now get the input from the user in string
+                                         #   also we can use the try/except here to enhence the 
+                                         #   program features to avoid errors when a bad datatype is used (we will do it after, this is the basic form of the program)
+   if vowels[0] and vowels[1] and vowels[2] and vowels[3] and vowels[4] in userIn: 
+      #3. here we now check if the user input contains all the vowels from the list we created
+      #   this is a non proffesional way of doing it but uts the most basic to understand
       print("all the vowels are in the word")
    else:
+      #4. this is the alternative in case the user input does not contain all the vowels
       print ("no they are not in")
 Checker()
