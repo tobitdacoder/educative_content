@@ -164,3 +164,7 @@ else:
 
 #this is a simple calculator using if statement
 
+for i in reversed(range(100)): #this "reversed" make the order reversed while we print the result of our loop
+    if i%3==0:
+        print(i) 
+
