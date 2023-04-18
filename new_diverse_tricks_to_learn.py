@@ -184,10 +184,11 @@ main()
 
 ########################################################
 
-def name():
+def Splitter():
+   #this function basicaly retrieves only the first name of a full name that the user entered
     fullname=input("enter your full name ") 
-    return fullname.split()[0]
-res=name()
+    return fullname.split()[0] #here we are using the split() function to split the input at the first place where there is a blank space (this will allow us to split exactly after the first name from the full entered name)
+res=Splitter()
 print(res)
 
 ####################################################
@@ -202,8 +203,8 @@ def Checker():
    if vowels[0] and vowels[1] and vowels[2] and vowels[3] and vowels[4] in userIn: 
       #3. here we now check if the user input contains all the vowels from the list we created
       #   this is a non proffesional way of doing it but uts the most basic to understand
-      print("all the vowels are in the word")
+      print("YEAHH 🥳🥳 all the vowels are in 😃")
    else:
       #4. this is the alternative in case the user input does not contain all the vowels
-      print ("no they are not in")
+      print ("ohh no 😢no they are not in 🙂")
 Checker()
