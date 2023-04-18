@@ -191,3 +191,14 @@ res=name()
 print(res)
 
 ####################################################
+
+
+vowels=["a",'e','i','o','u']
+
+def Checker():
+   userIn=str(input("give me a word: "))
+   if vowels[0] and vowels[1] and vowels[2] and vowels[3] and vowels[4] in userIn:
+      print("all the vowels are in the word")
+   else:
+      print ("no they are not in")
+Checker()
