@@ -208,3 +208,39 @@ def Checker():
       #4. this is the alternative in case the user input does not contain all the vowels
       print ("ohh no 😢no they are not in 🙂")
 Checker()
+
+
+########################################################
+
+input_str = "   hello world"
+output_str = input_str.lstrip() #this lstrip() only remove the leading characters, rstrip() removes
+                                # the trailing characters and the strip() remove the two leading characters
+print(output_str)
+
+#######################################################
+
+
+import random #here we are importing a library and we are then using its functions
+# here the function is 
+coin=random.choice([43,54,53,76])
+print(coin)
+
+cards=["head","tail","mix"]
+random.shuffle(cards)
+for card in cards:
+    print(card)
+    
+    
+##################################################
+
+import calendar
+# leaps = calendar.leapdays(2010, 2022)
+# print(leaps)
+
+print(">>>>>>>>>>Leap Year Calculator<<<<<<<<<<\n")
+year1 = int(input("Enter the first year: "))
+year2 = int(input("Enter the second year: "))
+leaps = calendar.leapdays(year1, year2)
+print("Number of leap years between", year1, "and",
+      year2, "is:", leaps)
+
