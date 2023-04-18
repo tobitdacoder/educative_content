@@ -182,3 +182,12 @@ def multiplier(size):
         
 main()
 
+########################################################
+
+def name():
+    fullname=input("enter your full name ") 
+    return fullname.split()[0]
+res=name()
+print(res)
+
+####################################################
