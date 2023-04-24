@@ -75,7 +75,7 @@ array=np.array(data)
 print(array) #here we will have an output of an array of those two lists
 print(array * array) #here we are multiplying the array by itself using the matrix theory about multiplication
 print(array**2) #here we are squaring the matrix ( which is our array)
-print(array - array) #here the output will be a matrix of zeros coz weve substracted every element if the matrix by it self.
+print(array - array) #here the output will be a matrix of zeros coz weve substracted every element of the matrix by it self.
 
 
 data = [[2, 4,6, 8, 10], [1, 2, 3, 4, 5]]
@@ -89,7 +89,7 @@ print(array_copy) #this will print the sub_array we copied from the original one
 
 array = np.arange(10)
 print(array) #here the output will be a row matrix with one row and 10 colums with elements from 0 to 9
-print(array[7]) #here also we can use the index to licalize an element from the array
+print(array[7]) #here also we can use the index to localize an element from the array
 print(array[2:5]) #elements of index 2 to 5 with the fifth element excluded
 array[6:8]=15 #here we say that the elements from idex 6 to 8 exclided are going to be 15.
 
@@ -121,7 +121,7 @@ class LinkedList:
         self.data = data
         self.next = next
 
-first = LinkedList(3) #this is our first objext created and we provided value for data (which is three and the default value for next (which is none))... here we created the object by first writing the class name then in the () we put tje values for the parameters we created in the innit function
+first = LinkedList(3) #this is our first objext created and we provided value for data (which is three and the default value for next (which is none))... here we created the object by first writing the class name then in the () we put the values for the parameters we created in the innit function
 print(first.data) #this will print 3 (which is the argument assigned to "data")
 print(first.next) #this will print none (which is the argument assigned to "next") 
 
@@ -155,7 +155,7 @@ stock_prices.insert(1,444)
 #so, linked list has two main benefits over an array: 
 # 1. you dont need to pre-allocate space and 2. insertion is easier
 
-#there are also double linked-list (where its no longer |value adress |next address| but now its |previus adress| current value adress | next value adress) this allows to comeback easier, the backward traversal is easier .... the traversall of a list is O(n)
+#there are also double linked-list (where its no longer |value |next address| but now its |previus adress| current value | next value adress) this allows to comeback easier, the backward traversal is easier .... the traversall of a list is O(n)
 
 #the only advantage an array has is, if you know the index of the element in array on order of 1 (O(1)) which is a constant time operation.. so in array if you want to access the fifth element you just have to specify the index of the element into [] and it will go directly to it, but for linked list, it has to go through all the elements to follow the links 
 
@@ -183,9 +183,9 @@ class LinkedList:
    def insert_at_begining(self,data): #this is taking the data value and insert it at the beginning of the linked-list !!! THIS IS THE FIRST FUNCTION TO INSERT AT THE BEGINING OF A LINKED-LIST
       
       #LET US CREATE A NODE TO EXPLAIN HOW IT WORKS
-      node= Node(data,self.head) #this "self.head" is taking the place of the "next" which is the pointer to the next value of the list and her the "self head is the first pointer"
+      node= Node(data,self.head) #this "self.head" is taking the place of the "next" which is the pointer to the next value of the list and here the "self head" is the "first pointer"
       
-      #just to make things easier,lets say there is an existing head, when we add a new element(data), it will create a node where the "next" value will be the previous self.head which was pushed. (now it become the address of the next value and the current value is now the new node we created)  here the self.head is now the adress of the next value (which was our head value before we inserted anoter at the front) 
+      #just to make things easier,lets say there is an existing head, when we add a new element(data), it will create a "node" where the "next" value will be the previous self.head which was pushed. (now it become the address of the next value and the current value is now the new node we created)  here the self.head is now the adress of the next value (which was our head value before we inserted anoter at the front) 
       
       #!!! REMEMBER, HERE THE "node" is an object we are creating and the "Node" is the class of the first value we created before 
       
@@ -193,12 +193,12 @@ class LinkedList:
       
       #so, the data in "node=Node(data,self.head)" is the new value we are inserting and the adress which will be in that node will be the adress of the next value (or next element)
       
-      #so, lets say we already have a head, and if we are inserting anything (any new data) infront of it, what gonna happen is, we will create a new "node" element (which is an object from the Node class) and the next value of that node will be the current head of the exiating value that will be pushed (here there is not yet another element which is pusshing the new element)
+      #so, lets say we already have a head, and if we are inserting anything (any new data) infront of it, what gonna happen is, we will create a new "node" element (which is an object from the Node class) and the next value of that node will be the current head of the existing value that will be pushed (here there is not yet another element which is pusshing the new element)
       
       self.head=node
       #here, its easy, we are simply saying that , now, since the new node is created, it become our new head (so that, if we want to insert another new element, this one will be pushed also and let the new node be the new head, and the self.head of that new new element will be the adress of the previously created element)
       
-      #in other words, here we are saying that our new head adress is the adress of the newuly created "node", this will be used when we will create a new element so thst it will be the "next" adress of the newly created node(which has a data and the adress of the pushed node) ... I REPEAT 🙏 the self.head of the newly created node will be the adress of the node we inserted earlier.
+      #in other words, here we are saying that our new head adress is the adress of the newly created "node", this will be used when we will create a new element so that it will be the "next" adress of the newly created node(which has a data and the adress of the pushed node) ... I REPEAT 🙏 the self.head of the newly created node will be the adress of the node we inserted earlier.
       
       #!!!!! PAY ATTENTION!!! in all the functions we are creating,we are using the "self" keyword in the parameter parentheses (i will explain it a bit later 😊)
       
@@ -216,9 +216,9 @@ class LinkedList:
             #the '-->' is just to show the link (it can be removed without problem 😊)
          itr=itr.next #here we say, now since there are an existing head, that head will become the "next" of the new "self.head =  the new value... so the itr become itr.next (next of the self.head or the new head) remember that it is like that coz we stored the self.head in itr (we stored the already exiating one in itr so that we can easily transform it into the "next" or the adress of the next value)
             
-            #anoher way to undrstand it very well is that, while printing, it will start by the last value in the list, verify if it is a head, then turn it into the "next" adress of the coming value to be analised by the printing function... for it, it will be iterrated and become the "next" then we go to the other value (from right to left <-- ) and keep itterating until it reaches the last value to see if there is a head which keep existing after the value we are at, if there is not any value, then the while loop is broken (no head existing after the value we are at so it cannot make the current value the "next" adress of a non existing value)
+            #anoher way to understand it very well is that, while printing, it will start by the last value in the list, verify if it is a head, then turn it into the "next" adress of the coming value to be analised by the printing function... for it, it will be iterrated and become the "next" then we go to the other value (from right to left <-- ) and keep itterating until it reaches the last value to see if there is a head which keep existing after the value we are at, if there is not any value, then the while loop is broken (no head existing after the value we are at so it cannot make the current value the "next" adress of a non existing value)
             
-            #WE ARE ITTERATING THROUGH ELEMENTS ONE BU ONE (dirrection: <-- )
+            #WE ARE ITTERATING THROUGH ELEMENTS ONE BY ONE (dirrection: <-- )
             #and for each itteration, the value that is made "next" will be printed after being itterated (and that will make our output)
       print(llstr) #here, after the loop was broken, we print the linked list with the added elements #!!! SO NOW, TO CHECK THIS, WE HAVE TO CREATE A LINKED LIST NAME TO BE USED IN THE PRINTING PROCCESS!!!
          
@@ -291,8 +291,8 @@ class LinkedList:
          raise Exception ("invalid index 😥") #here we are just reusing our raise exception again (you now know why)
       if index==0:
          self.insert_at_begining(data)
-         return  #here we are jusr specifying what the program will do if the provided index is 0... now we are reusing our previously created function "add_at_begining" as the default function to be executed for this particular condition
-         ''' here we wan also use another way if we don't want to use the "self.insert_at_begining(data)" and that is by creating a note and the "next" of that node will be the self.head just like we did with the "insert_at_beginning()" function''' 
+         return  #here we are just specifying what the program will do if the provided index is 0... now we are reusing our previously created function "add_at_begining" as the default function to be executed for this particular condition
+         ''' here we want also use another way if we don't want to use the "self.insert_at_begining(data)" and that is by creating a node and the "next" of that node will be the self.head just like we did with the "insert_at_beginning()" function''' 
       count=0 #so, for all other cases we need to keep a count.
       itr=self.head
       while itr:

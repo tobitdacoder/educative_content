@@ -95,7 +95,7 @@ am_male=True
 if am_male:
    print("yeah am a male")
 else:
-   print("oh no am not...FUUUUCK!!!")
+   print("oh no am not...DAAAMN!!!")
 
 #here we are using the if statement with the booleans values
 #we can put thousands of code in that if statement if we want to
@@ -244,3 +244,14 @@ leaps = calendar.leapdays(year1, year2)
 print("Number of leap years between", year1, "and",
       year2, "is:", leaps)
 
+""" The script first imports the calendar module.
+
+It then comments out a line that calculates the number of leap years between the years 2010 and 2022, using the leapdays() function of the calendar module.
+
+The script then prints a welcome message and prompts the user to enter two years: year1 and year2. These years are converted to integers using the int() function.
+
+The script then uses the leapdays() function of the calendar module to calculate the number of leap years between year1 and year2. The result is stored in the variable leaps.
+
+Finally, the script prints a message that displays the number of leap years between the two input years.
+
+Note that the leapdays() function returns the number of leap years in the range [y1, y2) (i.e., including y1 but not including y2). Therefore, the number of leap years between year1 and year2 is calculated as leaps = calendar.leapdays(year1, year2)"""

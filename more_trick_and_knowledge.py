@@ -137,5 +137,21 @@ def meow(n):
 main()
 
 
+"""this is a small game creared only using lists"""
+
+question=["un type de fleur: ","une marque de voiture: ","une industrie d'avion: "]
+answers=["rose","audi","boeing"]
+
+totale=0
+
+for i in range(len(question)):
+   print(question[i])
+   ans=str(input("what is the answer: "))
+   for j in range(len(answers)):
+      if ans==answers[j]:
+         totale+=1
+print(f"the final score is {totale}/3")
+
+
 
 
