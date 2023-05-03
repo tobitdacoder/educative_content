@@ -178,6 +178,24 @@ elif question=="digitalTV":
   else:
     print("that is not bad at all")
 
+##############################################
+
+# THS IS AN APP FOR DAYLY AFFIRMATION AND POSITIVITY SHARING
+name=input("what's your name: ")
+
+
+if name=="tobit":
+  scale=int(input("on a scale of 1-4, how good your day is?"))
+  if scale==1:
+    print("oh... sorry, you gonna be okay today, something amazing will happen to you")
+  elif scale==2:
+    print("oh.. a 50/50 day right ?! don't worry, something great will happen today ")
+  elif scale==3:
+    print("a kinda good day right? cool, keep going")
+  elif scale==4:
+    print("wooooow")
+else:
+  print("go out, you're not the one")
 
 
 
