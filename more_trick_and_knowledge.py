@@ -154,4 +154,30 @@ print(f"the final score is {totale}/3")
 
 
 
+###########################################
+
+#here we are usng the concept of NESTING
+
+question=input("what TV show do you like: ")
+if question=="infosport":
+  reason=input("ohh cool.. why? ")
+  if reason =="it is cool":
+    print("cool 😃😃")
+  elif reason=="don't know":
+    Sreason=input("hohh ... how come?")
+    if Sreason=="not good":
+      print("OKAY")
+    else:
+      print("it is also okay")
+  else:
+    print("we don't agree on that at all")
+elif question=="digitalTV":
+  reason2=input("why this choice: ")
+  if reason2=="because am congolese":
+    print("GREAAAT")
+  else:
+    print("that is not bad at all")
+
+
+
 
