@@ -196,6 +196,39 @@ if name=="tobit":
     print("wooooow")
 else:
   print("go out, you're not the one")
+  
+  
+  
+  
+#####################################################
+
+name=input("what is the name of the test? ")
+print("       in",name,":")
+
+max=float(input("what is the max score possible: "))
+#score_out_of_max= max*(34/max)
+score=float(input("what was your score: "))
+
+if score > max:
+  print("out of the range, the score has to be at most",max)
+  
+else:
+  score2=score/max
+  score2=round(score2,2)
+  percentage=score2*100
+  percentage=round(percentage,2)
+  if 40.0 <= percentage < 50.0:
+    print("you got",percentage,"% which is a U")
+  if 50.0 <= percentage < 60.0:
+    print("you got",percentage,"% which is a D")  
+  if 60.0 <= percentage < 70.0:
+    print("you got",percentage,"% which is a C")
+  if 70.0 <= percentage < 80.0:
+    print("you got",percentage,"% which is a B")
+  if 80.0 <= percentage < 90.0:
+    print("you got",percentage,"% which is a A-")
+  if 90.0 <= percentage <= 100.0:
+    print("you got",percentage,"% which is a A+")
 
 
 
