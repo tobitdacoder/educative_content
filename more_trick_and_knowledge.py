@@ -298,3 +298,14 @@ while answer=="no" or answer=="NO" or answer == "No":
   answer=input("\n Do you want to exit? ")
   
 
+#############################################################
+
+#understand the "while True: " loop and what is the basic condition behind it and how to break it
+while True:
+  print("\nthis is running, try again?\n")
+  answer=input("again? ")
+  if answer =="no":
+    break
+print("\n the program was terminated")
+
+#here we are using a "while" loop which can only be broken by using the "break" keyword under a certain condition ... if the condition s met, then we apply the break, if the condition is not met, it is bypassed and the loop continues looping... THIS IS HOW THIS KIND OF WHILE LOOP WORKS, it is broken only under a condition in the "if" statement.
