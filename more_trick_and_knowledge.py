@@ -325,3 +325,20 @@ while True:
     
   
 print("I don't like \033[31m red")
+
+######################
+
+#this is another program using the "while True" loop
+count=0
+print("fill the blank space if youre as cool as me\n")
+while True:
+  
+  print("dont ___ up on me\n")
+  answer=input("what is the missing word: ")
+  if answer=="give":
+    print("\nthat is right, you're a true fan")
+    break
+  else:
+    print("NO, try again!!\n")
+    count+=1
+print("you messed up",count,"times!!")
