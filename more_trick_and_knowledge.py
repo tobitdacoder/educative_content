@@ -306,6 +306,22 @@ while True:
   answer=input("again? ")
   if answer =="no":
     break
-print("\n the program was terminated")
+print("\n the program was terminated") #this line wll be executed once the loop s broken and that is because it is not indented inside the loop, it ia our of it.
 
 #here we are using a "while" loop which can only be broken by using the "break" keyword under a certain condition ... if the condition s met, then we apply the break, if the condition is not met, it is bypassed and the loop continues looping... THIS IS HOW THIS KIND OF WHILE LOOP WORKS, it is broken only under a condition in the "if" statement.
+
+#############################################################
+
+#here is another way of using the "while True" loop with nested loops and colors inside the output to make it more apealing
+while True:
+  color = input("Enter a color: ")
+  if color == "red":
+    break
+  else:
+    print("Cool color!")
+    again=input("do you want to try again?: ")
+    if again=="no":
+      break
+    
+  
+print("I don't like \033[31m red")
