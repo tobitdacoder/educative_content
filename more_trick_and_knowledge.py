@@ -229,6 +229,60 @@ else:
     print("you got",percentage,"% which is a A-")
   if 90.0 <= percentage <= 100.0:
     print("you got",percentage,"% which is a A+")
+    
+    
+#####################################################
+
+from getpass import getpass as input
+
+#THIS LIBRARY'S FUNCTION WILL HELP US TO HIDE THE INPUTS UNTIL THE ARE USED FOR COMPARISON
+
+#Rock, paper, scisors "game"
+
+#this will help us to hide the input between the two users to make it equal
+
+print("ROCK 🪨, PAPER 📄, SCISSORS ✂️\n")
+print(""" Choose the leter you want to use:
+R: rock 🪨
+P:paper 📄
+S: scissors ✂️\n""")
+player1=input("enter your choice: ")
+player2=input("enter your choice: ")
+
+if player1 == "R" or player1 == "r":
+  
+  if player2=="R" or player2 == "r":
+    print("\n the game is a tie 🪨 vs 🪨 ")
+  elif player2=="P" or player2=="p":
+    print("\n player2 📄 is the looser, player1 won 🪨")
+  elif player2=="S" or player2=="s":
+    print("\n player2 ✂️ is the looser, player1 won 🪨")
+  else:
+    print("\n invalid choice ... ")
+    
+elif player1 == "P" or player1 == "p":
+  
+  if player2=="R" or player2=="r":
+    print("\n player2 🪨 is the winner, player1 is the looser 📄")
+  elif player2=="P" or player2=="p":
+    print("\n the game is a tie 📄 vs 📄")
+  elif player2=="S" or player2=="s":
+    print("\n player2 ✂️ is the winner, player1 is the looser 📄")
+  else:
+    print("\n invalid choice ... ")
+    
+elif player1 == "S" or player1 == "s":
+  
+  if player2=="R" or player2=="r":
+    print("\n player2 🪨 is the winner, player1 is the looser ✂️")
+  elif player2=="P" or player2=="p":
+    print("\n player2 📄 is the looser, player1 is the winner ✂️")
+  elif player2=="S" or player2=="s":
+    print("\n the game is a tie ✂️ vs ✂️")
+  else:
+    print("\n invalid choice ... ")
+else:
+  print("\n choice not valid")
 
 
 
