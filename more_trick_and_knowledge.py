@@ -284,5 +284,17 @@ elif player1 == "S" or player1 == "s":
 else:
   print("\n choice not valid")
 
+#############################################################
 
+#this is a simple child game where we ask them what animal they would like to hear and then we can output the wanted animal.
+
+answer=input("Do you want to exit? ")
+while answer=="no" or answer=="NO" or answer == "No":
+  animal=input("\n what animal do you want to hear? ")
+  if animal =="Cow" or animal=="cow" or animal=="COW":
+    print("\n A cow goes 'Moo' 🐄🐄")
+  elif animal=="Cheep" or animal=="cheep" or animal=="CHEEP":
+    print("\n A cheep goes 'Meeheeheehee' 🐐🐐")
+  answer=input("\n Do you want to exit? ")
+  
 
