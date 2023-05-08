@@ -240,7 +240,7 @@ from getpass import getpass as input
 #Rock, paper, scisors "game"
 
 #this will help us to hide the input between the two users to make it equal
-score1=0 
+score1=0 #alsways remember to declare the variables outside the while loop. This will ensure that the values of these variables are retained between iterations of the loop. (this will avoid the values to be returned to zero, each time when the loop is restarted)
 score2=0
 
 while True:
