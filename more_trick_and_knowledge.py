@@ -384,8 +384,11 @@ elif score2==3:
 
 #here is a guessing_game as the result of the day 18/100 of replit:
 
+import random
+
 guesses=0
-number=50
+number=random.randint(1,1000000)
+
 print("Choose the right number between 0 and 100: ")
 
 
@@ -397,12 +400,12 @@ while True:
     guesses+=1
     continue #this will go and restart the loop again
     
-  elif guessNum>number and guessNum<=100:
+  elif guessNum>number and guessNum<=1000000:
     print("\ntoo high please")
     guesses+=1
     continue 
     
-  elif guessNum>100:
+  elif guessNum>1000000:
     
     print("\nwe said, between 0 and 100 and not out of the range please, try again")
     continue 
@@ -413,7 +416,7 @@ while True:
   else:
     print(f"\nyeahh you are right,{guessNum} is the right number")
     break
-print(f"\nit took you {guesses} guesses to get the right Number!!")  
+print(f"\nit took you {guesses} guesses to get the right Number!!")   
   
 #############################################################
   
@@ -460,6 +463,8 @@ for i in range(10):
     if res == final:
         marks += 1
         print("great !!!")
+    else:
+      print("oh nooo")
 
 print(f"\nyou've got {marks} our of TEN")
 
