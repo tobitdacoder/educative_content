@@ -419,6 +419,14 @@ while True:
 print(f"\nit took you {guesses} guesses to get the right Number!!")   
   
 #############################################################
+
+def rollDice(): #here we are creating a function or a "subroutine" and this plays
+  import random #   the game of rolling a dice and getting a random value between 1 and 6
+  diceNum=random.randint(1,6)
+  print(f"you rolled {diceNum}")
+rollDice()
+
+#############################################################
   
 print("""LOAN CALCULATOR""") # Challenge from day 19 on replit
 
