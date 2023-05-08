@@ -240,49 +240,149 @@ from getpass import getpass as input
 #Rock, paper, scisors "game"
 
 #this will help us to hide the input between the two users to make it equal
+score1=0 
+score2=0
 
-print("ROCK 🪨, PAPER 📄, SCISSORS ✂️\n")
-print(""" Choose the leter you want to use:
-R: rock 🪨
-P:paper 📄
-S: scissors ✂️\n""")
-player1=input("enter your choice: ")
-player2=input("enter your choice: ")
+while True:
+  
 
-if player1 == "R" or player1 == "r":
   
-  if player2=="R" or player2 == "r":
-    print("\n the game is a tie 🪨 vs 🪨 ")
-  elif player2=="P" or player2=="p":
-    print("\n player2 📄 is the looser, player1 won 🪨")
-  elif player2=="S" or player2=="s":
-    print("\n player2 ✂️ is the looser, player1 won 🪨")
-  else:
-    print("\n invalid choice ... ")
+  print("ROCK 🪨, PAPER 📄, SCISSORS ✂️\n")
+  print(""" Choose the leter you want to use:
+  R: rock 🪨
+  P:paper 📄
+  S: scissors ✂️\n""")
+
+
+  
+  
+  player1=input("player one enter your choice: ")
+  player2=input("player two enter your choice: ")
+
+
+  
+  
+  if player1 == "R" or player1 == "r":
     
-elif player1 == "P" or player1 == "p":
-  
-  if player2=="R" or player2=="r":
-    print("\n player2 🪨 is the winner, player1 is the looser 📄")
-  elif player2=="P" or player2=="p":
-    print("\n the game is a tie 📄 vs 📄")
-  elif player2=="S" or player2=="s":
-    print("\n player2 ✂️ is the winner, player1 is the looser 📄")
-  else:
-    print("\n invalid choice ... ")
+    if player2=="R" or player2 == "r":
+      print("\n the game is a tie 🪨 vs 🪨 \n")
+      
+      print(score1)
+      print(score2,"\n")
+      if score1==3 or score2==3:
+        
+        break
+      else:
+        
+        continue
+      
+    elif player2=="P" or player2=="p":
+      
+      
+      print("\n player2 📄 is the looser, player1 won 🪨\n")
+      
+      score1+=1
+      print(score1)
+      print(score2,"\n")
+      
+      if score1==3:
+        break
+      else:
+        continue
+      
+    elif player2=="S" or player2=="s":
+      print("\n player2 ✂️ is the looser, player1 won 🪨\n")
+      
+      score1+=1
+      print(score1)
+      print(score2,"\n")
+      
+      if score1==3:
+        break
+      else:
+        continue
+        
+    else:
+      print("\n invalid choice ... \n")
+      continue
+      
+  elif player1 == "P" or player1 == "p":
     
-elif player1 == "S" or player1 == "s":
+    if player2=="R" or player2=="r":
+      
+      score2+=1
+      print("\n player2 🪨 is the winner, player1 is the looser 📄\n")
+      print(score1)
+      print(score2,"\n")
+      
+      if score2==3:
+        break
+      else:
+        continue 
+        
+    elif player2=="P" or player2=="p":
+      print("\n the game is a tie 📄 vs 📄\n")
+      
+    elif player2=="S" or player2=="s":
+      print("\n player2 ✂️ is the winner, player1 is the looser 📄\n")
+      
+      score2+=1
+      print(score1)
+      print(score2,"\n")
+      
+      if score2==3:
+        break
+      else:
+        continue 
+      
+    else:
+      print("\n invalid choice ... \n")
+      continue
+      
+  elif player1 == "S" or player1 == "s":
+    
+    if player2=="R" or player2=="r":
+      print("\n player2 🪨 is the winner, player1 is the looser ✂️\n")
+      
+      score2+=1
+      print(score1)
+      print(score2,"\n")
+      
+      if score2==3:
+        break
+      else:
+        continue 
+        
+    elif player2=="P" or player2=="p":
+      print("\n player2 📄 is the looser, player1 is the winner ✂️\n")
+
+      score1+=1
+      print(score1)
+      print(score2,"\n")
+      
+      if score1==3:
+        break
+      else:
+        continue 
+        
+    elif player2=="S" or player2=="s":
+      print("\n the game is a tie ✂️ vs ✂️\n")
+    else:
+      print("\n invalid choice ... \n")
+      continue
   
-  if player2=="R" or player2=="r":
-    print("\n player2 🪨 is the winner, player1 is the looser ✂️")
-  elif player2=="P" or player2=="p":
-    print("\n player2 📄 is the looser, player1 is the winner ✂️")
-  elif player2=="S" or player2=="s":
-    print("\n the game is a tie ✂️ vs ✂️")
   else:
-    print("\n invalid choice ... ")
-else:
-  print("\n choice not valid")
+    print("\n choice not valid\n") 
+    continue
+
+if score1==3:
+  print(f"the player one has got {score1} and the player two has got {score2}, PLAYER ONE IS THEIS THE WINNER")
+elif score2==3:
+  print(f"the player two has got {score2} and the player one has got {score1}, PLAYER TWO IS THE WINNER")
+  
+
+                
+
 
 #############################################################
 
