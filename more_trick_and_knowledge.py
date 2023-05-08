@@ -342,3 +342,24 @@ while True:
     print("NO, try again!!\n")
     count+=1
 print("you messed up",count,"times!!")
+
+###############################################
+
+print("""THIS IS A MAZE GAME!!
+TRY TO SURVIVE""")
+
+while True:
+  print("\nyou are in a maze coridor, what direction do  you take ?")
+
+  print("""1. right
+  2. left\n""")
+  direction=input("give your answer: ")
+  if direction=="right":
+    continue
+  elif direction =="left":
+    print("you are dead")
+    break
+  else:
+    print("wow, youre clever, you survived")
+    exit()
+print("you loosed, try again next time")
