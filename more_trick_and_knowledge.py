@@ -415,9 +415,25 @@ while True:
     break
 print(f"\nit took you {guesses} guesses to get the right Number!!")  
   
-    
+#############################################################
   
+print("""LOAN CALCULATOR""") 
+
+loan=1200
+loan2=loan
+
+apr=0.05*loan
+
+
+for year in range(10):
+  loan+=apr
   
+  print("for year",year+1,"you owe",loan)
+interest=loan-loan2
+
+
+print(f"\n {interest} is the interest ")
+   
 
                 
 
