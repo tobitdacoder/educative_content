@@ -445,6 +445,23 @@ increment_value=int(input("what number do you want to increment with: \n"))
 for i in range(start,end_before,increment_value):
   print(i)            
 
+#############################################################
+
+print("""THIS IS A MATH GAME:
+MULTIPLICATION TABLE\n""")
+
+marks = 0
+
+mult = int(input("name your muliple: "))
+for i in range(10):
+
+    final = i * mult
+    res = int(input(f"{i} x {mult} = ? "))
+    if res == final:
+        marks += 1
+        print("great !!!")
+
+print(f"\nyou've got {marks} our of TEN")
 
 #############################################################
 
