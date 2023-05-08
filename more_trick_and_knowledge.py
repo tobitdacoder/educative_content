@@ -380,6 +380,44 @@ if score1==3:
 elif score2==3:
   print(f"the player two has got {score2} and the player one has got {score1}, PLAYER TWO IS THE WINNER")
   
+############################################################
+
+#here is a guessing_game as the result of the day 18/100 of replit:
+
+guesses=0
+number=50
+print("Choose the right number between 0 and 100: ")
+
+
+while True:
+  guessNum=int(input("try a number: "))
+  
+  if guessNum<number and guessNum>=0:
+    print("\ntoo low, try again")
+    guesses+=1
+    continue #this will go and restart the loop again
+    
+  elif guessNum>number and guessNum<=100:
+    print("\ntoo high please")
+    guesses+=1
+    continue 
+    
+  elif guessNum>100:
+    
+    print("\nwe said, between 0 and 100 and not out of the range please, try again")
+    continue 
+    
+  elif guessNum<0:
+    print("we said, no less than 0 please")
+    continue
+  else:
+    print(f"\nyeahh you are right,{guessNum} is the right number")
+    break
+print(f"\nit took you {guesses} guesses to get the right Number!!")  
+  
+    
+  
+  
 
                 
 
