@@ -417,7 +417,7 @@ print(f"\nit took you {guesses} guesses to get the right Number!!")
   
 #############################################################
   
-print("""LOAN CALCULATOR""") 
+print("""LOAN CALCULATOR""") # Challenge from day 19 on replit
 
 loan=1200
 loan2=loan
@@ -433,9 +433,17 @@ interest=loan-loan2
 
 
 print(f"\n {interest} is the interest ")
-   
 
-                
+#############################################################
+
+print("LIST GENERATOR\n") #challenge from day 20 from replit
+
+start=int(input("what is your start number: "))
+end_before=int(input("what number to end before: "))
+increment_value=int(input("what number do you want to increment with: \n"))
+
+for i in range(start,end_before,increment_value):
+  print(i)            
 
 
 #############################################################
