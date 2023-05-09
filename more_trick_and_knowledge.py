@@ -485,17 +485,17 @@ def infiniteDice():
   while True:
     num=int(input("\nhow many sides do you want to use: "))
     
-    rolling=rollDice(num)
+    rolling=rollDice(num) #this will store the value that will be rolled (the side whoch was randomly rolled)
     print("\nyou rolled the ",rolling,"th side\n")
     again=input("roll again?: ")
     if again=="no":
       break
     
 
-def rollDice(n):
+def rollDice(n): #this is a subroutine we created to be used in the main function, as you can see, we are importing the random librarie coz we want to use the randint function which will help us generate random values to compose the for the dice rolling 
   from random import randint as rdt
   roll=rdt(1,n)
-  return roll
+  return roll #this returns the random value that is passed to roll at each iteration of the loop
 
   
 infiniteDice()
