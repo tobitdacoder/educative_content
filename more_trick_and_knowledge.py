@@ -511,7 +511,7 @@ def RandomPin(number):
   pin = ""
   for i in range(num):
     pin += str(rdt(0, 9))
-  return pin #this returns the pin back to the caller
+  return pin #this returns the pin back to the caller ... it will not print but it will only return the value of the pin variable
 res = RandomPin(num)
 print(res)
 
