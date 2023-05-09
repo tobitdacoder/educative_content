@@ -476,6 +476,31 @@ userCoating=input("what do you want on top: ")
 
 Cakes(userIngredient,userBase,userCoating)
 
+###################################################
+
+#challenge day 24: AN INFINITE DICE!!
+
+
+def infiniteDice():
+  while True:
+    num=int(input("\nhow many sides do you want to use: "))
+    
+    rolling=rollDice(num)
+    print("\nyou rolled the ",rolling,"th side\n")
+    again=input("roll again?: ")
+    if again=="no":
+      break
+    
+
+def rollDice(n):
+  from random import randint as rdt
+  roll=rdt(1,n)
+  return roll
+
+  
+infiniteDice()
+
+
 
 ###################################################
 
