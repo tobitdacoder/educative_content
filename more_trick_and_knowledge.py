@@ -458,6 +458,22 @@ for i in range(start,end_before,increment_value):
 
 #############################################################
 
+def Cakes(ingredient,base,coating):  #here this "ingredient" is a variable which can contain different values given at the end of the subroutine
+
+
+  if ingredient == "chocolate":
+    print("ohhh, I LIKE CHOCOLATE CAKES!!")
+  elif ingredient == "broccoli":
+    print("hummm, not so much but its okay!!")
+  else:
+    print("I don't know that but i think it is great too\n")
+    print("So you want a \033[31m",ingredient,"\033[0m cake on a \033[31m",base,"\033[0m base with \033[31m",coating,"\033[0m on top?")
+
+
+Cakes("vanilla","biscuit","icing sugar")
+
+###################################################
+
 print("""THIS IS A MATH GAME:
 MULTIPLICATION TABLE\n""")
 
