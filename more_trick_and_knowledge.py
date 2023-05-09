@@ -466,11 +466,16 @@ def Cakes(ingredient,base,coating):  #here this "ingredient" is a variable which
   elif ingredient == "broccoli":
     print("hummm, not so much but its okay!!")
   else:
-    print("I don't know that but i think it is great too\n")
+    print("\nI don't know that but i think it is great too\n")
     print("So you want a \033[31m",ingredient,"\033[0m cake on a \033[31m",base,"\033[0m base with \033[31m",coating,"\033[0m on top?")
+    
 
+userIngredient=input("what is the ingredient you chosed: ")
+userBase=input("what is the base you want: ")
+userCoating=input("what do you want on top: ")
 
-Cakes("vanilla","biscuit","icing sugar")
+Cakes(userIngredient,userBase,userCoating)
+
 
 ###################################################
 
