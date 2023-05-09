@@ -510,7 +510,7 @@ def RandomPin(number):
   pin = ""
   for i in range(num):
     pin += str(rdt(0, 9))
-  return pin  #this return is used to return the final value of pin once the loop is ended, to print it out, we have to print the call of the function (or subroutine since it cannot print without a print() function)
+  return pin #this returns the pin back to the caller
 res = RandomPin(num)
 print(res)
 
