@@ -503,15 +503,15 @@ infiniteDice()
 ###################################################
 
 #here we have created a pin generator which generates random pins which can be used later on
-num=int(input("how many characters: ")) 
+num = int(input("how many characters: "))
 
 def RandomPin(number):
   from random import randint as rdt
-  pin=""
+  pin = ""
   for i in range(num):
-    pin+=str(rdt(0,9))
-  return pin
-res=RandomPin(num)
+    pin += str(rdt(0, 9))
+  return pin  #this return is used to return the final value of pin once the loop is ended, to print it out, we have to print the call of the function (or subroutine since it cannot print without a print() function)
+res = RandomPin(num)
 print(res)
 
 ###################################################
