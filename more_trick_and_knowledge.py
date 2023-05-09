@@ -502,6 +502,7 @@ infiniteDice()
 
 ###################################################
 
+
 #here we have created a pin generator which generates random pins which can be used later on
 num = int(input("how many characters: "))
 
@@ -513,6 +514,8 @@ def RandomPin(number):
   return pin #this returns the pin back to the caller
 res = RandomPin(num)
 print(res)
+
+
 
 ###################################################
 
