@@ -637,3 +637,39 @@ os.system("clear")
 
 user=input("enter your user name: ")
 
+#################################################################
+
+#here is a small program which simulate a music player with different options
+# the user can choose to play a song according to his choice, or can restart the 
+# music player if wanted
+
+# here we are using the "replit" library and the "audio" function
+
+from replit import audio #to use this library "replit" u have to download it first 
+import os, time
+
+def play():
+  
+  source = audio.play_file('audio.wav')
+  time.sleep(10)
+  source.paused = True # unpause the playback
+
+
+while True:
+  print("MyPOD Music Player")
+  time.sleep(1)
+
+  print("press 1 to play")
+  time.sleep(1)
+  print("press 2 to exit\n")
+  print("Press anything else to see the menu again.")
+
+  choice=input("> ")
+  if choice=="1":
+    play()
+  elif choice=="2":
+    exit()
+  else:
+    os.system("clear")
+    time.sleep(1)
+    continue
