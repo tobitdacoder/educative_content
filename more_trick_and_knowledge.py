@@ -432,17 +432,11 @@ print("""LOAN CALCULATOR""") # Challenge from day 19 on replit
 
 loan=1200
 loan2=loan
-
 apr=0.05*loan
-
-
 for year in range(10):
   loan+=apr
-  
   print("for year",year+1,"you owe",loan)
 interest=loan-loan2
-
-
 print(f"\n {interest} is the interest ")
 
 #############################################################
@@ -511,8 +505,8 @@ def RandomPin(number):
   pin = ""
   for i in range(num):
     pin += str(rdt(0, 9))
-  return pin #this returns the pin back to the caller ... it will not print but it will only return the value of the pin variable
-res = RandomPin(num)
+  return pin ##this return is used to return the final value of pin once the loop is ended, to print it out, we have to print the call of the function (or subroutine since it cannot print without a print() function)
+res = RandomPin(num) #here we need to use the print function (by asigning it to a variable) becuse the function call "RandomPin(num)" has been replaced by the "pin" by using the return statement.
 print(res)
 
 
@@ -616,3 +610,30 @@ while True:
     print("wow, youre clever, you survived")
     exit()
 print("you loosed, try again next time")
+
+#################################################################
+
+#HERE ARE SOME LIBRARIES THAT ARE USED IN GAMES ETC, we have been introduced to two of them which are the following (os, time)
+"""import os
+
+for i in range(1, 100):
+  print(i)
+  os.system("clear")  #this is basically telling to the console to clear every number after it has been printed by the loop and the print function inside."""
+
+#now the TIME library
+import os,time
+
+print("welcome")
+print("to")
+print("REPLIT!!")
+
+time.sleep(3) #here we are using the function "sleep" to tell to the computer how many seconds to sleep before to execute the next line of code which is to clear usng the os library
+os.system("clear")
+
+print("LET'S GO TO THE LOGIN PAGE")
+time.sleep(2)
+
+os.system("clear")
+
+user=input("enter your user name: ")
+
