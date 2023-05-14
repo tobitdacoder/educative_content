@@ -677,49 +677,62 @@ while True:
   ######################################################
   
 from random import randint as rd
-import os,time
+import os, time
+
 
 def character():
 
   while True:
+
     print("\n⚔️CHARACTER BUILDER⚔️\n")
     time.sleep(1)
-    name=input("name your legend: ")
-    type=input("\nwhat type is your character (Elf,Wizard,Orc): ")
-    health=HealthStat()
-    strength=StrenghtStat()
-    time.sleep(3)
-  
-    print(name)
-    
-    time.sleep(2)
-    print("TYPE IS:",type)
-    print("HEALTH IS:",health)
-    print("STRENGTH IS:",strength)
-    
-    time.sleep(2)
-    print("\n May your name go down in legends...")
+    for i in range(2):
+      #now we  are inside the for loop
+      name = input("name your legend: ")
+      type = input("\nwhat type is your character (Elf,Wizard,Orc): ")
 
-    agains=input("\nAgain?: ")
-    if agains=="yes":
+      health = HealthStat()
+      strength = StrenghtStat()
+      time.sleep(3)
+
+      print("first legend name is : ", name)
+
+      time.sleep(2)
+      print("TYPE IS:", type)
+      print("HEALTH IS:", health)
+      print("STRENGTH IS:", strength)
+      time.sleep(2)
+      print("\n May your name go down in legends...")
+      print("\n")
+
+      firstPlayer = name + " " + str(health) + " " + str(strength)
+
+    #now we are out of the for loop created earlier:
+    print(firstPlayer)
+    print(secondPlayer)
+
+    agains = input("\nAgain?: ")
+    if agains == "yes":
       os.system("clear")
       time.sleep(1)
       continue
-    elif agains=="no":
+    elif agains == "no":
       break
 
 
 def HealthStat():
-  roll1=rd(1,6)
-  roll2=rd(1,12)
-  Roll=((roll1*roll2)/2)+10
+  roll1 = rd(1, 6)
+  roll2 = rd(1, 12)
+  Roll = ((roll1 * roll2) / 2) + 10
   return Roll
 
+
 def StrenghtStat():
-  roll1=rd(1,6)
-  roll2=rd(1,8)
-  roll=((roll1*roll2)/2)+12
+  roll1 = rd(1, 6)
+  roll2 = rd(1, 8)
+  roll = ((roll1 * roll2) / 2) + 12
   return roll
+
 
 character()
   
