@@ -645,7 +645,7 @@ user=input("enter your user name: ")
 
 # here we are using the "replit" library and the "audio" function
 
-from replit import audio #to use this library "replit" u have to download it first 
+"""from replit import audio #to use this library "replit" u have to download it first 
 import os, time
 
 def play():
@@ -672,11 +672,11 @@ while True:
   else:
     os.system("clear")
     time.sleep(1)
-    continue
+    continue"""
   
   ######################################################
   
-from random import randint as rd
+  from random import randint as rd
 import os
 import time
 
@@ -723,6 +723,8 @@ def character():
   print("\n May your name go down in legends...")
   print("\n")
 
+  os.system("clear")
+
   characters = [{
     "name": name1,
     "type": type1,
@@ -741,8 +743,10 @@ def character():
   CurrentHealth2 = 0
   CurrentHealth1 = 0
 
+  print("BATTLE TIME\n")
+
   while True:  #this loop will be used to simulate our two characters batle until one of them win the final batle
-    print("the battle begins!")
+    print("the battle !!!!!!!!")
     time.sleep(1)
 
     char1 = rd(1, 6)
@@ -750,51 +754,58 @@ def character():
     #the round
     if char1 > char2:
 
-      print(characters[0]["name"], "won the blow")
+      print(characters[0]["name"], "won first blow")
 
-      if (characters[0]["strenght"] > characters[1]["strenght"]:
-        
+      if characters[0]["strenght"] > characters[1]["strenght"]:
+
         StrengthDiff = ((characters[0]["strenght"]) -
                         (characters[1]["strenght"])) + 1
 
       elif characters[1]["strenght"] > characters[0]["strenght"]:
         StrengthDiff = ((characters[1]["strenght"]) -
                         (characters[0]["strenght"])) + 1
-        
+
       CurrentHealth2 = (characters[1]["health"]) - StrengthDiff
-      
+      (characters[1]["health"]
+       ) = CurrentHealth2  #we set the new value of health
+
+      print("char 2 health", CurrentHealth2)
+      time.sleep(1)
+
       if CurrentHealth2 <= 0:
-        (characters[1]["name"],"Have Lost and died")
+        (characters[1]["name"], "Have Lost and died")
         break
       else:
-        print("the batlle continue")
         continue
-
-
 
     elif char2 > char1:
 
       print(characters[1]["name"], "won the blow")
 
-      if (characters[0]["strenght"] > characters[1]["strenght"]:
-        
+      if characters[0]["strenght"] > characters[1]["strenght"]:
+
         StrengthDiff = ((characters[0]["strenght"]) -
                         (characters[1]["strenght"])) + 1
 
       elif characters[1]["strenght"] > characters[0]["strenght"]:
         StrengthDiff = ((characters[1]["strenght"]) -
                         (characters[0]["strenght"])) + 1
-        
+
       CurrentHealth1 = (characters[0]["health"]) - StrengthDiff
-      
+      (characters[0]["health"]
+       ) = CurrentHealth1  #we set the new value of health
+
+      print("char 1 health", CurrentHealth1)
+      time.sleep(1)
+
       if CurrentHealth1 <= 0:
-        (characters[0]["name"],"Have Lost and died")
+        (characters[0]["name"], "Have Lost and died")
         break
       else:
-        print("the batlle continue")
         continue
-      
-        
+
+    else:
+      continue
 
     #here we ae TRYING to store the data as asked in the question
 
@@ -815,6 +826,8 @@ def StrenghtStat():
 
 
 character()
+
+
 
   
 
