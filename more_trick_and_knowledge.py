@@ -773,8 +773,8 @@ def character():
       time.sleep(1)
 
       if CurrentHealth2 <= 0:
-        print(characters[1]["name"], "Have Lost and died")
-        print("\n THE WINNER IS", characters[0]["name"], "with the remaining health of",characters[0]["health"],"!!!")
+        print(characters[1]["name"], "Have Lost and \033[31m died🕯️")
+        print("\n THE WINNER IS \033[32m", characters[0]["name"],       "\033[00m 👑🥇🏆 with the remaining health of",characters[0]["health"],"!!!")
         break
       else:
         time.sleep(1)
@@ -802,8 +802,8 @@ def character():
       time.sleep(1)
 
       if CurrentHealth1 <= 0:
-        print(characters[0]["name"], "Have Lost and died")
-        print("\n THE WINNER IS", characters[1]["name"], "with the remaining health of",characters[1]["health"],"!!!")
+        print(characters[0]["name"], "Have Lost and \033[31m died🕯️")
+        print("\n THE WINNER IS \033[32m", characters[1]["name"], "\033[00m 👑🥇🏆 with the remaining health of",characters[1]["health"],"!!!")
         break
 
       else:
@@ -833,6 +833,7 @@ def StrenghtStat():
 
 
 character()
+
 
 
 
