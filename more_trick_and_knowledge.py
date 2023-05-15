@@ -676,7 +676,7 @@ while True:
   
   ######################################################
   
-  from random import randint as rd
+from random import randint as rd
 import os
 import time
 
@@ -746,7 +746,7 @@ def character():
   print("BATTLE TIME\n")
 
   while True:  #this loop will be used to simulate our two characters batle until one of them win the final batle
-    print("the battle !!!!!!!!")
+    print("\nthe battle !!!!!!!!\n")
     time.sleep(1)
 
     char1 = rd(1, 6)
@@ -769,15 +769,18 @@ def character():
       (characters[1]["health"]
        ) = CurrentHealth2  #we set the new value of health
 
-      print("char 2 health", CurrentHealth2)
+      print(characters[1]["name"], ", your health is equal to", CurrentHealth2)
       time.sleep(1)
 
       if CurrentHealth2 <= 0:
-        (characters[1]["name"], "Have Lost and died")
+        print(characters[1]["name"], "Have Lost and died")
+        print("\n THE WINNER IS", characters[0]["name"], "with the remaining health of",characters[0]["health"],"!!!")
         break
       else:
+        time.sleep(1)
+        print(" they are both standing for the next round")
         continue
-
+    ############### SECOND POSSIBLE OUTCOME FROM THE BATTLE:
     elif char2 > char1:
 
       print(characters[1]["name"], "won the blow")
@@ -795,13 +798,17 @@ def character():
       (characters[0]["health"]
        ) = CurrentHealth1  #we set the new value of health
 
-      print("char 1 health", CurrentHealth1)
+      print(characters[0]["name"], ", your health is equal to", CurrentHealth1)
       time.sleep(1)
 
       if CurrentHealth1 <= 0:
-        (characters[0]["name"], "Have Lost and died")
+        print(characters[0]["name"], "Have Lost and died")
+        print("\n THE WINNER IS", characters[1]["name"], "with the remaining health of",characters[1]["health"],"!!!")
         break
+
       else:
+        time.sleep(1)
+        print("they are both standing for the next round")
         continue
 
     else:
@@ -826,6 +833,7 @@ def StrenghtStat():
 
 
 character()
+
 
 
 
