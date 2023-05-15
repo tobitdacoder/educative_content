@@ -677,50 +677,130 @@ while True:
   ######################################################
   
 from random import randint as rd
-import os, time
+import os
+import time
 
 
 def character():
 
-  while True:
+  print("\n⚔️CHARACTER BUILDER⚔️\n")
 
-    print("\n⚔️CHARACTER BUILDER⚔️\n")
+  time.sleep(1)
+  #for i in range(1,3):
+
+  #now we  are inside the for loop
+  name1 = input("name your legend: ")
+  type1 = input("\nwhat type is your character (Elf,Wizard,Orc): ")
+
+  health1 = HealthStat()
+  strength1 = StrenghtStat()
+  time.sleep(3)
+
+  print("first legend name is", name1)
+  print("TYPE IS:", type1)
+  print("HEALTH IS:", health1)
+  print("STRENGTH IS:", strength1)
+  print("\n May your name go down in legends...")
+  print("\n")
+
+  print("who is the opponent?\n")
+
+  time.sleep(1)
+  #for i in range(1,3):
+
+  #now we  are inside the for loop
+  name2 = input("name your legend: ")
+  type2 = input("\nwhat type is your character (Elf,Wizard,Orc): ")
+
+  health2 = HealthStat()
+  strength2 = StrenghtStat()
+  time.sleep(1)
+
+  print("second legend name is", name2)
+  print("TYPE IS:", type2)
+  print("HEALTH IS:", health2)
+  print("STRENGTH IS:", strength2)
+  print("\n May your name go down in legends...")
+  print("\n")
+
+  characters = [{
+    "name": name1,
+    "type": type1,
+    "health": health1,
+    "strenght": strength1
+  }, {
+    "name": name2,
+    "type": type2,
+    "health": health2,
+    "strenght": strength2
+  }]
+  #return characters
+
+  blowCount = 0  #for counting the rounds of the game inside the while loop
+  StrengthDiff = 0
+  CurrentHealth2 = 0
+  CurrentHealth1 = 0
+
+  while True:  #this loop will be used to simulate our two characters batle until one of them win the final batle
+    print("the battle begins!")
     time.sleep(1)
-    for i in range(2):
-      #now we  are inside the for loop
-      name = input("name your legend: ")
-      type = input("\nwhat type is your character (Elf,Wizard,Orc): ")
 
-      health = HealthStat()
-      strength = StrenghtStat()
-      time.sleep(3)
+    char1 = rd(1, 6)
+    char2 = rd(1, 6)
+    #the round
+    if char1 > char2:
 
-      print("first legend name is : ", name)
+      print(characters[0]["name"], "won the blow")
 
-      time.sleep(2)
-      print("TYPE IS:", type)
-      print("HEALTH IS:", health)
-      print("STRENGTH IS:", strength)
-      time.sleep(2)
-      print("\n May your name go down in legends...")
-      print("\n")
+      if (characters[0]["strenght"] > characters[1]["strenght"]:
+        
+        StrengthDiff = ((characters[0]["strenght"]) -
+                        (characters[1]["strenght"])) + 1
 
-      firstPlayer = name + " " + str(health) + " " + str(strength)
+      elif characters[1]["strenght"] > characters[0]["strenght"]:
+        StrengthDiff = ((characters[1]["strenght"]) -
+                        (characters[0]["strenght"])) + 1
+        
+      CurrentHealth2 = (characters[1]["health"]) - StrengthDiff
+      
+      if CurrentHealth2 <= 0:
+        (characters[1]["name"],"Have Lost and died")
+        break
+      else:
+        print("the batlle continue")
+        continue
 
-    #now we are out of the for loop created earlier:
-    print(firstPlayer)
-    print(secondPlayer)
 
-    agains = input("\nAgain?: ")
-    if agains == "yes":
-      os.system("clear")
-      time.sleep(1)
-      continue
-    elif agains == "no":
-      break
+
+    elif char2 > char1:
+
+      print(characters[1]["name"], "won the blow")
+
+      if (characters[0]["strenght"] > characters[1]["strenght"]:
+        
+        StrengthDiff = ((characters[0]["strenght"]) -
+                        (characters[1]["strenght"])) + 1
+
+      elif characters[1]["strenght"] > characters[0]["strenght"]:
+        StrengthDiff = ((characters[1]["strenght"]) -
+                        (characters[0]["strenght"])) + 1
+        
+      CurrentHealth1 = (characters[0]["health"]) - StrengthDiff
+      
+      if CurrentHealth1 <= 0:
+        (characters[0]["name"],"Have Lost and died")
+        break
+      else:
+        print("the batlle continue")
+        continue
+      
+        
+
+    #here we ae TRYING to store the data as asked in the question
 
 
 def HealthStat():
+
   roll1 = rd(1, 6)
   roll2 = rd(1, 12)
   Roll = ((roll1 * roll2) / 2) + 10
@@ -735,5 +815,6 @@ def StrenghtStat():
 
 
 character()
+
   
 
