@@ -937,6 +937,64 @@ def Agenda():
     
 Agenda()
 
+#########################
+
+# TO DO LIST Manager HERE WE ARE CREATING A BASIC ToDo list with very basics features which we are going to improve further later. we are basically using here : A SUBROUTINE, IF STATEMENTS, LISTS, APPEND AND REMOVE FUNCTIONS and more later
+import time
+
+ToDo = []
+
+
+def ToDoList():
+
+  while True:
+    choice = input("""what do you want to do?
+    1. VIEW
+    2. ADD
+    3. EDIT (REMOVE TASK): """)
+
+    if choice == "view":
+
+      print("\n")
+      for i in range(len(ToDo)):
+        print(ToDo[i])
+        time.sleep(0.5)
+      print("\n")
+
+    elif choice == "add":
+
+      item = input("what item do you want to add to your list?: ")
+      ToDo.append(item)
+      print("\n")
+      for i in range(len(ToDo)):
+        print(ToDo[i])
+        time.sleep(0.5)
+      print("\n")
+
+    elif choice == "edit":
+      item = input("what item do you want to remove from your list?: ")
+
+      if item in ToDo:
+        ToDo.remove(item)
+
+        print("\n")
+        for i in range(len(ToDo)):
+          print(ToDo[i])
+          time.sleep(0.5)
+        print("\n")
+      else:
+        print("this item does not exist in the list")
+
+        print("\n")
+        for i in range(len(ToDo)):
+          print(ToDo[i])
+          time.sleep(0.5)
+        print("\n")
+        continue
+
+
+ToDoList()
+
 
   
 
