@@ -898,7 +898,44 @@ print(len(greetings))
 
 #this program simply use the random library and a list of different meanings of "good morning" in different languages and then generate a random greeting among the ones inside the list
 
+############################################
 
+#THIS PROGRAM IS BASICALLY AN AGENDA MAKER [you can add or remove activities or items from it]
+
+my_agenda=[] #this list has to be declared on the top of the program before you use it even before the subroutine coz if a subroutine what to access a list, it has to exit in the first place
+
+def Agenda():
+   
+  while True:
+    menu=input("add or remove?")
+    
+    if menu=="add":
+      activity=input("\nwhat else is on your agenda today: ")
+      if activity!='end':    
+        my_agenda.append(activity)
+        print("\n")
+        for i in range(len(my_agenda)):
+          print(my_agenda[i])
+        print("\n")
+      elif activity=="end":
+        break
+    elif menu=="remove":
+      activity=input("\nwhat else to remove on your agenda today: ")
+      if activity in my_agenda:
+        my_agenda.remove(activity)
+      #this remove() function is a function that removes an element from a list, this will help us to easily remove any element from a list despite its index
+      
+        print("\n")
+        for i in range(len(my_agenda)):
+          print(my_agenda[i])
+        print("\n")
+      else:
+        print("this element is not in the list")
+        continue
+      
+    
+    
+Agenda()
 
 
   
