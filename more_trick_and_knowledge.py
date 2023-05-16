@@ -835,6 +835,12 @@ def StrenghtStat():
 character()
 
 
+#######################################
+
+for i in range(1,31):
+  print(f"day {i:^3} of 100")
+#in this code we have used the format string or "f (string) logic and this basically helps us to write the text printed much easier by directly using the variAbles inside the string without taking care of the data type... we used the {i:<3} as a separator and there are three types of separation which are > right aligned, < left aligned and ^ middle alignment
+
 
 
 
