@@ -834,6 +834,26 @@ def StrenghtStat():
 
 character()
 
+#######################################
+
+def ColoredText():
+  #this is a basic subroutine i which we are generating coloured text using color codes
+  
+  red="\033[31m"
+  white="\033[00m"
+  green="\033[32m"
+
+  color1=input("> ")
+  color2=input("> ")
+  color3=input("> ")
+
+  if color1=="red":
+    if color2=="white":
+      if color3=="green":
+        print("i am a",color1,"RED LOVER",color2,"and i love it",color3,"soo much",sep=" ")
+
+ColoredText()
+
 
 #######################################
 
