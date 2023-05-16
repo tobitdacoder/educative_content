@@ -888,6 +888,16 @@ for i in range(1,31):
   print(f"day {i:^3} of 100")
 #in this code we have used the format string or "f (string) logic and this basically helps us to write the text printed much easier by directly using the variAbles inside the string without taking care of the data type... we used the {i:<3} as a separator and there are three types of separation which are > right aligned, < left aligned and ^ middle alignment
 
+#####################################
+
+from random import randint as rd
+greetings=["bonjour","konnichiwa!","bore Da!","Aloha kakahiaka","shubh prabhaat"]
+randoo=rd(0,len(greetings)) #this wil store a random value between 0 and 4
+print(greetings[randoo])
+print(len(greetings))
+
+#this program simply use the random library and a list of different meanings of "good morning" in different languages and then generate a random greeting among the ones inside the list
+
 
 
 
