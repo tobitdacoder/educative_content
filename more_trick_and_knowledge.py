@@ -854,6 +854,33 @@ def ColoredText():
 
 ColoredText()
 
+#######################################
+
+import time
+
+#here is another cool program that gonna print some cool looking messages, here we are just learning about allignment, colours, separation and ending of strings in the print function
+
+text = "\033[31m=\033[00m=\033[34m=\033[33m Music App \033[34m=\033[00m=\033[31m="
+padding = 100  # Number of spaces to add on each side
+print(f"{text:^{padding}}")
+
+time.sleep(1)
+
+print("""👑 \033[00mRadio Gaga 👑
+\033[33m   QUEEN""")
+
+time.sleep(0.65)
+prev="\n \n \n \033[00mPREV"
+print(f"{prev:>12}")
+
+time.sleep(0.65)
+next="\033[32mNEXT"
+print(f"\n{next:^50}")
+
+time.sleep(0.65)
+pause="\033[35mPAUSE"
+print(f"\n{pause:^80}")
+
 
 #######################################
 
