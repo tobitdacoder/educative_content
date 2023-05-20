@@ -995,6 +995,40 @@ def ToDoList():
 
 ToDoList()
 
+####################################
+
+import os, time
+listOfEmail = []
+
+def prettyPrinting():# here we want just to print out the content of our List of email
+  os.system("clear")
+  print("list of the emails we have so far")
+  counter=1
+  for email in listOfEmail:
+    print(f"{counter}: {email}")
+    counter+=1
+    
+  time.sleep(3)
+
+while True:
+  print("SPAMMER Inc.")
+  menu = input("1. Add email\n2: Remove email\n3. Show emails\n4. Get SPAMMING\n> ")
+  if menu == "1":
+    email = input("Email > ")
+    listOfEmail.append(email)
+    again=input("another email: ?")
+    if again=="yes":
+      continue
+  elif menu =="2":
+    email = input ("Email > ")
+    if email in listOfEmail:
+      listOfEmail.remove(email)
+  elif menu=="3":
+    prettyPrinting()
+    
+  time.sleep(1)
+  os.system("clear")
+
 
   
 
