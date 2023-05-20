@@ -1016,15 +1016,25 @@ while True:
   if menu == "1":
     email = input("Email > ")
     listOfEmail.append(email)
-    again=input("another email: ?")
-    if again=="yes":
-      continue
   elif menu =="2":
     email = input ("Email > ")
     if email in listOfEmail:
       listOfEmail.remove(email)
   elif menu=="3":
     prettyPrinting()
+  elif menu=="4":
+    for i in range(10):
+      print(listOfEmail[i])
+
+      print(f"""dear {listOfEmail[i]}
+      It has come to our attention that you're missing out on the amazing Replit 100 days of code. We insist you do it right away. If you don't we will pass on your email adress to every spammer we've ever encountered and also sigh you up to the My little pony newsletter, because that's neat. We might just do that anyway
+      
+Love you {listOfEmail[i]} and Hugs 
+
+Ian Spammmmmmingtonal IV""")
+      time.sleep(3)
+      os.system("clear")
+      
     
   time.sleep(1)
   os.system("clear")
