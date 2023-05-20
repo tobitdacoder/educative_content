@@ -1038,6 +1038,83 @@ Ian Spammmmmmingtonal IV""")
     
   time.sleep(1)
   os.system("clear")
+  
+####################################
+  
+  # HERE IS THE UPDATED VERSION OF OUR TO DO LIST AND WE HAVE ADDED THE NEW FEATURE WHICH CONSIST ON MODIFYING OR "edit" A TASK ON OUR LIST
+  
+import os, time
+#from random import randint as rd
+
+ToDoLiiist = []
+
+
+def ToDo():
+  title = "ToDo list manager"
+  print(
+    f"{title:^60}"
+  )  #here we re just using the previous knowledge we got from how to print a title in a specific position on the screen
+
+  time.sleep(3)
+  os.system("clear")
+
+  print("what do you want to do: ")
+  time.sleep(1)
+  print()
+
+  while True:
+    menu = input("Do you want to view, add, remove or edit the todo list?\n: ")
+    if menu == "add":
+      item = input("what do you want to add?: ")
+      if item in ToDoLiiist:
+        print("this already exist")
+        continue
+      else:
+        ToDoLiiist.append(item)
+
+    elif menu == "view":
+      for item in ToDoLiiist:
+        print(item)
+      time.sleep(2)
+      os.system("clear")
+
+    elif menu == "remove":
+      item = input("what do you want to remove?: ")
+      if item in ToDoLiiist:
+        ToDoLiiist.remove(item)
+
+    elif menu == "edit":
+      for item in ToDoLiiist:
+        print(item)
+      time.sleep(3)
+
+      item_to_edit = input("what element do you want to edit:")
+      if item_to_edit in ToDoLiiist:
+
+        index = ToDoLiiist.index(
+          item_to_edit
+        )  #this is how we can store an index in a variable to use it later when we need to maybe, modify the list
+        newItem = input("what do you want to replace it with?")
+        ToDoLiiist[index] = newItem
+        #as you can see, here we have changed the element at the index we stored into something new or into a new task
+
+        for item in ToDoLiiist:
+          print(item)
+        time.sleep(3)
+        os.system("clear")
+    elif menu == "erase":
+
+      for item in ToDoLiiist:
+        ToDoLiiist.remove(item)
+      print("the ToDolist is empty now")
+
+    else:
+      print("invalid choice, try again")
+      continue
+
+
+ToDo()
+
 
 
   
