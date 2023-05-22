@@ -1127,20 +1127,23 @@ else:
 
 myList = []
 
+
 def printList():
   print()
   for i in myList:
     print(i)
   print()
 
-while True:
-  addItem = input("Item > ").lower().strip()
-  #you can notice now that we've used the same two functions of .lower() .strip() but now we have used it directly next to the input and that basicaly mean that (in this case) we want our input to be directly converted to lower and stripped (no spaces before and after, they are erased)
-  
-  if addItem not in myList:
-    myList.append(addItem) 
-  printList()
 
+while True:
+  addItem = input("Item > ").strip().capitalize()
+  #you can notice now that we've used the same two functions of .lower() .strip() but now we have used it directly next to the input and that basicaly mean that (in this case) we want our input to be directly converted to lower and stripped (no spaces before and after, they are erased).. the capitalize function will simply capitalize every word that is added in the list . we do need to use strip() but not neceraly lower.
+
+  # .strip() has to come before the .capitalize() because here the order matters and if we have first to eliminate the space characters before we do any other capitalization.
+
+  if addItem not in myList:
+    myList.append(addItem)
+  printList()
 
 
   
