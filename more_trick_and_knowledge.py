@@ -1115,6 +1115,14 @@ def ToDo():
 
 ToDo()
 
+##############################################
+
+name = input("What's your name? ")
+if name.lower() == "david": #SO, here in this code, we are starting to use what we call "capitalisation" and we use the functions .lower() | .upper() | .title()  to capitalize the user input to make it match the expecter input (the one we compare too in order to insure that the condition is met)
+  print("Hello Baldy!")
+else: 
+  print("What a beautiful head of hair!")
+
 
 
   
