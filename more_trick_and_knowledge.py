@@ -1122,6 +1122,24 @@ if name.lower() == "david": #SO, here in this code, we are starting to use what 
   print("Hello Baldy!")
 else: 
   print("What a beautiful head of hair!")
+  
+#############################################
+
+myList = []
+
+def printList():
+  print()
+  for i in myList:
+    print(i)
+  print()
+
+while True:
+  addItem = input("Item > ").lower().strip()
+  #you can notice now that we've used the same two functions of .lower() .strip() but now we have used it directly next to the input and that basicaly mean that (in this case) we want our input to be directly converted to lower and stripped (no spaces before and after, they are erased)
+  
+  if addItem not in myList:
+    myList.append(addItem) 
+  printList()
 
 
 
