@@ -13,3 +13,20 @@ myString='tobit comment ca va ?'
 
 #print(myString[ : :-1]) #here we are going backward
 print("welcome back",myString.split()[0]) #this function turns the string into a list of individual strings separated by the space char ... the index there now allows us to use different parts of that whole string
+
+#################################
+
+#this small program helps us to capture any vowel found in the string or the set of strings entered by the user (we give them colors just to differenciate them)
+
+vowels=["a","e","i","o","u"]
+
+striing=input("a string please: ")
+print()
+for letter in striing:
+  if letter.lower() in vowels: 
+    print("\033[32m",end='') #these end="" are helping us to eliminate the space in between the letters after the color text is writen
+  print(letter,end='') #this end here helps us to print an horizontal sentense by eliminating the default \n 
+  print("\033[0m",end='') 
+
+  #the if condition here will help us capture any vowel that is found in our string provided by the user. (this is sooo helpful)
+    
