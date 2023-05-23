@@ -54,6 +54,7 @@ sentence = input("Enter any sentence you want: \n")
 for letter in sentence:
     if letter.lower() == "b":
         print("\033[34m" + letter, end='')
+        #here we are basically saying, if the letter is b, set the color to sky blue, then print the letter and eliminate the \n (or eliminate the shift effect in order to print the next letter next to the previous one ... this logic is applied to all the other letters and conditions)
     elif letter.lower() == "r":
         print("\033[31m" + letter, end='')
     elif letter.lower() == "y":
@@ -62,8 +63,10 @@ for letter in sentence:
         print("\033[32m" + letter, end='')
     elif letter.lower() == " ":
         print("\033[0m" + letter, end='')
+        #here we are using the empty space to recet the color to the default white color
     else:
         print(letter, end=' ')
+        #in case the next letter is not among the listed ones, and it is not coming after an empty space, then the previous color will be applied to it
 
 
     
