@@ -45,4 +45,25 @@ THESE ARE THE COLOURS codes to be used in such games
 
 """
 
+########################################################
+
+# this program gets the input from the user and transform that sentense into a rainbow sentense by detecting the conditions of color changing we created 
+
+sentence = input("Enter any sentence you want: \n")
+
+for letter in sentence:
+    if letter.lower() == "b":
+        print("\033[34m" + letter, end='')
+    elif letter.lower() == "r":
+        print("\033[31m" + letter, end='')
+    elif letter.lower() == "y":
+        print("\033[33m" + letter, end='')
+    elif letter.lower() == "g":
+        print("\033[32m" + letter, end='')
+    elif letter.lower() == " ":
+        print("\033[0m" + letter, end='')
+    else:
+        print(letter, end=' ')
+
+
     
