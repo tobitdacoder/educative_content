@@ -67,6 +67,39 @@ for letter in sentence:
     else:
         print(letter, end=' ')
         #in case the next letter is not among the listed ones, and it is not coming after an empty space, then the previous color will be applied to it
+        
+        
+    ################################################
+    #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
+    #         BUILDING THE GAME: HANGMAN
+
+import random
+#here this is a new function we are learning. this "choice()"" function is another function from the library random ... we already know how to use the randint (random integer) with numbers and indexes, and here we are now using the "choice()" for strings random choices now !!!
+
+answers = [
+  "dog", "cat", "lion", "goat", "cow", "insect", "fish", "shark", "bird",
+  "snake", "horse", "aigle"
+]
+
+Word = random.choice(answers)
+FinalWord = ""
+lives = 15
+while True:
+  letterPick = input("pick a letter of your choice:")
+
+  if letterPick in Word:
+    FinalWord += letterPick
+    print("\nYou found a letter")
+    print()
+    for letter in Word:
+      print()
+  elif letterPick in FinalWord:
+    print("\nyou've already found this one")
+    continue
+
+"""  The idea that i have here is that, we are going to use the index of letters in order to print them one by one while the word is builded up ... we need some for loop and if statements here for the printing and condition matching ... CONTINUE CODE AFTER
+"""
 
 
     
