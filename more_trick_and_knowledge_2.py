@@ -109,7 +109,14 @@ while True:
 sentense="we are the guyzz"
 print(sentense.split()[2]) #here we are printing the word at the index 2 which is "the"
 
-#you can use this technique to print in pretty maners like greetings, tests, exams, welcome messages or writing emails after getting the full name of the receiver
+#you can use this technique to print in pretty maners like greetings, tests, exams, welcome messages or writing emails after getting the full name of the receiver (this function does the task called "STRING SLICING")
+
+#other functions are .upper()
+#                    .lower()
+#                    .title()
+#                    .capitalize()
+
+#we can mix them like this too : print(sentense.split().capitalize()
 #########################################
 
 
