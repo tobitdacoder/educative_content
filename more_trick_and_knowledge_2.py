@@ -72,9 +72,10 @@ for letter in sentence:
     ################################################
     #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
-    #         BUILDING THE GAME: HANGMAN
+#         BUILDING THE GAME: HANGMAN
 
 import random
+import os, time
 #here this is a new function we are learning. this "choice()"" function is another function from the library random ... we already know how to use the randint (random integer) with numbers and indexes, and here we are now using the "choice()" for strings random choices now !!!
 
 answers = [
@@ -83,23 +84,57 @@ answers = [
 ]
 
 Word = random.choice(answers)
+# for this .choice() function, we are giving a list as an argument instead of a range of numbers like for the .randint() function
 FinalWord = ""
-lives = 15
+FalseWord=""
+lives = 10
+
+GameName="HANGMAN GAME"
+print(f"{GameName:^60}")
+
+time.sleep(2)
+os.system("clear")
+
+print("you will be asked to pick any letter that is contained in a random name of an animal we've created, then if the letter is part of that name, you will get one mark and if you loose, you will have one mark less, IF your marks are equal to zero, then YOU LOOSE!!, so be wise")
+
+time.sleep(2)
+os.system("clear")
+
 while True:
+  print(Word)
   letterPick = input("pick a letter of your choice:")
 
   if letterPick in Word:
     FinalWord += letterPick
     print("\nYou found a letter")
+    #if he/she loses, we decrement the "lives"
+    #for i in range (0,len(Word)-1):
     print()
-    for letter in Word:
-      print()
-  elif letterPick in FinalWord:
-    print("\nyou've already found this one")
-    continue
+    for i in range(len(Word)):
+      if letterPick == Word[i]:
+        print(letterPick,end="")
+      else:
+        print("_",end="")
+    print()
+    
 
-"""  The idea that i have here is that, we are going to use the index of letters in order to print them one by one while the word is builded up ... we need some for loop and if statements here for the printing and condition matching ... CONTINUE CODE AFTER
-"""
+  """elif letterPick in FinalWord:
+    
+    print("this ")
+
+  elif letterPick not in Word:
+    
+    print("this is not in the word")
+    lives-=1
+    continue"""
+    
+      
+  #elif letterPick in FinalWord:
+    #print("\nyou've already found this one")
+    #continue
+
+    ###the idea that i have here is that, we are going to use the index of letters in order to print them one by one while the word is builded up ... we need some for loop and if statements here for the printing and condition matching
+
 
 #########################################
 #here are some functions we can use for string manipulation:
@@ -115,6 +150,7 @@ print(sentense.split()[2]) #here we are printing the word at the index 2 which i
 #                    .lower()
 #                    .title()
 #                    .capitalize()
+#                    .strip() this is to erase the empty spaces arround the strings coz epmty space is also an element, so we use .strip() to eliminate those empty spaces.
 
 #we can mix them like this too : print(sentense.split().capitalize()
 #########################################
