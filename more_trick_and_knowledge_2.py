@@ -101,5 +101,16 @@ while True:
 """  The idea that i have here is that, we are going to use the index of letters in order to print them one by one while the word is builded up ... we need some for loop and if statements here for the printing and condition matching ... CONTINUE CODE AFTER
 """
 
+#########################################
+#here are some functions we can use for string manipulation:
+# .split() to split the string into parts and can print the different parts using the indexing system 
+
+#example:
+sentense="we are the guyzz"
+print(sentense.split()[2]) #here we are printing the word at the index 2 which is "the"
+
+#you can use this technique to print in pretty maners like greetings, tests, exams, welcome messages or writing emails after getting the full name of the receiver
+#########################################
+
 
     
