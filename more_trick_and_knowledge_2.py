@@ -93,7 +93,17 @@ progress = "_" * len(
   Word
 )  #this is the world we are going to always be printing by adding the letters that has been discovered
 
-GameName = "HANGMAN GAME"
+GameName = """HANGMAN GAME
+  ________
+  |      |
+  |      💀
+  |      ||
+  |      /\
+  |
+  |
+  |
+############
+"""
 print(f"{GameName:^60}")
 
 time.sleep(2)
@@ -103,12 +113,18 @@ print(
   "you will be asked to pick any letter that is contained in a random name of an animal we've created, then if the letter is part of that name, you will get one mark and if you loose, you will have one mark less, IF your marks are equal to zero, then YOU LOOSE!!, so be wise"
 )
 
-time.sleep(2)
+time.sleep(4)
 os.system("clear")
 
 while True:
-  print(Word)
+  #print("\n", Word)
+  print("\n")
   letterPick = input("pick a letter of your choice:").lower()
+
+  if letterPick in letterUsed:
+    print("\nYou have already used this letter. Choose another one.")
+    continue
+
   letterUsed.append(letterPick)
 
   if letterPick in Word:
@@ -128,8 +144,10 @@ while True:
     print("\n")
     print(progress)
 
-    if progress == Word: #here this is the condition to verify if the word has been fully guessed
-      print("CONGRATULATION!! YOU FOUND THE RIGHT WORLD!!!") #this is the message of success that will be printed once once the whole word has been guessed
+    if progress == Word:  #here this is the condition to verify if the word has been fully guessed
+      print(
+        "CONGRATULATION!! YOU FOUND THE RIGHT WORLD!!!"
+      )  #this is the message of success that will be printed once once the whole word has been guessed
       break
 
     print(f"you still have {lives} lives! use them wisely")
@@ -137,7 +155,7 @@ while True:
     os.system("clear")
 
   elif letterPick not in Word:
-    
+
     OutLetters += 1
     lives -= 1
     print("No this letter is not in the word")
@@ -148,11 +166,10 @@ while True:
       )
       continue
     elif OutLetters == 6:
-      
+
       print("""LIVES ARE 0, YOU ARE DEAD""")
       time.sleep(2)
       break
-      
 
     print("\n")
     print(progress)
@@ -161,6 +178,7 @@ while True:
     time.sleep(2)
     os.system("clear")
     continue
+
 
   
   """Let's break down the appending for loop in this code step by step:
