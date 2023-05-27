@@ -87,7 +87,8 @@ Word = random.choice(answers)
 # for this .choice() function, we are giving a list as an argument instead of a range of numbers like for the .randint() function
 
 letterUsed = []
-lives = 10
+OutLetters = 0
+lives = 6
 progress = "_" * len(
   Word
 )  #this is the world we are going to always be printing by adding the letters that has been discovered
@@ -108,10 +109,11 @@ os.system("clear")
 while True:
   print(Word)
   letterPick = input("pick a letter of your choice:").lower()
+  letterUsed.append(letterPick)
 
   if letterPick in Word:
     #FinalWord += letterPick
-    letterUsed.append(letterPick)
+
     print("\nYou found a letter\n")
 
     time.sleep(0.5)
@@ -122,17 +124,35 @@ while True:
     for i in range(len(Word)):
       if letterPick.lower() == Word[i]:
         progress = progress[:i] + letterPick + progress[i + 1:]
-        
+
     print("\n")
     print(progress)
+
+    if progress == Word: #here this is the condition to verify if the word has been fully guessed
+      print("CONGRATULATION!! YOU FOUND THE RIGHT WORLD!!!") #this is the message of success that will be printed once once the whole word has been guessed
+      break
+
     print(f"you still have {lives} lives! use them wisely")
     time.sleep(3)
     os.system("clear")
 
   elif letterPick not in Word:
-    print("No this letter is not in the word")
+    
+    OutLetters += 1
     lives -= 1
-    print(f"now you have {lives} lives remaining! be carefull")
+    print("No this letter is not in the word")
+
+    if OutLetters < 6:
+      print(
+        f"now you have used {OutLetters} out of 6 lives remaining! be carefull"
+      )
+      continue
+    elif OutLetters == 6:
+      
+      print("""LIVES ARE 0, YOU ARE DEAD""")
+      time.sleep(2)
+      break
+      
 
     print("\n")
     print(progress)
@@ -141,6 +161,7 @@ while True:
     time.sleep(2)
     os.system("clear")
     continue
+
   
   """Let's break down the appending for loop in this code step by step:
 
