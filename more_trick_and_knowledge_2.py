@@ -122,6 +122,7 @@ while True:
     for i in range(len(Word)):
       if letterPick.lower() == Word[i]:
         progress = progress[:i] + letterPick + progress[i + 1:]
+        
     print("\n")
     print(progress)
     print(f"you still have {lives} lives! use them wisely")
@@ -134,25 +135,37 @@ while True:
     print(f"now you have {lives} lives remaining! be carefull")
 
     print("\n")
-    for i in range(len(Word)):
-      if letterPick.lower() == Word[i]:
-        print(letterPick, end="")
-      else:
-        print("_", end="")
+    print(progress)
     print("\n")
 
     time.sleep(2)
     os.system("clear")
     continue
-  """elif letterPick in FinalWord:
-    
-    print("this ")
+  
+  """Let's break down the appending for loop in this code step by step:
 
-  elif letterPick not in Word:
-    
-    print("this is not in the word")
-    lives-=1
-    continue"""
+1. `for i in range(len(word)):`:
+   - This line sets up a for loop that iterates through each index ('i') in the range from 0 to the length of the `word` string minus 1.
+   - The purpose of this loop is to check each letter in the `word` string.
+
+2. 'if letter == word[i]:':
+   - This line checks if the 'letter' guessed by the user is equal to the character at index 'i' in the 'word' string.
+   - It compares the guessed letter with each letter in the `word` string to determine if there is a match.
+
+3. 'progress = progress[:i] + letter + progress[i+1:]':
+   - This line updates the 'progress' string based on the outcome of the comparison.
+   - If the guessed letter matches the letter at index 'i' in the 'word' string, it replaces the corresponding underscore ('_') in the 'progress' string with the guessed letter, preserving the correct guesses made so far.
+   - It does this by constructing a new string 'progress' using string slicing.
+   - 'progress[:i]' retrieves the substring of 'progress' from the beginning up to (but not including) index 'i'.
+   - 'letter' is the guessed letter.
+   - 'progress[i+1:]' retrieves the substring of 'progress' starting from index 'i+1' up to the end of the string.
+   - By concatenating these three parts together, the line creates an updated 'progress' string with the correct guesses filled in.
+
+4. 'print(progress)':
+   - After each iteration of the for loop, this line prints the updated 'progress' string to show the current state of the guessed word.
+   - This allows the user to see the progress they have made and any correct letters they have guessed so far.
+
+The for loop iterates through each letter of the 'word' string, checking if the guessed letter matches each letter in the word. If there is a match, it updates the 'progress' string accordingly. After each iteration, the updated 'progress' string is printed to show the current state of the guessed word. This process continues until the user has guessed all the correct letters and 'progress' matches the 'word' string completely."""
 
   #elif letterPick in FinalWord:
   #print("\nyou've already found this one")
