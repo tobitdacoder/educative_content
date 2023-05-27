@@ -85,39 +85,65 @@ answers = [
 
 Word = random.choice(answers)
 # for this .choice() function, we are giving a list as an argument instead of a range of numbers like for the .randint() function
-FinalWord = ""
-FalseWord=""
-lives = 10
 
-GameName="HANGMAN GAME"
+letterUsed = []
+lives = 10
+progress = "_" * len(
+  Word
+)  #this is the world we are going to always be printing by adding the letters that has been discovered
+
+GameName = "HANGMAN GAME"
 print(f"{GameName:^60}")
 
 time.sleep(2)
 os.system("clear")
 
-print("you will be asked to pick any letter that is contained in a random name of an animal we've created, then if the letter is part of that name, you will get one mark and if you loose, you will have one mark less, IF your marks are equal to zero, then YOU LOOSE!!, so be wise")
+print(
+  "you will be asked to pick any letter that is contained in a random name of an animal we've created, then if the letter is part of that name, you will get one mark and if you loose, you will have one mark less, IF your marks are equal to zero, then YOU LOOSE!!, so be wise"
+)
 
 time.sleep(2)
 os.system("clear")
 
 while True:
   print(Word)
-  letterPick = input("pick a letter of your choice:")
+  letterPick = input("pick a letter of your choice:").lower()
 
   if letterPick in Word:
-    FinalWord += letterPick
-    print("\nYou found a letter")
+    #FinalWord += letterPick
+    letterUsed.append(letterPick)
+    print("\nYou found a letter\n")
+
+    time.sleep(0.5)
+
     #if he/she loses, we decrement the "lives"
     #for i in range (0,len(Word)-1):
-    print()
+    print("\n")
     for i in range(len(Word)):
-      if letterPick == Word[i]:
-        print(letterPick,end="")
-      else:
-        print("_",end="")
-    print()
-    
+      if letterPick.lower() == Word[i]:
+        progress = progress[:i] + letterPick + progress[i + 1:]
+    print("\n")
+    print(progress)
+    print(f"you still have {lives} lives! use them wisely")
+    time.sleep(3)
+    os.system("clear")
 
+  elif letterPick not in Word:
+    print("No this letter is not in the word")
+    lives -= 1
+    print(f"now you have {lives} lives remaining! be carefull")
+
+    print("\n")
+    for i in range(len(Word)):
+      if letterPick.lower() == Word[i]:
+        print(letterPick, end="")
+      else:
+        print("_", end="")
+    print("\n")
+
+    time.sleep(2)
+    os.system("clear")
+    continue
   """elif letterPick in FinalWord:
     
     print("this ")
@@ -127,6 +153,13 @@ while True:
     print("this is not in the word")
     lives-=1
     continue"""
+
+  #elif letterPick in FinalWord:
+  #print("\nyou've already found this one")
+  #continue
+
+  ###the idea that i have here is that, we are going to use the index of letters in order to print them one by one while the word is builded up ... we need some for loop and if statements here for the printing and condition matching
+
     
       
   #elif letterPick in FinalWord:
