@@ -250,6 +250,34 @@ print(sentense.split()[2]) #here we are printing the word at the index 2 which i
 Users = {"name": "tobit", "age": "23"} # here "name" and "age" are the keys and, respectively, "tobit" and "23" are the values stored inside those keys
 Users['age']="21" # here is how we change a value stored in a specific key 
 print(Users['age']) #here is how to print the dictionary content
+print(f"his name is {Users['name']} and he is {Users['age']}") #here is how to use the f string... it is by making sure the keys are in '' single quotes
+
+##############################
+
+# here is a simple program that gets credentials input from the user, stores them in a dictionary and then use them to output a customized CONTACT CARD
+
+import os,time
+title="CONTACT CARD"
+print(f"{title:^80}")
+
+time.sleep(3)
+os.system("clear")
+
+name=input("what is your name: ")
+DoBirth=input("what is your DoBirth: ")
+email=input("what is your email: ")
+adress=input("what is your adress: ")
+
+time.sleep(2)
+os.system("clear")
+DetailsDic={"Name":name,"Date_of_birth":DoBirth,"Emails":email,"Adress":adress}
+
+print("here is your contact card\n")
+print(f"Name: {DetailsDic['Name']}")
+print(f"Date of birth: {DetailsDic['Date_of_birth']}")
+print(f"Email: {DetailsDic['Emails']}")
+print(f"Adress: {DetailsDic['Adress']}")
+print()
 
 
 
