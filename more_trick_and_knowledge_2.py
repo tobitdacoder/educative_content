@@ -294,7 +294,23 @@ print(f"Adress: {DetailsDic['Adress']}")
 #DICTIONARY  #[KEY]
 print()
 
-# those informtions can be reused evn after because they are already stored inside the dictionary
+# those informations can be reused evn after because they are already stored inside the dictionary
+
+########################################
+
+# now dictionaries and how to use loops to iterate into the values inside
+
+myDictionary = {"name" : "Ian", "health": 219, "strength": 199, "equipped": "Axe"}
+
+for i in myDictionary:
+  print(myDictionary[i])
+  #here is how we print only the keys in a dictionary
+
+for i in myDictionary:
+    print(myDictionary[i])
+    #here is how we access the values of a dictionary.. if you remember very well, we used previously this syntax 'print(myDictionary[i])'  where i was the nake of a key placed in single quote and the output was the value associated with that key.
+
+  #now, we are replacing the key in quotes by the index which is equal to = key but without quotes 
 
 
 
