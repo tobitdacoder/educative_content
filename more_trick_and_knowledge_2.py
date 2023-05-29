@@ -247,8 +247,9 @@ print(sentense.split()[2]) #here we are printing the word at the index 2 which i
 
 #simple dictionary:
 
-Users = {"name": "tobit", "age": "23"}
-print(Users['age'])
+Users = {"name": "tobit", "age": "23"} # here "name" and "age" are the keys and, respectively, "tobit" and "23" are the values stored inside those keys
+Users['age']="21" # here is how we change a value stored in a specific key 
+print(Users['age']) #here is how to print the dictionary content
 
 
 
