@@ -241,5 +241,15 @@ print(sentense.split()[2]) #here we are printing the word at the index 2 which i
 #we can mix them like this too : print(sentense.split().capitalize()
 #########################################
 
+# DICTIONARIES FUNDAMENTALS IN PYTHON 
+
+#today we talk about the core basics of dictionaries. these comes o solve the LIST problems where by, with lists we put elements in an order and that order is accessed numerically by numbers [and that is not always what we want], because we will have to remember the index or the location of the element in the list, WHICH IS A LITTLE CONFUSING... that is why dictionaries comes in useful ... basically we just assign keys to values then those values are accessed by calling the key in the print function.
+
+#simple dictionary:
+
+Users = {"name": "tobit", "age": "23"}
+print(Users['age'])
+
+
 
     
