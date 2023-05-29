@@ -256,28 +256,45 @@ print(f"his name is {Users['name']} and he is {Users['age']}") #here is how to u
 
 # here is a simple program that gets credentials input from the user, stores them in a dictionary and then use them to output a customized CONTACT CARD
 
-import os,time
-title="CONTACT CARD"
+import os, time
+
+title = "CONTACT CARD"
 print(f"{title:^80}")
 
 time.sleep(3)
 os.system("clear")
 
-name=input("what is your name: ")
-DoBirth=input("what is your DoBirth: ")
-email=input("what is your email: ")
-adress=input("what is your adress: ")
+# 1# we get the credentials input from the user:
+# then we store them into these variables:
+
+name = input("what is your name: ")
+DoBirth = input("what is your DoBirth: ")
+email = input("what is your email: ")
+adress = input("what is your adress: ")
 
 time.sleep(2)
 os.system("clear")
-DetailsDic={"Name":name,"Date_of_birth":DoBirth,"Emails":email,"Adress":adress}
+
+# 2# then we now create a dictionary in which the previous variables we created will be used as values of the dictionary's keys
+
+DetailsDic = {
+  "Name": name,
+  "Date_of_birth": DoBirth,
+  "Emails": email,
+  "Adress": adress
+}
+
+# 3# then we use the keys in the f string to print the inputs from the dictionary directly .. this is how we do access the values:
 
 print("here is your contact card\n")
 print(f"Name: {DetailsDic['Name']}")
 print(f"Date of birth: {DetailsDic['Date_of_birth']}")
 print(f"Email: {DetailsDic['Emails']}")
 print(f"Adress: {DetailsDic['Adress']}")
+#DICTIONARY  #[KEY]
 print()
+
+# those informtions can be reused evn after because they are already stored inside the dictionary
 
 
 
