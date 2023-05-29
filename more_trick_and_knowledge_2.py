@@ -336,6 +336,33 @@ for key,value in myDictionary.items():
   #from here we can use the variables to do some stuff like:
   if key=="strength":
     print("you're strong!") 
+    
+    
+############################################
+
+# this is my website rating program !!!:
+
+WebsiteDetails={"Name": None,"Url":None,"Description":None,"Rating": None}
+# we will use this kind of values to keep the space for the inputs of the user when wanted
+
+print()
+for key in WebsiteDetails.keys():
+  print(key,": ",end="")
+  WebsiteDetails[key]=input("")
+print()
+  
+print("\n____________________\n") 
+
+for keyz,valuez in WebsiteDetails.items():
+  print(f"{keyz} : {valuez}")
+               
+"""name=input(" name of the website: ")
+url=input(" url of the website: ")
+description=input(" some description of the website: ")
+rating=input(" what is the rate of the website out of 5: ")
+
+for key in WebsiteDetails.keys():"""
+  
 
 
 
