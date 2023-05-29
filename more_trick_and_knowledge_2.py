@@ -300,7 +300,7 @@ print()
 
 # now dictionaries and how to use loops to iterate into the values inside
 
-myDictionary = {"name" : "Ian", "health": 219, "strength": 199, "equipped": "Axe"}
+myDictionary = {"name" : "Ian", "health": "219", "strength": "199", "equipped": "Axe"}
 
 for i in myDictionary:
   print(i)
@@ -318,6 +318,8 @@ print()
 for valueee in myDictionary.values():
                         #  .keys():
   print(valueee)
+  if valueee.lower()=="axe":
+    print(" THIS IS DANGEROUS")
 print()
   #the .values() function picks only the values from the dictionary and returns them ... without using the index
 
@@ -329,7 +331,11 @@ count=0
 for key,value in myDictionary.items():
   count+=1
   print(f"{count} {key} : {value}")
-  #the .item() function helps to return both the key and the value at the same time 
+  #the .item() function helps to return both the key and the value at the same time ... the .items() function always need two variabes which are both the key and the value (you can name them as you want in the loop)
+
+  #from here we can use the variables to do some stuff like:
+  if key=="strength":
+    print("you're strong!") 
 
 
 
