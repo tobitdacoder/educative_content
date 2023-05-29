@@ -303,14 +303,33 @@ print()
 myDictionary = {"name" : "Ian", "health": 219, "strength": 199, "equipped": "Axe"}
 
 for i in myDictionary:
-  print(myDictionary[i])
+  print(i)
   #here is how we print only the keys in a dictionary
 
+print()
 for i in myDictionary:
     print(myDictionary[i])
-    #here is how we access the values of a dictionary.. if you remember very well, we used previously this syntax 'print(myDictionary[i])'  where i was the nake of a key placed in single quote and the output was the value associated with that key.
+    #here is how we access the values of a dictionary.. if you remember very well, we used previously this syntax 'print(myDictionary[i])'  where i was the nake of a key placed in single quote and the output was the value associated with that key.... the i repressnt the key
 
   #now, we are replacing the key in quotes by the index which is equal to = key but without quotes 
+
+#ANOTHER WAY TO ACCESS THE VALUES DIRECTLY IS LIKE THIS:
+print()
+for valueee in myDictionary.values():
+                        #  .keys():
+  print(valueee)
+print()
+  #the .values() function picks only the values from the dictionary and returns them ... without using the index
+
+  #the .keys() function picks only the keys from the dictionary and returns them ... without using the index
+
+
+# if we want to obtain both the key and the value we do like this:
+count=0
+for key,value in myDictionary.items():
+  count+=1
+  print(f"{count} {key} : {value}")
+  #the .item() function helps to return both the key and the value at the same time 
 
 
 
