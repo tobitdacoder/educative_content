@@ -378,15 +378,24 @@ Beast = {
   "starting MP": None
 }
 
-for key in Beast.keys():
+#here we use this for loop to iterate into the dictionary's keys then for each key we input the value
+
+for key in Beast.keys(): 
   print(key, ": ", end="")
   Beast[key] = input(" ")
 
 print("\n")
 
+# here this IF condition is just for security so that the user can't use another element other than one of the ones inside the dictionary
+
 if Beast["type"].strip().lower() in ["water","fire","air","spirit"]:
-  for keyz, valuez in Beast.items():
   
+  #now this FOR loop comes to print both the keys and the values from the dictionary, following a set of basic rules:
+  
+  for keyz, valuez in Beast.items():
+    
+    # this is where we use the IF statement to change the color of the output based on the type of brast that has been inputed by the user
+        
     if Beast["type"].strip().lower() == "water":
       print("\033[34m", end="")
       print(f"{keyz} : {valuez}")
