@@ -346,15 +346,15 @@ WebsiteDetails={"Name": None,"Url":None,"Description":None,"Rating": None}
 # we will use this kind of values to keep the space for the inputs of the user when wanted
 
 print()
-for key in WebsiteDetails.keys():
-  print(key,": ",end="")
-  WebsiteDetails[key]=input("")
+for key in WebsiteDetails.keys(): #here we just want to iterate through the dictionary keys
+  print(key,": ",end="") # then here we print those keys
+  WebsiteDetails[key]=input("") # then before to print the next key, we ask the user to enter the value for the key we are at before to bring in the next key
 print()
   
 print("\n____________________\n") 
 
-for keyz,valuez in WebsiteDetails.items():
-  print(f"{keyz} : {valuez}")
+for keyz,valuez in WebsiteDetails.items(): #now with this loop, we print the keys and the values associated with them at the same time by using the .item() function
+  print(f"{keyz} : {valuez}") # then here we simply print both the keys and the values (with different names associated with them)
                
 """name=input(" name of the website: ")
 url=input(" url of the website: ")
