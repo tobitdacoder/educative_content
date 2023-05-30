@@ -378,12 +378,30 @@ Beast = {
   "starting MP": None
 }
 
-for key in Beast.key():
+for key in Beast.keys():
   print(key, ": ", end="")
   Beast[key] = input(" ")
 
-#for keyz,valuez in Beast.items():
-#  print(f"{keyz} : {valuez}")
+print("\n")
+for keyz, valuez in Beast.items():
+  if Beast[keyz]=="water":
+    print("\033[34m")
+  print(f"{keyz} : {valuez}")
+  
+
+
+""" 
+THESE ARE THE COLOURS codes to be used in such games 
+
+\033[30m  #BLACK OR GRAY
+\033[31m  #RED
+\033[32m  #GREEN
+\033[33m  #YELLOW
+\033[34m  #SKY BLUE
+\033[35m  #PINK
+\033[00m  #WHITE
+
+"""
 
   
 
