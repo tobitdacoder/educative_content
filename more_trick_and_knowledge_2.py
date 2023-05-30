@@ -362,6 +362,29 @@ description=input(" some description of the website: ")
 rating=input(" what is the rate of the website out of 5: ")
 
 for key in WebsiteDetails.keys():"""
+
+####################################################
+
+#      MOCKER BEAST GAME (almost like pokemon)
+
+import os, time
+
+# here type is either earth, fire, air, water or spirit
+Beast = {
+  "Beast name": None,
+  "type": None,
+  "special move": None,
+  "starting HP": None,
+  "starting MP": None
+}
+
+for key in Beast.key():
+  print(key, ": ", end="")
+  Beast[key] = input(" ")
+
+#for keyz,valuez in Beast.items():
+#  print(f"{keyz} : {valuez}")
+
   
 
 
