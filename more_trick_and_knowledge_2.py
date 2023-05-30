@@ -383,22 +383,27 @@ for key in Beast.keys():
   Beast[key] = input(" ")
 
 print("\n")
-for keyz, valuez in Beast.items():
 
-  if Beast["type"].strip().lower() == "water":
-    print("\033[34m", end="")
-    print(f"{keyz} : {valuez}")
-  elif Beast["type"].strip().lower() == "fire":
-    print("\033[31m", end="")
-    print(f"{keyz} : {valuez}")
-  elif Beast["type"].strip().lower() == "air":
-    print("\033[00m", end="")
-    print(f"{keyz} : {valuez}")
-  elif Beast["type"].strip().lower() == "spirit":
-    print("\033[33m", end="")
-    print(f"{keyz} : {valuez}")
+if Beast["type"].strip().lower() in ["water","fire","air","spirit"]:
+  for keyz, valuez in Beast.items():
+  
+    if Beast["type"].strip().lower() == "water":
+      print("\033[34m", end="")
+      print(f"{keyz} : {valuez}")
+    elif Beast["type"].strip().lower() == "fire":
+      print("\033[31m", end="")
+      print(f"{keyz} : {valuez}")
+    elif Beast["type"].strip().lower() == "air":
+      print("\033[00m", end="")
+      print(f"{keyz} : {valuez}")
+    elif Beast["type"].strip().lower() == "spirit":
+      print("\033[33m", end="")
+      print(f"{keyz} : {valuez}")
+  
+  print("\033[00m", end="")
 
-print("\033[00m", end="")
+else:
+  print("THIS TYPE DOES NOT EXIST")
 """ 
 THESE ARE THE COLOURS codes to be used in such games 
 
@@ -411,6 +416,7 @@ THESE ARE THE COLOURS codes to be used in such games
 \033[00m  #WHITE
 
 """
+
 
 
   
