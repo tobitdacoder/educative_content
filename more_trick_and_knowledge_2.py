@@ -454,24 +454,25 @@ BingoList=[[],
            [],
            []]
 
-
-for list in BingoList:
-  previous_num=0
-  for i in range (0,3):
-    randNum=random.randint(previous_num+1,90)
-    if randNum not in list:
+used=[0] #we will use this a bit later when we find a way to use it
+for list in BingoList: #this loop helps to iterate in the BIG bingolist
+  previous_num=0 #this will be used for the acendent order in each list
+  
+  for i in range (0,3): #this will itterate in each list elements
+    randNum=random.randint(previous_num+1,90) #then for each i in the list, a random value (greater then the previous one, will be generated)
+    if randNum not in list: #a condition to avoid repetition in the list elements
       list.append(randNum)
+      used.append(randNum)
       previous_num=randNum
-      
 
-answer=(BingoList[1][1])
-print(answer,"\n")
-
+answer=(BingoList[1][1]) #then here we set the very middle of the BINGO list as the number to guess
+#print(answer,"\n") THIS IS THE HIDEN ANSWER !!!
 BingoList[1][1]="bingo"
-for i in range(0,len(BingoList)):
+
+for i in range(0,len(BingoList)): #then here we are printing the full BIG list in order to ask      the user to guess the number.
   print(BingoList[i],"\n")
 
-for i in range(11):
+for i in range(11): #now the QUIZ !!
   final=int(input("what number is behind the world bingo ?: "))
   if final == answer:
     print("yeahhhh")
@@ -482,6 +483,13 @@ for i in range(11):
   elif final<answer:
     print("this is lower then the 'bingo', try again\n")
     continue
+
+
+
+
+
+
+
 
 
 
