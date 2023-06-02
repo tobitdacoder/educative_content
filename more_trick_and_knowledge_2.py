@@ -443,6 +443,43 @@ My2Dlist[1][
 
 #one of the common error done is using an index that is out of bound (for our example, using index 3 or 4 is going out of bound because the limit is index 2)
 
+###############################################
+
+#this is a BINGO GAME 
+import random
+import os,time
+
+
+BingoList=[[],[],[]]
+
+
+for list in BingoList:
+  previous_num=0
+  for i in range (0,3):
+    randNum=random.randint(previous_num+1,90)
+    if randNum not in list:
+      list.append(randNum)
+      previous_num=randNum
+      
+
+answer=(BingoList[1][1])
+print(answer)
+
+BingoList[1][1]="bingo"  
+print(BingoList)
+
+for i in range(11):
+  final=int(input("what number is behind the world bingo ?: "))
+  if final == answer:
+    print("yeahhhh")
+  
+  elif final>answer:
+    print("this is bigger than 'bingo', try again\n'")
+    continue
+  elif final<answer:
+    print("this is lower then the 'bingo', try again\n")
+    continue
+
 
   
 
