@@ -484,19 +484,43 @@ for i in range(11): #now the QUIZ !!
     print("this is lower then the 'bingo', try again\n")
     continue
   
-  ###############################################
+###############################################
+
+# this is how we can remove or append a row in a 2D list:  
+ListOfShame=[]
+
+def PrettyPrint():
   
-  ListOfShame=[]
+
+  print()
+  for row in ListOfShame:
+    for element in row:
+      print(f"{element:^5}",end=" | ")
+    print()
+  print()
+  
 while True:
   name=input("what is your name?: ")
   age=input("what is your age?: ")
   pref=input("what is your computer platform?: ")
-  row=[name,age,pref] #first we create a sample list form that will be used for each list
-  ListOfShame.append(row) #this is how we append lists into a 2D list.
-  exit=input("EXIT?: y/n?")
-  if exit.strip().lower()[0]=="y": # a condition that has to be met if we want to exit the while loop
-    break
-print(ListOfShame)
+  row=[name,age,pref]
+  ListOfShame.append(row)
+  add=input("new record?: y/n?")
+  
+  if add.strip().lower()[0]=="y":
+    continue
+  else:
+    remove=input("\n do you want to remove?: y/n")
+    if remove.strip().lower()[0]=="y":
+      word=input("what name do u want to remove: ")
+      for row in ListOfShame:
+        if word in row:
+          ListOfShame>remove(row)
+          
+      
+
+PrettyPrint()
+
 
 
 
