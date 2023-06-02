@@ -425,7 +425,14 @@ THESE ARE THE COLOURS codes to be used in such games
 \033[00m  #WHITE
 
 """
+################################################
 
+#here we are introducing the concept of 2D list where we have to print the content differently as we were doing with a simple list
+My2Dlist=[ ["toby",23,"Mac"],
+          ["julia",21,"lenovo"],
+         ["nana",19,"Hp"]]
+
+print(My2Dlist[1][1])
 
 
   
