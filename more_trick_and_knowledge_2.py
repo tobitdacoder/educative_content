@@ -483,6 +483,22 @@ for i in range(11): #now the QUIZ !!
   elif final<answer:
     print("this is lower then the 'bingo', try again\n")
     continue
+  
+  ###############################################
+  
+  ListOfShame=[]
+while True:
+  name=input("what is your name?: ")
+  age=input("what is your age?: ")
+  pref=input("what is your computer platform?: ")
+  row=[name,age,pref] #first we create a sample list form that will be used for each list
+  ListOfShame.append(row) #this is how we append lists into a 2D list.
+  exit=input("EXIT?: y/n?")
+  if exit.strip().lower()[0]=="y": # a condition that has to be met if we want to exit the while loop
+    break
+print(ListOfShame)
+
+
 
 
 
