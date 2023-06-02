@@ -450,7 +450,9 @@ import random
 import os,time
 
 
-BingoList=[[],[],[]]
+BingoList=[[],
+           [],
+           []]
 
 
 for list in BingoList:
@@ -463,10 +465,11 @@ for list in BingoList:
       
 
 answer=(BingoList[1][1])
-print(answer)
+print(answer,"\n")
 
-BingoList[1][1]="bingo"  
-print(BingoList)
+BingoList[1][1]="bingo"
+for i in range(0,len(BingoList)):
+  print(BingoList[i],"\n")
 
 for i in range(11):
   final=int(input("what number is behind the world bingo ?: "))
@@ -479,6 +482,13 @@ for i in range(11):
   elif final<answer:
     print("this is lower then the 'bingo', try again\n")
     continue
+
+
+
+
+
+
+
 
 
   
