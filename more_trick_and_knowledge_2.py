@@ -428,11 +428,20 @@ THESE ARE THE COLOURS codes to be used in such games
 ################################################
 
 #here we are introducing the concept of 2D list where we have to print the content differently as we were doing with a simple list
-My2Dlist=[ ["toby",23,"Mac"],
-          ["julia",21,"lenovo"],
-         ["nana",19,"Hp"]]
+My2Dlist = [
+  ["toby", 23, "Mac"],  #first row [index 0]
+  ["julia", 21, "lenovo"],  #second row [index 1]
+  ["nana", 19, "Hp"]
+]  #last row [index2]
 
-print(My2Dlist[1][1])
+print(
+  My2Dlist[1][1]
+)  #here, the first index is the ROW index, and the second is the COLUMN index
+
+My2Dlist[1][
+  2] = 'Mac'  #here we are changing the data at row of index 1 and column of index 2 (which is julia's computer, from lenovo to Mac)
+
+#one of the common error done is using an index that is out of bound (for our example, using index 3 or 4 is going out of bound because the limit is index 2)
 
 
   
