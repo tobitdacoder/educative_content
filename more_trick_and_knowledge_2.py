@@ -573,6 +573,41 @@ while True:
       print()
       print("---------------------------------------")
   print()    
+  
+  
+####################################################
+
+#  ToDo list management system
+
+ToDo = []
+
+while True:
+  question = input("what do you want to do next: ")
+
+  if question.strip().lower()[0] == "a":
+    info = input("\nwhat do you want to add in your list: ")
+    ToDo.append(info)
+    print()
+    for i in range(len(ToDo)):
+      print(ToDo[i])
+    print()
+    continue
+
+  elif question.strip().lower()[0] == "r":
+    whatToRem = input("\nwhat do you want to remove?: ")
+    if whatToRem in ToDo:
+      ToDo.remove(whatToRem)
+    else:
+      print("\ndoes not exist in the list:")
+      continue
+
+  elif question.strip().lower()[0] == "v":
+    print()
+    for i in range(len(ToDo)):
+      print(ToDo[i])
+    print()
+    continue
+
 
 
 
