@@ -521,6 +521,82 @@ while True:
 
 PrettyPrint()
 
+############################################
+
+import random
+
+
+BingoList=[[],
+           [],
+           []]
+
+used=[0] #we will use this a bit later when we find a way to use it
+for list in BingoList: #this loop helps to iterate in the BIG bingolist
+  previous_num=0 #this will be used for the acendent order in each list
+  
+  for i in range (0,3): #this will itterate in each list elements
+    randNum=random.randint(previous_num+1,90) #then for each i in the list, a random value (greater then the previous one, will be generated)
+    if randNum not in list: #a condition to avoid repetition in the list elements
+      list.append(randNum)
+      used.append(randNum)
+      previous_num=randNum
+
+answer=(BingoList[1][1]) #then here we set the very middle of the BINGO list as the number to guess
+#print(answer,"\n") THIS IS THE HIDEN ANSWER !!!
+BingoList[1][1]="bingo"
+
+print()
+for row in BingoList:
+  for element in row:
+    str(element)
+    print(f"{element:^10}",end=" | ")
+  print()
+  print("---------------------------------------")
+print()
+
+"""while True:
+    next_num = input("What number comes next: ")
+    found = False
+
+    for i in range(len(BingoList)):
+        for j in range(len(BingoList[i])):
+            if BingoList[i][j] == int(next_num):
+                BingoList[i][j] = "X"
+                found = True
+                break #here we break the for loop for the j
+
+        if found:
+            break #here, in case the condition is met, we break the for loop for i
+
+    print()
+    for row in BingoList:
+        for num in row:
+            print(f"{num:^10}", end=" | ")
+        print()
+        print("---------------------------------------")
+    print()"""    
+
+while True:
+  next_num=input("what number comes next: ")
+  found=False
+  for i in range(len(BingoList)):
+    for j in range(len(BingoList[i])):
+      if BingoList[i][j]==int(next_num):
+        BingoList[i][j]="X"
+        found=True
+        break
+    if found==True:
+      break
+      
+  print()
+  for row in BingoList:
+      for num in row:
+        print(f"{num:^10}", end=" | ")
+      print()
+      print("---------------------------------------")
+  print()    
+
+
 
 
 
