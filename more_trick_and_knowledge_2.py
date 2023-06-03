@@ -515,7 +515,7 @@ while True:
       word=input("what name do u want to remove: ")
       for row in ListOfShame:
         if word in row:
-          ListOfShame>remove(row)
+          ListOfShame.remove(row)
           
       
 
@@ -550,32 +550,10 @@ for row in BingoList:
   for element in row:
     str(element)
     print(f"{element:^10}",end=" | ")
-  print()
+  print() #when we do this, it is the same as printing a new line with the \n
   print("---------------------------------------")
 print()
-
-"""while True:
-    next_num = input("What number comes next: ")
-    found = False
-
-    for i in range(len(BingoList)):
-        for j in range(len(BingoList[i])):
-            if BingoList[i][j] == int(next_num):
-                BingoList[i][j] = "X"
-                found = True
-                break #here we break the for loop for the j
-
-        if found:
-            break #here, in case the condition is met, we break the for loop for i
-
-    print()
-    for row in BingoList:
-        for num in row:
-            print(f"{num:^10}", end=" | ")
-        print()
-        print("---------------------------------------")
-    print()"""    
-
+   
 while True:
   next_num=input("what number comes next: ")
   found=False
