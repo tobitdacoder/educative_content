@@ -704,17 +704,33 @@ while True:
 
 #2D dictionary notions
 
-clue={}
+clue = {}
+
+
+def PrettyPrint():
+  print()
+  for key, value in clue.items():
+    print(
+      key, end=": "
+    )  #here the key is the "name" we add after each itteration of the loop
+    for subkey, subvalue in value.items():
+      #here we can use this value.item because the value is another sub-dictionary
+      print(subkey, subvalue, end=" | ")
+    print()
+
 
 while True:
-  name=input("Name: ")
-  location=input("Location: ")
-  weapon=input("weapon: ")
-  clue[name]={"Location": location, "weapon": weapon}
+  name = input("Name: ")
+  location = input("Location: ")
+  weapon = input("weapon: ")
+  clue[name] = {"Location": location, "weapon": weapon}
+  #here name is the key, clue[name] is the variable to contain the value, and the rest is the value (which is a dictionary)
+
   #here we are implementing the @d aspect by creating a key containing another dictionary...  "name" is the name of the dictionary ... it can be a person name wth his characteristic beibg the content of the sub-dictionary
 
   # THIS IS HOW WE APPEND a dictionary IN A DICTIONARY, we furst give it a key then we assign a sub-dictionary to that key as the value of it.
-  print(clue)
+
+  PrettyPrint()
 
 
 
