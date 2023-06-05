@@ -577,7 +577,7 @@ while True:
   
 ####################################################
 
- #  ToDo list management system
+#  ToDo list advanced: TODOlist MANAGEMENT SYSTEM 
 import os, time
 
 ToDo = []
@@ -610,12 +610,51 @@ while True:
       continue
 
   elif question.strip().lower()[0] == "v":
-    print()
-    for i in range(len(ToDo)):
-      print(ToDo[i])
-    print()
-    time.sleep(2)
-    os.system("clear")
+    
+    ViewStyle=input("\nview all or priority: ")
+    
+    if ViewStyle.strip().lower()[0] == "a": # a = all
+      #now here we are trying to prettyprint each element of the Todo, containing each element we asked for earlier
+      print()
+      for i in range(ToDo):
+        for j in range(ToDo[i]):
+          print(f"{ToDo[i][j]:^12}",end=" | ")
+        print()
+      print()
+      
+      """print()
+      for i in range(len(ToDo)):
+        print(ToDo[i])
+      print()"""
+      time.sleep(2)
+      os.system("clear")
+
+    
+    elif ViewStyle.strip().lower()[0] == "p": #priority
+      prior=input("\n what priority please (high,medium,low): ")
+      
+      if prior.strip().lower()[0] == "h": # high
+        for i in range(len(ToDo)):
+          for j in range(len(ToDo[i])):
+            if ToDo[i][j].strip().lower()[0]=="h":
+              print(f"{ToDo[i][j]:^12}",end=" | ")
+          print()
+          
+      elif prior.strip().lower()[0] == "m": # medium
+        for i in range(len(ToDo)):
+          for j in range(len(ToDo[i])):
+            if ToDo[i][j].strip().lower()[0]=="m":
+              print(f"{ToDo[i][j]:^12}",end=" | ")
+          print()
+          
+      elif prior.strip().lower()[0] == "l": # low
+        for i in range(len(ToDo)):
+          for j in range(len(ToDo[i])):
+            if ToDo[i][j].strip().lower()[0]=="l":
+              print(f"{ToDo[i][j]:^12}",end=" | ")
+          print()
+        
+        
     continue
   elif question.strip().lower()[0] == "e":
     word = input("what do you want to edit: ")
@@ -632,6 +671,7 @@ while True:
         time.sleep(2)
         os.system("clear")
         continue
+
 
 
 
