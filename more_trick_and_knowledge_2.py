@@ -732,7 +732,17 @@ while True:
 
   PrettyPrint()
 
+########################################
 
+# 2D dictionary: other way that it can be represented
+
+john = {"daysCompleted": 46, "streak": 22} # 1st sub-dictionary
+janet = {"daysCompleted": 21, "streak": 21} # 2nd sub-dictionary
+erica = {"daysCompleted": 75, "streak": 6} # 3rd subdictionary
+
+# these above are jus the values of the main dictionaries and they are the subdictionaries we are trying to access. (don't be confused with the assigment above)
+courseProgress = {"John":john, "Janet":janet, "Erica":erica}
+print(courseProgress["John"]["daysCompleted"])
 
 
 
