@@ -699,6 +699,23 @@ while True:
         time.sleep(2)
         os.system("clear")
         continue
+      
+########################################
+
+#2D dictionary notions
+
+clue={}
+
+while True:
+  name=input("Name: ")
+  location=input("Location: ")
+  weapon=input("weapon: ")
+  clue[name]={"Location": location, "weapon": weapon}
+  #here we are implementing the @d aspect by creating a key containing another dictionary...  "name" is the name of the dictionary ... it can be a person name wth his characteristic beibg the content of the sub-dictionary
+
+  # THIS IS HOW WE APPEND a dictionary IN A DICTIONARY, we furst give it a key then we assign a sub-dictionary to that key as the value of it.
+  print(clue)
+
 
 
 
