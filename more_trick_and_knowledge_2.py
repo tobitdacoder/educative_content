@@ -744,7 +744,45 @@ erica = {"daysCompleted": 75, "streak": 6} # 3rd subdictionary
 courseProgress = {"John":john, "Janet":janet, "Erica":erica}
 print(courseProgress["John"]["daysCompleted"])
 
+######################################################
 
+#      MOCKER BEAST GAME (almost like pokemon) UPDATE, USING 2D LIST NOTION
+
+import os, time
+
+# here type is either earth, fire, air, water or spirit
+"""Beast = {
+  "Beast name": None,
+  "type": None,
+  "special move": None,
+  "starting HP": None,
+  "starting MP": None
+}"""
+
+Mokedex={}
+def PrettyPrint():
+  print()
+  print("----------------------")
+  print()
+  for key,value in Mokedex.items():
+    print(key,end="\t: ")
+    for subkeyz,subvaluez in value.items():
+      print(subkeyz,":",subvaluez,end="\t| ")
+    print()
+
+#here we use this for loop to iterate into the dictionary's keys then for each key we input the value
+
+while True:
+  print("\nadd your beast: \n")
+  print()
+  Name=input("name > ")
+  Type=input("type> ")
+  Special_move=input("Special move > ")
+  HP=input("HP > ")
+  MP=input("MP > ")
+
+  Mokedex[Name]={"Type":Type,"Special move":Special_move,"Starting HP":HP,"Starting MP":MP}
+  PrettyPrint()
 
 
 
