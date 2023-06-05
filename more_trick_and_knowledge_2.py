@@ -577,7 +577,8 @@ while True:
   
 ####################################################
 
-#  ToDo list management system
+ #  ToDo list management system
+import os,time
 
 ToDo = []
 
@@ -606,7 +607,24 @@ while True:
     for i in range(len(ToDo)):
       print(ToDo[i])
     print()
+    time.sleep(2)
+    os.system("clear")
     continue
+  elif question.strip().lower()[0] == "e":
+    word=input("what do you want to edit: ")
+    for i in range(len(ToDo)):
+      
+      if word == ToDo[i]:
+        new=input("what do you want to replace with: ")
+        ToDo[i]=new
+        
+        print()
+        for i in range(len(ToDo)):
+          print(ToDo[i])
+        print()
+        time.sleep(2)
+        os.system("clear")
+        continue
 
 
 
