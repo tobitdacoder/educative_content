@@ -583,6 +583,7 @@ import os, time
 ToDo = []
 
 while True:
+  counter = 0
   question = input("what do you want to do next: ")
 
   if question.strip().lower()[0] == "a":
@@ -595,6 +596,8 @@ while True:
     ToDo.append(Task)  #we append the sub-list into the main list which is ToDO
     print()
     for i in range(len(ToDo)):
+      counter += 1
+      print(f"{counter}. ", end="")
       for j in range(len(ToDo[i])):
         print(f"{ToDo[i][j]:^12}", end=" | ")
       print()
@@ -621,6 +624,8 @@ while True:
       #now here we are trying to prettyprint each element of the Todo, containing each element we asked for earlier
       print()
       for i in range(len(ToDo)):
+        counter += 1
+        print(f"{counter}. ", end="")
         for j in range(len(ToDo[i])):
           print(f"{ToDo[i][j]:^12}", end=" | ")
         print()
@@ -638,28 +643,36 @@ while True:
       if prior.strip().lower()[0] == "h":  # high
         print()
         for i in range(len(ToDo)):
+
           if "high" in ToDo[i]:
+            counter += 1
+            print(f"{counter}. ", end="")
             for element in ToDo[i]:
-              print(f"{element:^12}",end=" | ")
+              print(f"{element:^12}", end=" | ")
             print()
         print()
-          
 
       elif prior.strip().lower()[0] == "m":  # medium
         print()
         for i in range(len(ToDo)):
+
           if "medium" in ToDo[i]:
+            counter += 1
+            print(f"{counter}. ", end="")
             for element in ToDo[i]:
-              print(f"{element:^12}",end=" | ")
+              print(f"{element:^12}", end=" | ")
             print()
         print()
 
       elif prior.strip().lower()[0] == "l":  # low
         print()
         for i in range(len(ToDo)):
+
           if "low" in ToDo[i]:
+            counter += 1
+            print(f"{counter}. ", end="")
             for element in ToDo[i]:
-              print(f"{element:^12}",end=" | ")
+              print(f"{element:^12}", end=" | ")
             print()
         print()
 
@@ -673,6 +686,8 @@ while True:
         ToDo[i] = new
         print()
         for i in range(len(ToDo)):
+          counter += 1
+          print(f"{counter}. ", end="")
           for j in range(len(ToDo[i])):
             print(f"{ToDo[i][j]:^12}", end=" | ")
           print()
