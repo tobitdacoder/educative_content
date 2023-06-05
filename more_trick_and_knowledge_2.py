@@ -593,12 +593,16 @@ while True:
     importance = input("\nlevel of importance (High, medium, low): ")
     Task = [task, due, importance]
     ToDo.append(Task)  #we append the sub-list into the main list which is ToDO
-
-    ToDo.append(task)
     print()
     for i in range(len(ToDo)):
-      print(ToDo[i])
+      for j in range(len(ToDo[i])):
+        print(f"{ToDo[i][j]:^12}", end=" | ")
+      print()
     print()
+    """print()
+    for i in range(len(ToDo)):
+      print(ToDo[i])
+    print()"""
     continue
 
   elif question.strip().lower()[0] == "r":
@@ -610,18 +614,17 @@ while True:
       continue
 
   elif question.strip().lower()[0] == "v":
-    
-    ViewStyle=input("\nview all or priority: ")
-    
-    if ViewStyle.strip().lower()[0] == "a": # a = all
+
+    ViewStyle = input("\nview all or priority: ")
+
+    if ViewStyle.strip().lower()[0] == "a":  # a = all
       #now here we are trying to prettyprint each element of the Todo, containing each element we asked for earlier
       print()
-      for i in range(ToDo):
-        for j in range(ToDo[i]):
-          print(f"{ToDo[i][j]:^12}",end=" | ")
+      for i in range(len(ToDo)):
+        for j in range(len(ToDo[i])):
+          print(f"{ToDo[i][j]:^12}", end=" | ")
         print()
       print()
-      
       """print()
       for i in range(len(ToDo)):
         print(ToDo[i])
@@ -629,32 +632,37 @@ while True:
       time.sleep(2)
       os.system("clear")
 
-    
-    elif ViewStyle.strip().lower()[0] == "p": #priority
-      prior=input("\n what priority please (high,medium,low): ")
-      
-      if prior.strip().lower()[0] == "h": # high
+    elif ViewStyle.strip().lower()[0] == "p":  #priority
+      prior = input("\n what priority please (high,medium,low): ")
+
+      if prior.strip().lower()[0] == "h":  # high
+        print()
         for i in range(len(ToDo)):
-          for j in range(len(ToDo[i])):
-            if ToDo[i][j].strip().lower()[0]=="h":
-              print(f"{ToDo[i][j]:^12}",end=" | ")
-          print()
+          if "high" in ToDo[i]:
+            for element in ToDo[i]:
+              print(f"{element:^12}",end=" | ")
+            print()
+        print()
           
-      elif prior.strip().lower()[0] == "m": # medium
+
+      elif prior.strip().lower()[0] == "m":  # medium
+        print()
         for i in range(len(ToDo)):
-          for j in range(len(ToDo[i])):
-            if ToDo[i][j].strip().lower()[0]=="m":
-              print(f"{ToDo[i][j]:^12}",end=" | ")
-          print()
-          
-      elif prior.strip().lower()[0] == "l": # low
+          if "medium" in ToDo[i]:
+            for element in ToDo[i]:
+              print(f"{element:^12}",end=" | ")
+            print()
+        print()
+
+      elif prior.strip().lower()[0] == "l":  # low
+        print()
         for i in range(len(ToDo)):
-          for j in range(len(ToDo[i])):
-            if ToDo[i][j].strip().lower()[0]=="l":
-              print(f"{ToDo[i][j]:^12}",end=" | ")
-          print()
-        
-        
+          if "low" in ToDo[i]:
+            for element in ToDo[i]:
+              print(f"{element:^12}",end=" | ")
+            print()
+        print()
+
     continue
   elif question.strip().lower()[0] == "e":
     word = input("what do you want to edit: ")
@@ -663,11 +671,16 @@ while True:
       if word == ToDo[i]:
         new = input("what do you want to replace with: ")
         ToDo[i] = new
-
         print()
         for i in range(len(ToDo)):
-          print(ToDo[i])
+          for j in range(len(ToDo[i])):
+            print(f"{ToDo[i][j]:^12}", end=" | ")
+          print()
         print()
+        """print()
+        for i in range(len(ToDo)):
+          print(ToDo[i])
+        print()"""
         time.sleep(2)
         os.system("clear")
         continue
