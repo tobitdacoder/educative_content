@@ -578,7 +578,7 @@ while True:
 ####################################################
 
  #  ToDo list management system
-import os,time
+import os, time
 
 ToDo = []
 
@@ -586,8 +586,15 @@ while True:
   question = input("what do you want to do next: ")
 
   if question.strip().lower()[0] == "a":
-    info = input("\nwhat do you want to add in your list: ")
-    ToDo.append(info)
+
+    Task = []  #we will append the elements of the task in this list
+    task = input("\nwhat task to add: ")
+    due = input("\nwhen is the due time: ")
+    importance = input("\nlevel of importance (High, medium, low): ")
+    Task = [task, due, importance]
+    ToDo.append(Task)  #we append the sub-list into the main list which is ToDO
+
+    ToDo.append(task)
     print()
     for i in range(len(ToDo)):
       print(ToDo[i])
@@ -611,13 +618,13 @@ while True:
     os.system("clear")
     continue
   elif question.strip().lower()[0] == "e":
-    word=input("what do you want to edit: ")
+    word = input("what do you want to edit: ")
     for i in range(len(ToDo)):
-      
+
       if word == ToDo[i]:
-        new=input("what do you want to replace with: ")
-        ToDo[i]=new
-        
+        new = input("what do you want to replace with: ")
+        ToDo[i] = new
+
         print()
         for i in range(len(ToDo)):
           print(ToDo[i])
@@ -625,6 +632,7 @@ while True:
         time.sleep(2)
         os.system("clear")
         continue
+
 
 
 
