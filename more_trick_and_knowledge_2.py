@@ -786,32 +786,62 @@ while True:
 
 #########################################
 
-import os,time
+# NEW GAME:  Top Trumps
+
+import os, time
+import random
+
 
 def prettyPrint():
-  for key,value in OurObjects.items():
-    print(key,": ",end="\t")
-    for subkey,subvalue in value.items():
-      print(subkey,subvalue,end=" |\t ")
+  for key, value in OurObjects.items():
+    print(key, ": ", end="\t")
+    for subkey, subvalue in value.items():
+      print(subkey, subvalue, end=" |\t ")
     print()
 
-OurObjects={}
+
+OurObjects = {}
 while True:
   print()
-  Name=input("what is the name of your avatar: ")
-  Intelligence=input("what is the % of intelligence: ")
-  Speed=input("what is your speed: ")
-  Strength_lev=input("what is your strength level: ")
+  Name = input("what is the name of your avatar: ")
+  Intelligence = input("what is the % of intelligence: ")
+  Speed = input("what is your speed: ")
+  Strength_lev = input("what is your strength level: ")
 
-  OurObjects[Name]={"intelligence":Intelligence,"speed":Speed,"strength":Strength_lev}
-  another=input("\nanother character? (y/n): ")
-  if another.strip().lower()[0]=="y":
+  OurObjects[Name] = {
+    "intelligence": Intelligence,
+    "speed": Speed,
+    "strength": Strength_lev
+  }
+  another = input("\nanother character? (y/n): ")
+  if another.strip().lower()[0] == "y":
     continue
   else:
     prettyPrint()
-    time.sleep(3)
+    time.sleep(1)
     os.system("clear")
     break
+
+
+while True:
+  print()
+  print("here are the characters: ")
+  print()
+  for key, value in OurObjects.items():
+    print(key)
+  print()
+  
+  choice = input("choose your character: ")
+  #for key,value in OurObjects.items():
+  if choice.strip().lower() in OurObjects.keys():
+    print("\nyou picked", choice)
+    
+    choice2 = random.choice(list(OurObjects.keys()))
+    print("The computer has chosen", choice2)
+  else:
+    print("\ndoes not exit, pick again")
+    continue
+  
   
   
 
