@@ -796,7 +796,7 @@ def prettyPrint():
   for key, value in OurObjects.items():
     print(key, ": ", end="\t")
     for subkey, subvalue in value.items():
-      print(subkey, subvalue, end=" |\t ")
+      print(subkey, subvalue, end="|\t")
     print()
 
 
@@ -804,7 +804,7 @@ OurObjects = {}
 while True:
   print()
   Name = input("what is the name of your avatar: ")
-  Intelligence = input("what is the % of intelligence: ")
+  Intelligence = int(input("what is the % of intelligence: "))
   Speed = input("what is your speed: ")
   Strength_lev = input("what is your strength level: ")
 
@@ -822,7 +822,6 @@ while True:
     os.system("clear")
     break
 
-
 while True:
   print()
   print("here are the characters: ")
@@ -830,17 +829,36 @@ while True:
   for key, value in OurObjects.items():
     print(key)
   print()
-  
+
   choice = input("choose your character: ")
   #for key,value in OurObjects.items():
   if choice.strip().lower() in OurObjects.keys():
     print("\nyou picked", choice)
-    
+
     choice2 = random.choice(list(OurObjects.keys()))
     print("The computer has chosen", choice2)
+
+    stat = input("\nchoose your stat to use: ")
+
+    if stat.strip().lower()[0:3] == "int":
+      #here we have to compare the intelligence of choice and choice2
+      if int(OurObjects[choice]["intelligence"]) > int(OurObjects[choice2]["intelligence"]):
+        print(choice,"is the winner")
+      else:
+        print("\nohhhhhhh nooooooooo")
+    elif stat.strip().lower()[0:3] == "spe":
+      #here we have to compare the speed of choice and choice2
+      pass
+    elif stat.strip().lower()[0:3] == "str":
+      #here we have to compare the strength of choice and choice2
+      pass
+    else:
+      print("\n this statistic name does not exist, try again")
+      continue
   else:
     print("\ndoes not exit, pick again")
     continue
+
   
   
   
