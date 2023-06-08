@@ -790,10 +790,10 @@ import os,time
 
 def prettyPrint():
   for key,value in OurObjects.items():
-    print(key,": ",end="")
-    for subkey,subvalue in OurObjects.items():
-      print(subkey,subvalue,end=" | ")
-
+    print(key,": ",end="\t")
+    for subkey,subvalue in value.items():
+      print(subkey,subvalue,end=" |\t ")
+    print()
 
 OurObjects={}
 while True:
@@ -809,7 +809,7 @@ while True:
     continue
   else:
     prettyPrint()
-    time.sleep()
+    time.sleep(3)
     os.system("clear")
     break
   
