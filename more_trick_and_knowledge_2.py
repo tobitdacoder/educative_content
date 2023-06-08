@@ -804,9 +804,9 @@ OurObjects = {}
 while True:
   print()
   Name = input("what is the name of your avatar: ")
-  Intelligence = int(input("what is the % of intelligence: "))
+  Intelligence = int(input("what is the % of intelligence 0-100: "))
   Speed = int(input("what is your speed 100-300: "))
-  Strength_lev = int(input("what is your strength level in % : "))
+  Strength_lev = int(input("what is your strength level in % 0-100: "))
 
   OurObjects[Name] = {
     "intelligence": Intelligence,
@@ -844,37 +844,45 @@ while True:
     if stat.strip().lower()[0:3] == "int":
       #here we have to compare the intelligence of choice and choice2
       if int(OurObjects[choice]["intelligence"]) > int(OurObjects[choice2]["intelligence"]):
-        print("\n"choice,",your choice is the SMARTEST")
+        print("\n",choice,",your choice is the SMARTEST 🧠")
         
-      elif int(OurObjects[choice]["intelligence"]) == int(OurObjects[choice2]["intelligence"]): :
+      elif int(OurObjects[choice]["intelligence"]) == int(OurObjects[choice2]["intelligence"]):
         print("\nthe fight is though, you are equal !!!")
         #continue
         
       elif int(OurObjects[choice]["intelligence"]) < int(OurObjects[choice2]["intelligence"]):
-        print("\n"choice2,", the computers choice is the SMARTEST")
+        print("\n",choice2,", the computers choice is the SMARTEST 🧠")
         
     #2nd STAT CHOICE  
     elif stat.strip().lower()[0:3] == "spe":
       #here we have to compare the speed of choice and choice2
       if int(OurObjects[choice]["speed"]) > int(OurObjects[choice2]["speed"]):
-        print("\n"choice,",your choice is the FASTEST")
+        print("\n",choice,",your choice is the FASTEST ⏩⏩")
         
       elif int(OurObjects[choice]["speed"]) == int(OurObjects[choice2]["speed"]):
         print("\nthe fight is though, you are equal !!!")
         
       elif int(OurObjects[choice]["speed"]) < int(OurObjects[choice2]["speed"]):
-        print("\n"choice2,", the computers choice is the SMARTEST")
+        print("\n",choice2,", the computers choice is the FASTEST ⏩⏩")
         
     #3rd STAT CHOICE  
     elif stat.strip().lower()[0:3] == "str":
       #here we have to compare the strength of choice and choice2
-      pass
+      if int(OurObjects[choice]["strength"]) > int(OurObjects[choice2]["strength"]):
+        print("\n",choice,",your choice is the STRONGEST 💪🏾💪🏾")
+        
+      elif int(OurObjects[choice]["strength"]) == int(OurObjects[choice2]["strength"]):
+        print("\nthe fight is though, you are equal !!!")
+        
+      elif int(OurObjects[choice]["strength"]) < int(OurObjects[choice2]["strength"]):
+        print("\n",choice2,", the computers choice is the STRONGEST 💪🏾💪🏾")
     else:
       print("\n this statistic name does not exist, try again")
       continue
   else:
     print("\ndoes not exit, pick again")
     continue
+
 
 
   
