@@ -805,8 +805,8 @@ while True:
   print()
   Name = input("what is the name of your avatar: ")
   Intelligence = int(input("what is the % of intelligence: "))
-  Speed = input("what is your speed: ")
-  Strength_lev = input("what is your strength level: ")
+  Speed = int(input("what is your speed 100-300: "))
+  Strength_lev = int(input("what is your strength level in % : "))
 
   OurObjects[Name] = {
     "intelligence": Intelligence,
@@ -839,16 +839,33 @@ while True:
     print("The computer has chosen", choice2)
 
     stat = input("\nchoose your stat to use: ")
-
+    
+    #1st STAT CHOICE
     if stat.strip().lower()[0:3] == "int":
       #here we have to compare the intelligence of choice and choice2
       if int(OurObjects[choice]["intelligence"]) > int(OurObjects[choice2]["intelligence"]):
-        print(choice,"is the winner")
-      else:
-        print("\nohhhhhhh nooooooooo")
+        print("\n"choice,",your choice is the SMARTEST")
+        
+      elif int(OurObjects[choice]["intelligence"]) == int(OurObjects[choice2]["intelligence"]): :
+        print("\nthe fight is though, you are equal !!!")
+        #continue
+        
+      elif int(OurObjects[choice]["intelligence"]) < int(OurObjects[choice2]["intelligence"]):
+        print("\n"choice2,", the computers choice is the SMARTEST")
+        
+    #2nd STAT CHOICE  
     elif stat.strip().lower()[0:3] == "spe":
       #here we have to compare the speed of choice and choice2
-      pass
+      if int(OurObjects[choice]["speed"]) > int(OurObjects[choice2]["speed"]):
+        print("\n"choice,",your choice is the FASTEST")
+        
+      elif int(OurObjects[choice]["speed"]) == int(OurObjects[choice2]["speed"]):
+        print("\nthe fight is though, you are equal !!!")
+        
+      elif int(OurObjects[choice]["speed"]) < int(OurObjects[choice2]["speed"]):
+        print("\n"choice2,", the computers choice is the SMARTEST")
+        
+    #3rd STAT CHOICE  
     elif stat.strip().lower()[0:3] == "str":
       #here we have to compare the strength of choice and choice2
       pass
@@ -858,6 +875,7 @@ while True:
   else:
     print("\ndoes not exit, pick again")
     continue
+
 
   
   
