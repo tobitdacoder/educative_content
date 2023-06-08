@@ -784,6 +784,36 @@ while True:
   Mokedex[Name]={"Type":Type,"Special move":Special_move,"Starting HP":HP,"Starting MP":MP}
   PrettyPrint()
 
+#########################################
+
+import os,time
+
+def prettyPrint():
+  for key,value in OurObjects.items():
+    print(key,": ",end="")
+    for subkey,subvalue in OurObjects.items():
+      print(subkey,subvalue,end=" | ")
+
+
+OurObjects={}
+while True:
+  print()
+  Name=input("what is the name of your avatar: ")
+  Intelligence=input("what is the % of intelligence: ")
+  Speed=input("what is your speed: ")
+  Strength_lev=input("what is your strength level: ")
+
+  OurObjects[Name]={"intelligence":Intelligence,"speed":Speed,"strength":Strength_lev}
+  another=input("\nanother character? (y/n): ")
+  if another.strip().lower()[0]=="y":
+    continue
+  else:
+    prettyPrint()
+    time.sleep()
+    os.system("clear")
+    break
+  
+  
 
 
 
