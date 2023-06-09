@@ -882,6 +882,24 @@ while True:
   else:
     print("\ndoes not exit, pick again")
     continue
+  
+#######################################
+
+# WRITE TO A FILE AND READ IT
+
+f = open("SavedFile.txt", "w") #this "f" variable is the one which point to a copy of the file in which we have to save content.
+f.write("hello there, am tobit")  #anything inside this bracket will be
+#  pushed into the file
+
+# this "write" will write to the file, each time it is called it will add to the bottom and can be called as many times as you want
+
+#the data should be a string, idealy, so cast it with str() if you get error
+
+#WE CAN USE MULTIPLE OF THESE "f.write" if we want too
+# te inforation we are adding here is going into the RAM
+f.close() # this is the line that will help us save our file after we've added new content to it. if we don't use this f.cloe(), the new content will  dissapear once we stop. 
+# THIS f.close() is the function that will send back the information to the file. it is the just oposite of "open()", which we started with.
+
 
 
 
