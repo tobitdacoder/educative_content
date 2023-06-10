@@ -924,6 +924,35 @@ FilePointer.close()
 
 
 
+# SO, here we are now reading the content of a file once it has been created:
+
+# first, here bellow, we create a filelist called filenames.list and we choose the mode to append and create file in it does not exist...
+
+"""f=open("finenames.list","a+")
+while True:
+  file=input("add file > ")
+  f.write(f"{file} \n")
+  quit=input("quit ?")
+  if quit.strip().lower()[0]=="y":
+    break
+f.close()"""
+
+# then here we are now reading the filename.list content by using the mode read ="r" ... inside the code we are using a loop to help us print the content of the file in a pretty way ... we can use f.read() to read the entire content, or f.readline() to read one line after another until the next content is a blank space so that the loop can stop.
+
+f=open("finenames.list","r")
+
+while True:
+  content=f.readline().strip() #this strip helps us remove the \n hided in the print function
+  print(content)
+  if content=="": #here we are just basically making sure that, while the loop will be readint the content of ou list, once the content reaches the last file in the list, instead of taking the emplty space as the next file to print and keep printing empty spaces, we tell it to break once the content is the empty space
+    break
+  
+#content=f.readline().strip()
+#print(content)
+#content=f.readline().strip()
+#print(content)
+f.close()
+
 
 
 
