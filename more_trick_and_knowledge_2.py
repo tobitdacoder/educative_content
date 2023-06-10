@@ -1002,24 +1002,24 @@ f=open("HighScore.txt","r")
 lists=[]
 highest=0 #to store the highest num
 
-while True:
-  content=f.readline()
+while True: #this loop will go through the file and print each line of content that we created
+  content=f.readline() #using this .readline() function, we will take one line at the time 
   if content=="":
     break
-  print(content.split())
-  lists.append(content.split())
+  print(content.split()) #then we print that line after splitting it to make that line a small list
+  lists.append(content.split()) #then we append that small list in a bigger one to use later.
 print()
-print(lists)
+print(lists) #here we print that filal big list containing the other sub-lists... THIS IS OPTIONAL
 
-for list in lists:
+for list in lists: #then now we are introducing the comparison to find the highest of the three scores in each of the lines of the file
   if int(list[1]) > highest:
     highest=int(list[1])
 print("\n")
-print(highest,"is the highest score, so\n")
+print(highest,"is the highest score, so") #then we print the innitials of the person with the highest score
 
 for list in lists:
   if highest==int(list[1]):
-    print("\n",list[0],"has the highest score")
+    print(list[0],"has the highest score")
 
 f.close()
 
