@@ -943,9 +943,11 @@ f=open("finenames.list","r")
 
 while True:
   content=f.readline().strip() #this strip helps us remove the \n hided in the print function
-  print(content)
+  
   if content=="": #here we are just basically making sure that, while the loop will be readint the content of ou list, once the content reaches the last file in the list, instead of taking the emplty space as the next file to print and keep printing empty spaces, we tell it to break once the content is the empty space
     break
+  
+  print(content) # we print here just to make sure we don't print even the blank space
   
 #content=f.readline().strip()
 #print(content)
