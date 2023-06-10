@@ -958,6 +958,75 @@ f.close()
 
 
 
+# WRITE TO A FILE AND READ IT
+
+f = open("SavedFile.txt", "w") #this "f" variable is the one which point to a copy of the file in which we have to save content.
+f.write("hello there, am tobit")  #anything inside this bracket will be
+#  pushed into the file
+
+# this "write" will write to the file, each time it is called it will add to the bottom and can be called as many times as you want
+
+#the data should be a string, idealy, so cast it with str() if you get error
+
+#WE CAN USE MULTIPLE OF THESE "f.write" if we want too
+# te inforation we are adding here is going into the RAM
+f.close() # this is the line that will help us save our file after we've added new content to it. if we don't use this f.cloe(), the new content will  dissapear once we stop. 
+# THIS f.close() is the function that will send back the information to the file. it is the just oposite of "open()", which we started with.
+
+
+#########################################
+
+"""THIS IS A SMALL PROGRAM THAT STORES scores and innitials in a local file so that they can be used later, hre we are using the 3 spets for using a local file (open the file, write in the file, and close the file to save the content)"""
+ 
+"""FilePointer=open("HighScore.txt","a+")
+
+while True:
+  initt=input("INITIALS (3) > ")
+  FilePointer.write(f"{initt} ")
+  score=int(input("SCORE |0-100,000| > "))
+  FilePointer.write(f"{score} \n")
+  print()
+  print("ADDED")
+  quit=input("\n finish?: ")
+  if quit.strip().lower()[0]=="y":
+    break
+  else:
+    print("\n")
+    continue
+  
+FilePointer.close()"""
+
+#after created the file, now, bellow, we are reading the content and do some printing magic with it
+
+f=open("HighScore.txt","r")
+lists=[]
+highest=0 #to store the highest num
+
+while True:
+  content=f.readline()
+  if content=="":
+    break
+  print(content.split())
+  lists.append(content.split())
+print()
+print(lists)
+
+for list in lists:
+  if int(list[1]) > highest:
+    highest=int(list[1])
+print("\n")
+print(highest,"is the highest score, so\n")
+
+for list in lists:
+  if highest==int(list[1]):
+    print("\n",list[0],"has the highest score")
+
+f.close()
+
+
+
+
+
 
 
 
