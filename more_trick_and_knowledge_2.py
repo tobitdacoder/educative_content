@@ -900,12 +900,30 @@ f.write("hello there, am tobit")  #anything inside this bracket will be
 f.close() # this is the line that will help us save our file after we've added new content to it. if we don't use this f.cloe(), the new content will  dissapear once we stop. 
 # THIS f.close() is the function that will send back the information to the file. it is the just oposite of "open()", which we started with.
 
+#########################################
+
+"""THIS IS A SMALL PROGRAM THAT STORES scores and innitials in a local file so that they can be used later, hre we are using the 3 spets for using a local file (open the file, write in the file, and close the file to save the content)"""
+ 
+FilePointer=open("HighScore.txt","a+")
+
+while True:
+  initt=input("INITIALS (3) > ")
+  FilePointer.write(f"{initt} ")
+  score=int(input("SCORE |0-100,000| > "))
+  FilePointer.write(f"{score} \n")
+  print()
+  print("ADDED")
+  quit=input("\n finish?: ")
+  if quit.strip().lower()[0]=="y":
+    break
+  else:
+    print("\n")
+    continue
+  
+FilePointer.close()
 
 
 
-  
-  
-  
 
 
 
