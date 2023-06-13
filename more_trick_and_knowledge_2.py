@@ -1048,8 +1048,14 @@ while True:
     for row in myEvents:
       if criteria in row:
         myEvents.remove(row)
+    prettyPrint()
         
   """ !!!!!! here is where we automatically save the chnges into our file by always overwriting the content of the file and replace it with the new content if the "myEvents" list """
+  
+  f=open("Myevents.txt","w") #here we use "w" coz we want to allways fully replace the previous content and put there the new one. 
+f.write(str(myEvents))  #always turn the array into a string by casting it with the str() function
+
+f.close()
 
 
 
