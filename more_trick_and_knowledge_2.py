@@ -1027,11 +1027,21 @@ f.close()
 
 myEvents = []
 
+f = open("myEvents.txt", "r")
+
+myEvents = eval(
+  f.read()
+)  #here we are using the reading method we learned, but here we are basiclly taking the list created before and read after it is alredy converted back into code (here, back into list) and is then re-assigned to myEvents so that, even after the end of the program, the content will already be saved in myEvents... so that it cnnot be erased. NOW THE 2D LIST IS ASSIGNED TO "mtEvents" and can later be prettyPrinted.
+
+f.close()
+
+
 def prettyPrint():
   print()
   for row in myEvents:
     print(f"{row[0] :^15} {row[1] :^15}")
   print()
+
 
 while True:
   menu = input("1: Add, 2: Remove\n")
@@ -1039,7 +1049,7 @@ while True:
   if menu == "1":
     event = input("What event?: ").capitalize()
     date = input("What date?: ")
-    row = [event,date]
+    row = [event, date]
     myEvents.append(row)
     prettyPrint()
 
@@ -1049,13 +1059,17 @@ while True:
       if criteria in row:
         myEvents.remove(row)
     prettyPrint()
-        
   """ !!!!!! here is where we automatically save the chnges into our file by always overwriting the content of the file and replace it with the new content if the "myEvents" list """
-  
-  f=open("Myevents.txt","w") #here we use "w" coz we want to allways fully replace the previous content and put there the new one. 
-f.write(str(myEvents))  #always turn the array into a string by casting it with the str() function
 
-f.close()
+  f = open(
+    "Myevents.txt", "w"
+  )  #here we use "w" coz we want to allways fully replace the previous content and put there the new one.
+  f.write(
+    str(myEvents)
+  )  #always turn the array into a string by casting it with the str() function
+
+  f.close()
+
 
 
 
