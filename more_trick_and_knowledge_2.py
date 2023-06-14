@@ -1061,6 +1061,97 @@ while True:
   f.write(str(myEvents))  #always turn the array into a string by casting it with the str() function
   f.close()
 
+################################################
+
+#THIS IS OUR ToDo LIST MANAGEMENT ADVANCED ( with auto-load and auto-save inside to make it even more safe and save the content in a local file)
+import os, time
+#from random import randint as rd
+
+ToDoLiiist = []
+
+###here is THE AUTO-LOADING of the text file content###
+
+f=open("MyToDo.txt","r")
+ToDoLiiist=eval(f.read()) #here we are passing the content of the text file to the ToDo list we created above
+f.close()
+
+def ToDo():
+  title = "ToDo list manager"
+  print(
+    f"{title:^60}" 
+  )  #here we re just using the previous knowledge we got from how to print a title in a specific position on the screen
+
+  time.sleep(3)
+  os.system("clear")
+
+  print("what do you want to do: ")
+  time.sleep(1)
+  print()
+
+  while True:
+    menu = input("\nDo you want to view, add, remove,exit or edit the todo list?: ")
+    
+    if menu.strip().lower()[0] == "a":
+      item = input("\nwhat do you want to add?: ")
+      if item in ToDoLiiist:
+        print("this already exist\n")
+        continue
+      else:
+        ToDoLiiist.append(item)
+
+    elif menu.strip().lower()[0] == "v":
+      for item in ToDoLiiist:
+        print(item)
+      time.sleep(2)
+      os.system("clear")
+
+    elif menu.strip().lower()[0] == "r":
+      item = input("\nwhat do you want to remove?: ")
+      if item in ToDoLiiist:
+        ToDoLiiist.remove(item)
+        
+    elif menu.strip().lower()[0:2] == "ex":
+      f=open("MyToDo.txt","r")
+      content=f.read()
+      print(content)
+      f.close()
+      break
+      
+    elif menu.strip().lower()[0] == "e":
+      for item in ToDoLiiist:
+        print(item)
+      time.sleep(3)
+
+      item_to_edit = input("what element do you want to edit:")
+      if item_to_edit in ToDoLiiist:
+
+        index = ToDoLiiist.index(
+          item_to_edit
+        )  #this is how we can store an index in a variable to use it later when we need to maybe, modify the list
+        newItem = input("what do you want to replace it with?")
+        ToDoLiiist[index] = newItem
+        #as you can see, here we have changed the element at the index we stored into something new or into a new task
+
+        for item in ToDoLiiist:
+          print(item)
+        time.sleep(3)
+        os.system("clear")
+    elif menu == "erase":
+
+      for item in ToDoLiiist:
+        ToDoLiiist.remove(item)
+      print("the ToDolist is empty now")
+
+    else:
+      print("invalid choice, try again")
+      continue
+
+    # here is our AUTO-SAVE code, we are erasing the content of the text file and replace it with the newuly edited list "the edited ToDoLiiist"
+    f=open("MyToDo.txt","w")
+    f.write(str(ToDoLiiist))
+    f.close()
+
+ToDo()
 
 
 
