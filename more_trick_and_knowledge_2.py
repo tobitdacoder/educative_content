@@ -1075,8 +1075,9 @@ try:
   f=open("MyToDo.txt","r")
   ToDoLiiist=eval(f.read()) #here we are passing the content of the text file to the ToDo list we created above
   f.close()
-except:
+except Exception as err: #here, this Exception means "every kind of error"
   print("ERROR: Unable to load, try again")
+  print(err) #then we print that error here, just after the warning that there is ab error
 
 def ToDo():
   title = "ToDo list manager"
