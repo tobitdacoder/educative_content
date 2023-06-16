@@ -1162,31 +1162,56 @@ ToDo()
 
 #######################################
 
-import os,time
-debugMode=False
-MyOrder=[]
+import os, time
 
+debugMode = False
+MyOrder = []
+
+#OUR TRY AND EXCEPT CODE
 try:
-  f=open("ORDERS.txt","r")
-  MyOrder=eval(f.read())
+  f = open("ORDERS.txt", "r")  #here we are reading the whole txt file
+  MyOrder = eval(f.read())
   f.close()
 except Exception as err:
   print("ERROR: the list does not exist, come later")
   print()
   print(err)
+  time.sleep(2)
 
+
+#OUR PRETTY PRINTING CODE
+def PrettyPrint():
+  print()
+  for row in MyOrder:
+    print(f"{row[0]} {row[1]} {row[2]}\n")
+  print()
+
+
+#HERE WE ARE JUST PRINTING OUR PIZZARIA SHOP NAME
+title = "\nPIZZA SHOP 🍕"
+print(f"{title:^12}")
+time.sleep(2)
+os.system("clear")
+
+#THEN, THIS IS OUR LOOP WHERE EVERY THING IS DONE
 while True:
-  name=input("your name please > ")
-  pizzaSize=input("what size (s,m,l) > ")
-  quantity=int(input("how many pizza please > "))
-  order=[name,pizzaSize,quantity]
+  name = input("your name please > ")
+  pizzaSize = input("what size (s,m,l) > ")
+  quantity = int(input("how many pizza please > "))
+  order = [name, pizzaSize, quantity]
   MyOrder.append(order)
-  another=input("\nanother order?: ")
-  if another.strip().lower()[0]=="y":
+  another = input("\nanother order?: ")
+  #THEN HERE WE TAKE THE LIST WITH ALL THE UPDATES AND WRITE IT IN THE .txt file
+  f = open("ORDERS.txt", "w")
+  f.write(str(MyOrder))
+  f.close()
+
+  if another.strip().lower()[0] == "y":
     continue
   else:
-    thanks="THANK YOU FOR THE ORDER"
+    thanks = "THANK YOU FOR THE ORDER"
     print(f"\n{thanks:^12}")
+
 
 
 
