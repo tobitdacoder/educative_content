@@ -1068,7 +1068,7 @@ import os, time
 #from random import randint as rd
 
 ToDoLiiist = []
-debugMode=False
+debugMode=False #this is just to help us decide wether we want to print the traceback or not.
 
 ###here is THE AUTO-LOADING of the text file content###
 
@@ -1159,6 +1159,34 @@ def ToDo():
     f.close()
 
 ToDo()
+
+#######################################
+
+import os,time
+debugMode=False
+MyOrder=[]
+
+try:
+  f=open("ORDERS.txt","r")
+  MyOrder=eval(f.read())
+  f.close()
+except Exception as err:
+  print("ERROR: the list does not exist, come later")
+  print()
+  print(err)
+
+while True:
+  name=input("your name please > ")
+  pizzaSize=input("what size (s,m,l) > ")
+  quantity=int(input("how many pizza please > "))
+  order=[name,pizzaSize,quantity]
+  MyOrder.append(order)
+  another=input("\nanother order?: ")
+  if another.strip().lower()[0]=="y":
+    continue
+  else:
+    thanks="THANK YOU FOR THE ORDER"
+    print(f"\n{thanks:^12}")
 
 
 
