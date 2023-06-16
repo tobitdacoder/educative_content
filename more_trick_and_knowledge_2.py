@@ -1071,9 +1071,12 @@ ToDoLiiist = []
 
 ###here is THE AUTO-LOADING of the text file content###
 
-f=open("MyToDo.txt","r")
-ToDoLiiist=eval(f.read()) #here we are passing the content of the text file to the ToDo list we created above
-f.close()
+try:
+  f=open("MyToDo.txt","r")
+  ToDoLiiist=eval(f.read()) #here we are passing the content of the text file to the ToDo list we created above
+  f.close()
+except:
+  print("ERROR: Unable to load, try again")
 
 def ToDo():
   title = "ToDo list manager"
