@@ -1068,6 +1068,7 @@ import os, time
 #from random import randint as rd
 
 ToDoLiiist = []
+debugMode=False
 
 ###here is THE AUTO-LOADING of the text file content###
 
@@ -1078,6 +1079,8 @@ try:
 except Exception as err: #here, this Exception means "every kind of error"
   print("ERROR: Unable to load, try again")
   print(err) #then we print that error here, just after the warning that there is ab error
+  if debugMode: #here we say, if debugMode is true, then print the traceback message without breaking the code
+    print(traceback) #here the traceback will print many error info we want as software devellopers, we can turn the debugMode manually to false if we don't want the users to see it at their side.
 
 def ToDo():
   title = "ToDo list manager"
