@@ -1183,7 +1183,7 @@ except Exception as err:
 def PrettyPrint():
   print()
   for row in MyOrder:
-    print(f"{row[0]} {row[1]} {row[2]}\n")
+    print(f"{row[0]} {row[1]} {row[2]} {row[3]} \n",end="|")
   print()
 
 
@@ -1195,22 +1195,40 @@ os.system("clear")
 
 #THEN, THIS IS OUR LOOP WHERE EVERY THING IS DONE
 while True:
-  name = input("your name please > ")
-  pizzaSize = input("what size (s,m,l) > ")
-  quantity = int(input("how many pizza please > "))
-  order = [name, pizzaSize, quantity]
-  MyOrder.append(order)
-  another = input("\nanother order?: ")
-  #THEN HERE WE TAKE THE LIST WITH ALL THE UPDATES AND WRITE IT IN THE .txt file
-  f = open("ORDERS.txt", "w")
-  f.write(str(MyOrder))
-  f.close()
-
-  if another.strip().lower()[0] == "y":
+  print()
+  print("1. add pizza command")
+  print("2. view pizza command list")
+  choice=input("> ")
+  
+  if choice==1:
+    name = input("your name please > ")
+    pizzaSize = input("what size (s,m,l) > ")
+    topping=input("pizza toping > ")
+    quantity = int(input("how many pizza please > "))
+    order = [name, pizzaSize,topping, quantity]
+    MyOrder.append(order)
+    another = input("\nanother order?: ")
+    #THEN HERE WE TAKE THE LIST WITH ALL THE UPDATES AND WRITE IT IN THE .txt file
+    f = open("ORDERS.txt", "w")
+    f.write(str(MyOrder))
+    f.close()
+  
+    if another.strip().lower()[0] == "y":
+      continue
+    else:
+      thanks = "THANK YOU FOR THE ORDER"
+      print(f"\n{thanks:^12}")
+      
+  elif choice==2:
+    PrettyPrint()
+    time.sleep(2)
+    os.system("clear")
     continue
   else:
-    thanks = "THANK YOU FOR THE ORDER"
-    print(f"\n{thanks:^12}")
+    print("wrong choice, try again")
+    time.sleep(1)
+    continue
+
 
 
 
