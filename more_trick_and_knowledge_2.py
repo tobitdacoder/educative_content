@@ -1161,7 +1161,6 @@ def ToDo():
 ToDo()
 
 #######################################
-
 import os, time
 
 debugMode = False
@@ -1169,6 +1168,7 @@ MyOrder = []
 
 #OUR TRY AND EXCEPT CODE
 try:
+  #HERE IS OUR AUTO-LOAD
   f = open("ORDERS.txt", "r")  #here we are reading the whole txt file
   MyOrder = eval(f.read())
   f.close()
@@ -1182,8 +1182,9 @@ except Exception as err:
 #OUR PRETTY PRINTING CODE
 def PrettyPrint():
   print()
+  print("name    pizzaSize   topping   quantity   TotCost\n",end="\t") #just for the table printing
   for row in MyOrder:
-    print(f"{row[0]} {row[1]} {row[2]} {row[3]} \n",end="|")
+    print(f"{row[0]}        {row[1]}        {row[2]}        {row[3]}        {row[4]} \n",end="\t")
   print()
 
 
@@ -1198,14 +1199,38 @@ while True:
   print()
   print("1. add pizza command")
   print("2. view pizza command list")
-  choice=input("> ")
+  try:
+    choice=int(input("> "))
+  except Exception as err:
+    print("an integer please")
+    print(err)
+    continue
   
   if choice==1:
+    
     name = input("your name please > ")
     pizzaSize = input("what size (s,m,l) > ")
+    if pizzaSize.strip().lower()[0]=="s":
+      price=30000
+    elif pizzaSize.strip().lower()[0]=="m":
+      price=40000
+    elif pizzaSize.strip().lower()[0]=="l":
+      price=55000
+    else:
+      print("does not exist, try again")
+      time.sleep(1)
+      os.system("clear")
+      continue
     topping=input("pizza toping > ")
-    quantity = int(input("how many pizza please > "))
-    order = [name, pizzaSize,topping, quantity]
+    
+    try:
+      quantity = int(input("how many pizza please > "))
+    except Exception as err:
+      print("this is not the right data type, please put a number")
+      print(err)
+      
+    TotCost=price*quantity #the total cost
+    order = [name, pizzaSize,topping, quantity,TotCost]
     MyOrder.append(order)
     another = input("\nanother order?: ")
     #THEN HERE WE TAKE THE LIST WITH ALL THE UPDATES AND WRITE IT IN THE .txt file
@@ -1221,13 +1246,15 @@ while True:
       
   elif choice==2:
     PrettyPrint()
-    time.sleep(2)
+    time.sleep(5)
     os.system("clear")
+    
     continue
   else:
     print("wrong choice, try again")
-    time.sleep(1)
+    time.sleep(1) 
     continue
+
 
 
 
