@@ -1266,6 +1266,7 @@ import os, time, random
 
 Inventory = []
 
+#this down here is our AUTO-LOAD feature, that helps us to load the content of the .txt file from the local file to the "Inventory=[] list"
 try:
   f = open("Inventory.txt", "r")
   Inventory = eval(f.read())
@@ -1276,7 +1277,8 @@ except Exception as err:
 
 
 #our pretty printing function or subroutine is here
-def prettyPrint():
+def prettyPrint(
+):  #this just helps us to print the content of the list in a nice way!
   print()
   for object in Inventory:
     print(object, end="\n")
@@ -1324,6 +1326,9 @@ while True:
 
   elif choice == 4:
     pass
+
+
+
 
 
 
