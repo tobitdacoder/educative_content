@@ -1265,6 +1265,7 @@ while True:
 import os, time, random
 
 Inventory = []
+
 try:
   f = open("Inventory.txt", "r")
   Inventory = eval(f.read())
@@ -1272,6 +1273,15 @@ try:
 except Exception as err:
   print("ERROR: you made an error\n")
   print(err)
+
+
+#our pretty printing function or subroutine is here
+def prettyPrint():
+  print()
+  for object in Inventory:
+    print(object, end="\n")
+  print()
+
 
 title = """INVENTORY
 ========="""
@@ -1285,14 +1295,34 @@ while True:
   print("1. Add")
   print("2. View")
   print("3. Remove")
+  print("4. Done")
   print()
-  choice = int(input("> "))
+  choice = int(input("\n> "))
   if choice == 1:
     Item = input("what item do you want to add: ").capitalize()
     Inventory.append(Item)
+    #here we deliberatelly allow duplicate of items
   elif choice == 2:
-    pass
+    prettyPrint()  #we are just printing the content of the list
+    time.sleep(3)
+    os.system("clear")
+    continue
+
   elif choice == 3:
+    prettyPrint()
+    print()
+    iitem = input("what item do you want to remove: ")
+    if iitem in Inventory:
+      print(iitem, "has been removed from the inventory")
+      Inventory.remove(iitem)
+    print()
+    prettyPrint()
+    print()
+    time.sleep(3)
+    os.system("clear")
+    continue
+
+  elif choice == 4:
     pass
 
 
