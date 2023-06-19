@@ -1262,16 +1262,39 @@ while True:
 
 # INVENTORY SYSTEM
 
-import os,time,random
+import os, time, random
 
-Inventory=[]
+Inventory = []
 try:
-  f=open("Inventory.txt","r")
-  Inventory=eval(f.read())
+  f = open("Inventory.txt", "r")
+  Inventory = eval(f.read())
   f.close
 except Exception as err:
   print("ERROR: you made an error\n")
   print(err)
+
+title = """INVENTORY
+========="""
+
+print(f"{title:^12}")
+time.sleep(2)
+os.system("clear")
+
+while True:
+  print()
+  print("1. Add")
+  print("2. View")
+  print("3. Remove")
+  print()
+  choice = int(input("> "))
+  if choice == 1:
+    Item = input("what item do you want to add: ").capitalize()
+    Inventory.append(Item)
+  elif choice == 2:
+    pass
+  elif choice == 3:
+    pass
+
 
 
 
