@@ -1170,7 +1170,7 @@ MyOrder = []
 try:
   #HERE IS OUR AUTO-LOAD
   f = open("ORDERS.txt", "r")  #here we are reading the whole txt file
-  MyOrder = eval(f.read())
+  MyOrder = eval(f.read()) #here we are assigning the .txt file content to our list
   f.close()
 except Exception as err:
   print("ERROR: the list does not exist, come later")
@@ -1254,6 +1254,24 @@ while True:
     print("wrong choice, try again")
     time.sleep(1) 
     continue
+
+###############################################
+
+# TODAY WE ARE AT DAY 53 AND IT IS A CHALLENGE DAY!!!
+# WE ARE CREATING AN INVENTORY SYSTEM
+
+# INVENTORY SYSTEM
+
+import os,time,random
+
+Inventory=[]
+try:
+  f=open("Inventory.txt","r")
+  Inventory=eval(f.read())
+  f.close
+except Exception as err:
+  print("ERROR: you made an error\n")
+  print(err)
 
 
 
