@@ -1265,31 +1265,24 @@ while True:
 import os, time, random
 
 Inventory = []
+count=0
+UniqueInventory=[]
 
 #this down here is our AUTO-LOAD feature, that helps us to load the content of the .txt file from the local file to the "Inventory=[] list"
 try:
   f = open("Inventory.txt", "r")
   Inventory = eval(f.read())
-  f.close
+  f.close()
 except Exception as err:
   print("ERROR: you made an error\n")
   print(err)
+  
+title1 = "INVENTORY"
+title2="========="
 
-
-#our pretty printing function or subroutine is here
-def prettyPrint(
-):  #this just helps us to print the content of the list in a nice way!
-  print()
-  for object in Inventory:
-    print(object, end="\n")
-  print()
-
-
-title = """INVENTORY
-========="""
-
-print(f"{title:^12}")
-time.sleep(2)
+print(f"\n{title1:^60}")
+print(f"\n{title2:^60}")
+time.sleep(4)
 os.system("clear")
 
 while True:
@@ -1299,33 +1292,53 @@ while True:
   print("3. Remove")
   print("4. Done")
   print()
-  choice = int(input("\n> "))
-  if choice == 1:
-    Item = input("what item do you want to add: ").capitalize()
+  try:
+    choice = int(input("\n> "))
+  except Exception as err:
+    print("ERROR: only an integer in the range: 1-3")
+    print(err)
+    time.sleep(2)
+    
+  
+  if choice == 1: # add
+    Item = input("what item do you want to add: ").capitalize() 
     Inventory.append(Item)
-    #here we deliberatelly allow duplicate of items
-  elif choice == 2:
-    prettyPrint()  #we are just printing the content of the list
-    time.sleep(3)
-    os.system("clear")
-    continue
 
-  elif choice == 3:
-    prettyPrint()
+    for Item in Inventory:
+      count=Inventory.count(Item)
+      if count<=1:
+        UniqueInventory.append(Item)
+    
+    #here we deliberatelly allow duplicate of items
+  elif choice == 2: # view
+    
+    print("Inventory with Counts:\n")
+    
+    for item in UniqueInventory: 
+      count=Inventory.count(item)
+      print(f"{item} : {count}")
+    print()
+    print(UniqueInventory)
+    time.sleep(3)
+    os.system("clear")  #we are just printing the content of the list
+    
+    continue
+  elif choice == 3: # remove
+    
     print()
     iitem = input("what item do you want to remove: ")
     if iitem in Inventory:
       print(iitem, "has been removed from the inventory")
       Inventory.remove(iitem)
     print()
-    prettyPrint()
-    print()
     time.sleep(3)
     os.system("clear")
     continue
-
-  elif choice == 4:
-    pass
+  #elif choice == 4:
+    #pass
+  f = open("Inventory.txt", "w")
+  f.write(str(Inventory))
+  f.close()
 
 
 
