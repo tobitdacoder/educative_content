@@ -1266,14 +1266,14 @@ import os, time, random
 
 Inventory = [] # this is our main inventory system, it contains 
 count=0 # this will keep counting the repeated element of the list (it stores the .count() function aplied on a specific element of a list
-UniqueInventory=[] #
+UniqueInventory=[] # this list will store the unique items.
 
 #this down here is our AUTO-LOAD feature, that helps us to load the content of the .txt file from the local file to the "Inventory=[] list"
 try:
   f = open("Inventory.txt", "r")
   Inventory = eval(f.read())
   f.close()
-except Exception as err:
+except Exception as err: # this is our exception handler that will handle any error coming from the text file creation or opening.
   print("ERROR: you made an error\n")
   print(err)
   
@@ -1285,7 +1285,7 @@ print(f"\n{title2:^60}")
 time.sleep(4)
 os.system("clear")
 
-while True:
+while True: #this is where our program stars ... here we are just making sure to ask to the user what action to do and depending on his choice, a cycle of automated actions will start as a loop until we stop it. 
   print()
   print("1. Add")
   print("2. View")
