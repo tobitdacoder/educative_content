@@ -1264,9 +1264,9 @@ while True:
 
 import os, time, random
 
-Inventory = []
-count=0
-UniqueInventory=[]
+Inventory = [] # this is our main inventory system, it contains 
+count=0 # this will keep counting the repeated element of the list (it stores the .count() function aplied on a specific element of a list
+UniqueInventory=[] #
 
 #this down here is our AUTO-LOAD feature, that helps us to load the content of the .txt file from the local file to the "Inventory=[] list"
 try:
@@ -1318,12 +1318,12 @@ while True:
       count=Inventory.count(item)
       print(f"{item} : {count}")
     print()
-    print(UniqueInventory)
+    print(UniqueInventory) #this is the list we created to contain only the element once, not repeated ones.
     time.sleep(3)
     os.system("clear")  #we are just printing the content of the list
     
     continue
-  elif choice == 3: # remove
+  elif choice == 3: # remove 
     
     print()
     iitem = input("what item do you want to remove: ")
@@ -1337,7 +1337,7 @@ while True:
   #elif choice == 4:
     #pass
   f = open("Inventory.txt", "w")
-  f.write(str(Inventory))
+  f.write(str(Inventory)) #here we are now resending the content of the list in the text file after casting it into string. this is very important.
   f.close()
 
 
