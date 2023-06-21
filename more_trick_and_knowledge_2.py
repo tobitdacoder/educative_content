@@ -1339,6 +1339,19 @@ while True: #this is where our program stars ... here we are just making sure to
   f = open("Inventory.txt", "w")
   f.write(str(Inventory)) #here we are now resending the content of the list in the text file after casting it into string. this is very important.
   f.close()
+  
+  
+#####################################################
+
+# this is the new topic we are learning on day 54/100 of REPLIT 
+# here we are learning how to access, to print the coontent of a CSV file
+
+import csv
+
+with open("January.csv") as file:
+  reader=csv.reader(file)
+  for row in reader:
+    print(row)
 
 
 
