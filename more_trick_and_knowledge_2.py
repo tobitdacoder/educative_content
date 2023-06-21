@@ -1351,7 +1351,7 @@ import csv
 with open("January.csv") as file:
   reader=csv.reader(file)
   for row in reader:
-    print(row)
+    print(",\t".join(row)) # this .join() function helps us to combine lists in a more interewsting way. Here the \t is the tab, in order to print them in a nicer way
 
 
 
