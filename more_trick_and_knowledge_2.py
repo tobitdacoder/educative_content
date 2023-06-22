@@ -1357,10 +1357,20 @@ with open("January.csv") as file:
 
 import csv
 
+total=0.0
+
 with open("January.csv") as file:
-  reader=csv.DictReader(file) # here we are now changing it into a dictionary so that we can print only the wanted column using the column name (which is the key for our dictionary)
+  reader = csv.DictReader(file)  # here we are now changing it into a dictionary so that we can print only the wanted column using the column name (which is the key for our dictionary)
+
+  # this DictReader() read the file content and turn each row into a dictionary.
   for row in reader:
-    print(row["Net Total"]) # here we are now treating each row as a dictionary, and "Net Total" is a key that holds values for each day. so here we are printing the Net total for each 
+    print(row["Net Total"])  # here we are now treating each row as a dictionary, and "Net Total" is a key that holds values for each day. so here we are printing the Net total for each.
+    #in the csv file, the key is the heading of each column (each value in the column Net Total) is a net total of that specific day (that is why, each day we are picking only the Net Total key to print one after another for each day of the January month)
+    total+=float(row["Net Total"])
+  print()
+  print("the Total is:",total,"and this is the benefit you made this month")
+    
+ 
   
 
 
