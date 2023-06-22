@@ -1344,14 +1344,24 @@ while True: #this is where our program stars ... here we are just making sure to
 #####################################################
 
 # this is the new topic we are learning on day 54/100 of REPLIT 
-# here we are learning how to access, to print the coontent of a CSV file
-
+# here we are learning how to access, to print the content of a CSV file
+"""
 import csv
 
 with open("January.csv") as file:
   reader=csv.reader(file)
   for row in reader:
-    print(",\t".join(row)) # this .join() function helps us to combine lists in a more interewsting way. Here the \t is the tab, in order to print them in a nicer way
+    print(",\t".join(row)) # this .join() function helps us to combine lists in a more interesting way. Here the \t is the tab, in order to print them in a nice way
+""" 
+
+
+import csv
+
+with open("January.csv") as file:
+  reader=csv.DictReader(file) # here we are now changing it into a dictionary so that we can print only the wanted column using the column name (which is the key for our dictionary)
+  for row in reader:
+    print(row["Net Total"]) # here we are now treating each row as a dictionary, and "Net Total" is a key that holds values for each day. so here we are printing the Net total for each 
+  
 
 
 
