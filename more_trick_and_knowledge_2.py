@@ -1372,16 +1372,20 @@ with open("January.csv") as file:
   
   ####################################################
   
-  import csv
+#DAY REVENUE COUNTER FROM .csv files
 
-DayRevenue=0.0
+import csv #here we are basically importing the csv library in order to use it ( it allows us to interpret and deal with files having a csv extention.)
 
-with open("Day54Totals.csv") as file:
-  reader=csv.DictReader(file)
-  for row in reader:
+DayRevenue=0.0 
+
+with open("Day54Totals.csv") as file: # here we open the csv file we were given
+  reader=csv.DictReader(file) #then here we store the content of that file into a file (after we turned eac row of the file into a small dictionary)
+  for row in reader: #then we are now computing the result by using the key names for each row
     ProductRevenue=float(row["Cost"])*int(row["Quantity"])
     DayRevenue+=ProductRevenue
 print(f"The total for this day is: ${DayRevenue:.2f}")
+    
+
     
  
   
