@@ -1369,6 +1369,19 @@ with open("January.csv") as file:
     total+=float(row["Net Total"])
   print()
   print("the Total is:",total,"and this is the benefit you made this month")
+  
+  ####################################################
+  
+  import csv
+
+DayRevenue=0.0
+
+with open("Day54Totals.csv") as file:
+  reader=csv.DictReader(file)
+  for row in reader:
+    ProductRevenue=float(row["Cost"])*int(row["Quantity"])
+    DayRevenue+=ProductRevenue
+print(f"The total for this day is: ${DayRevenue:.2f}")
     
  
   
