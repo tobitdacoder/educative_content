@@ -1390,7 +1390,14 @@ print(f"The total for this day is: ${DayRevenue:.2f}")
 #DAY 55: The os library
 
 import os 
-print (os.listdir()) #we are going to use os.listdir() to print all the files in the directory or folder you are curently in.
+print (os.listdir()) #we are going to use os.listdir() to print all the files in the directory or folder you are curently in. this is to check if a file is in a directory we think it is in.
+
+# this is saved as a list and can be accessed as a list after we stored os.listdir() in a variable (a list variable)
+listt = os.listdir() #here we are storing the conent in a list variable name
+if "rere.py" not in listt:
+  print("\nERROR: file not found")
+
+os.mkdir("hello") #here we are creating a new folder with this command os.mkdir("{name of folder}")
     
 
     
