@@ -1384,6 +1384,13 @@ with open("Day54Totals.csv") as file: # here we open the csv file we were given
     ProductRevenue=float(row["Cost"])*int(row["Quantity"])
     DayRevenue+=ProductRevenue
 print(f"The total for this day is: ${DayRevenue:.2f}")
+
+###################################
+
+#DAY 55: The os library
+
+import os 
+print (os.listdir()) #we are going to use os.listdir() to print all the files in the directory or folder you are curently in.
     
 
     
