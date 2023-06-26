@@ -1388,8 +1388,9 @@ print(f"The total for this day is: ${DayRevenue:.2f}")
 ###################################
 
 #DAY 55: The os library
-
 import os 
+
+
 print (os.listdir()) #we are going to use os.listdir() to print all the files in the directory or folder you are curently in. this is to check if a file is in a directory we think it is in.
 
 # this is saved as a list and can be accessed as a list after we stored os.listdir() in a variable (a list variable)
@@ -1399,8 +1400,17 @@ if "rere.py" not in listt:
 
 os.mkdir("hello") #here we are creating a new folder with this command os.mkdir("{name of folder}")
 
-os.rename("{name of file to rename}","{the new name here}") #here is when we want to rename a file 
+os.rename("{name of file to rename}","{the new name here}") #here is when we want to rename a file
 
+
+filename=os.path.join(" DirectoryX "," FileX.txt ")
+#filename=os.path.join(" name of folder or path "," file  name ")
+
+#here we are storing the text file in thew filename variable, and to reach it, we need to open the folder "like ours, "the DirectoryX" .. here, we are joining the directory and the file, using the os.path.join(" "," "), thi will join the folder and the file in a chronological way (just the way we see in the terminal)
+f=open(filename,"w")
+f.write("hi") # here we are basicaly addinng "hi" to the file FileX.txt which is in the drectory DirectoryX 
+              # then we can now write something in it  
+f.close()
 
 
     
