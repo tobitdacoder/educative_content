@@ -1398,6 +1398,11 @@ if "rere.py" not in listt:
   print("\nERROR: file not found")
 
 os.mkdir("hello") #here we are creating a new folder with this command os.mkdir("{name of folder}")
+
+os.rename("{name of file to rename}","{the new name here}") #here is when we want to rename a file 
+
+
+
     
 
     
