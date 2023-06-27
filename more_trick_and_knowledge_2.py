@@ -1412,6 +1412,104 @@ f.write("hi") # here we are basicaly addinng "hi" to the file FileX.txt which is
               # then we can now write something in it  
 f.close()
 
+###########################################
+
+import os
+import time
+import ast
+
+ToDoLiiist = []
+
+###here is THE AUTO-LOADING of the text file content###
+
+if not os.path.exists("backupFolderr"):
+  os.mkdir("backupFolderr")
+  #now, our folder has been created, now let us create the file using the os
+filename = os.path.join("backupFolderr", "NewFile.txt")
+#this is the filenae that we will use as our text file to write in using the auto-save feature at the end of the code ... here NewFile.txt is the one which is used everytime we will use "filename" the os.path.join just shows the path to use
+
+try:
+  with open(
+      "NewFile.txt", "r"
+  ) as f:  #this is the easiest way to open and automatically close a local file
+    ToDoLiiist = ast.literal_eval(
+      f.read()
+    )  # By using ast.literal_eval() instead of eval(), it ensures that only safe Python literals are evaluated, preventing the execution of potentially harmful code. It provides a safer alternative for evaluating the content of the file as compared to using eval()
+except Exception as err:
+  print(err)
+
+
+def ToDo():
+  title = "ToDo list manager"
+  print(f"{title:^60}")
+  time.sleep(3)
+  os.system("clear")
+
+  print("What do you want to do:")
+  time.sleep(1)
+  print()
+
+  while True:
+    menu = input(
+      "\nDo you want to view, add, remove, exit, or edit the todo list?: ")
+
+    if menu.strip().lower()[0] == "a":
+      item = input("\nWhat do you want to add?: ")
+      if item in ToDoLiiist:
+        print("This already exists.\n")
+        continue
+      else:
+        ToDoLiiist.append(item)
+
+    elif menu.strip().lower()[0] == "v":
+      for item in ToDoLiiist:
+        print(item)
+      time.sleep(2)
+      os.system("clear")
+
+    elif menu.strip().lower()[0] == "r":
+      item = input("\nWhat do you want to remove?: ")
+      if item in ToDoLiiist:
+        ToDoLiiist.remove(item)
+
+    elif menu.strip().lower()[0:2] == "ex":
+      with open("NewFile.txt", "r") as f:
+        content = f.read()
+      print(content)
+      break
+
+    elif menu.strip().lower()[0] == "e":
+      for item in ToDoLiiist:
+        print(item)
+      time.sleep(3)
+
+      item_to_edit = input("What element do you want to edit:")
+      if item_to_edit in ToDoLiiist:
+        index = ToDoLiiist.index(item_to_edit)
+        newItem = input("What do you want to replace it with?")
+        ToDoLiiist[index] = newItem
+
+        for item in ToDoLiiist:
+          print(item)
+        time.sleep(3)
+        os.system("clear")
+    elif menu == "erase":
+      ToDoLiiist.clear()
+      print("The ToDo list is empty now.")
+
+    else:
+      print("Invalid choice, try again")
+      continue
+
+  # Here is our AUTO-SAVE code. We are erasing the content of the text file and replacing it with the newly edited list "ToDoLiiist"
+
+  with open(filename, "w") as f:
+    f.write(str(ToDoLiiist))
+
+
+ToDo()
+
+
 
     
 
