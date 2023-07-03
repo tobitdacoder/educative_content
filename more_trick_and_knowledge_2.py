@@ -1194,7 +1194,7 @@ print(f"{title:^12}")
 time.sleep(2)
 os.system("clear")
 
-#THEN, THIS IS OUR LOOP WHERE EVERY THING IS DONE
+#THEN, THIS-p[[]] IS OUR LOOP WHERE EVERY THING IS DONE
 while True:
   print()
   print("1. add pizza command")
@@ -1385,7 +1385,7 @@ with open("Day54Totals.csv") as file: # here we open the csv file we were given
     DayRevenue+=ProductRevenue
 print(f"The total for this day is: ${DayRevenue:.2f}")
 
-###################################
+###############################################################
 
 #DAY 55: The os library
 import os 
@@ -1430,11 +1430,11 @@ filename = os.path.join("backupFolderr", "NewFile.txt")
 
 try:
   with open(
-      "NewFile.txt", "r"
+      filename, "r"
   ) as f:  #this is the easiest way to open and automatically close a local file
     ToDoLiiist = ast.literal_eval(
       f.read()
-    )  # By using ast.literal_eval() instead of eval(), it ensures that only safe Python literals are evaluated, preventing the execution of potentially harmful code. It provides a safer alternative for evaluating the content of the file as compared to using eval()
+    )  # By using ast.literal_eval() in stead of eval(), it ensures that only safe Python literals are evaluated, preventing the execution of potentially harmful code. It provides a safer alternative for evaluating the content of the file as compared to using eval()
 except Exception as err:
   print(err)
 
@@ -1509,6 +1509,24 @@ def ToDo():
 
 ToDo()
 
+
+###########################################################
+
+#DAY 56 challenge: 
+
+import csv
+import ast
+import os,time
+
+songs=[]
+with open("100MostStreamedSongs.csv") as Songs:
+  songs=csv.DictReader(Songs)
+  for row in songs:
+    print(row,end="\n")
+
+os.mrdir("Ed Sheeran")
+EdFile=os.path.join("Ed Sheeran","")
+os.mrdir("The Weeknd")
 
 
     
