@@ -1519,9 +1519,10 @@ import ast
 import os
 import time
 
-
 songs=[]
 artists=[]
+Directories=[]
+artistSongs=[]
 
 #first, we open the csv file in order to get what is inside
 
@@ -1533,12 +1534,19 @@ with open("100MostStreamedSongs.csv") as Songs:
 
     if not os.path.exists(row["Artist(s)"]):
       os.mkdir(row["Artist(s)"])
+    Directories.append(row["Artist(s)"])
+    #artistSongs.append(row["Song"])
+  extension=".txt"
+  for Artist in Directories:
+    for rows in songs:
+      if rows["Artist(s)"]==Artist:
+        if not os.path.exists(os.path.join(Artist,rows["Song"]+extension)):
+          rows["Song"]= os.path.join(Artist,rows["Song"]+extension)
     
-    """if os.path.exists(row["Artist(s)"]):
-      os.rmdir(row["Artist(s)"])"""
-
-  
-#now we create a folder for each ARTIST
+    #if os.path.exists(row["Artist(s)"]):
+      #os.rmdir(row["Artist(s)"])
+    # also os.rmdir(name of directory in "") if you ... 
+    # ... want to remove a directory
 
 
 
