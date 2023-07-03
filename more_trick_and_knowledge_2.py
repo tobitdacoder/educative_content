@@ -1516,17 +1516,30 @@ ToDo()
 
 import csv
 import ast
-import os,time
+import os
+import time
+
 
 songs=[]
+artists=[]
+
+#first, we open the csv file in order to get what is inside
+
 with open("100MostStreamedSongs.csv") as Songs:
   songs=csv.DictReader(Songs)
   for row in songs:
-    print(row,end="\n")
+    #print(row,end="\n")
+    #artists.append(row["Artist(s)"])
 
-os.mrdir("Ed Sheeran")
-EdFile=os.path.join("Ed Sheeran","")
-os.mrdir("The Weeknd")
+    if not os.path.exists(row["Artist(s)"]):
+      os.mkdir(row["Artist(s)"])
+    
+    """if os.path.exists(row["Artist(s)"]):
+      os.rmdir(row["Artist(s)"])"""
+
+  
+#now we create a folder for each ARTIST
+
 
 
     
