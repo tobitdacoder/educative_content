@@ -1553,15 +1553,18 @@ with open("100MostStreamedSongs.csv") as Songs:
 # DAY 57: recursive function (we call a function in itself)
 
 def reverse(value):
-  if value <=0:
+  if value <=0: # first we check if the number is allowed
     print("done! ")
     return
   else:
     for i in range(value):
       print("🥳", end="")
     print()
-    reverse(value-2)
-reverse(10)
+    reverse(value-1) # here is where the fuction calls itself
+reverse(30)
+
+# ITERATION COMES IN WHEN WE WANT TO USE THE SAME PROGRAM BUT WITH A DIFFERENT NUMBER. IT ALSO COMES TO SOLVE MATH PROBLEMS IN A MUCH HUMAN WAY.
+
 
 
 
