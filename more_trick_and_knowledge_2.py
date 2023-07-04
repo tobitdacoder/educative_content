@@ -1519,10 +1519,10 @@ import ast
 import os
 import time
 
-songs=[]
-artists=[]
-Directories=[]
-artistSongs=[]
+songs=[] # we will store our song playlist in this
+artists=[] 
+Directories=[] # this will be used to store the artists names in order to use them as sub-playlists folders
+artistSongs=[] 
 
 #first, we open the csv file in order to get what is inside
 
@@ -1547,6 +1547,22 @@ with open("100MostStreamedSongs.csv") as Songs:
       #os.rmdir(row["Artist(s)"])
     # also os.rmdir(name of directory in "") if you ... 
     # ... want to remove a directory
+    
+############################################
+
+# DAY 57: recursive function (we call a function in itself)
+
+def reverse(value):
+  if value <=0:
+    print("done! ")
+    return
+  else:
+    for i in range(value):
+      print("🥳", end="")
+    print()
+    reverse(value-2)
+reverse(10)
+
 
 
 
