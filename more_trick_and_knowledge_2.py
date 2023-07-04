@@ -1574,11 +1574,13 @@ reverse(30)
 #here is the DAY 57: challenge, calculating the factorial of a number of
 
 def factorial(value):
-  if value ==1:
+  if value == 1:
     return 1
   else:
-    return value*factorial(value-1)
-print(factorial(5))
+    return value*factorial(value-1) # = 6*5! and so on until it reaches 1!
+print(factorial(6))
+
+# this program works in this way: first, it takes the value we provided and multiply it by the factorial of the same value minius 1. By calling the function inside the function, it will automatically redo the function after multiplying the current value by the function (factorial of the value -1) 
 
 
 
