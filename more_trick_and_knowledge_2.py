@@ -1559,7 +1559,7 @@ def reverse(value):
   else:
     for i in range(value):
       print("🥳", end="")
-    print()
+    print() # here we just go to another line before we call the function with a new value
     reverse(value-1) # here is where the fuction calls itself
 reverse(30)
 
