@@ -1569,7 +1569,16 @@ reverse(30)
 
 # when dealing with recursion, NEVER FORGET THE CONDITION THAT WILL INSURE THE RECURSION ( the "if statement" to check if our value is still usable, like <=0)
 
+###################################################
 
+#here is the DAY 57: challenge, calculating the factorial of a number of
+
+def factorial(value):
+  if value ==1:
+    return 1
+  else:
+    return value*factorial(value-1)
+print(factorial(5))
 
 
 
