@@ -1582,6 +1582,42 @@ print(factorial(6))
 
 # this program works in this way: first, it takes the value we provided and multiply it by the factorial of the same value minius 1. By calling the function inside the function, it will automatically redo the function after multiplying the current value by the function (factorial of the value -1) 
 
+###############################################
+
+import random
+
+totalAttempts = 0
+
+def game():
+    global totalAttempts  # Use the global keyword to access the totalAttempts variable
+
+    attempts = 0
+    number = random.randint(1, 100)
+    while True:
+        guess = int(input("Pick a number between 1 and 100: "))
+        attempts += 1  # Move the attempts increment statement outside the if-elif conditions
+
+        if guess > number:
+            print("Too high")
+        elif guess < number:
+            print("Too low")
+        elif guess == number:
+            print("Just right!")
+            print(f"{attempts} attempts this round")
+            totalAttempts += attempts  # Increment the totalAttempts variable
+            break
+
+while True:
+    menu = int(input("\n1: Guess the random number game\n2: Total Score\n3: Exit\n> "))
+
+    if menu == 1:
+        game()
+    elif menu == 2:
+        print(f"You've had {totalAttempts} attempts")
+    else:
+        break
+
+
 
 
     
