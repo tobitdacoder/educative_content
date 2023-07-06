@@ -1617,7 +1617,25 @@ while True:
     else:
         break
 
+#################################################
 
+# CHALLENGE DAY 59: PALYNDROME DETECTOR
+
+sentense1="am here" 
+list1=[]
+list2=[]
+for char in sentense1:
+  if char==" ":
+    continue
+  list1.append(char)
+print(list1)
+
+sentense2=sentense1[::-1] # thisa is how we read backward from the last charcter to the first
+for chars in sentense2:
+  if chars==" ":
+    continue
+  list2.append(chars)
+print(list2)
 
 
     
