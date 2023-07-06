@@ -1666,7 +1666,7 @@ while True:
 #DAY 60: TIME LIBRARY .. datetime etc
 import datetime 
 
-myDate=datetime.date(year=1999, month=12, day=10)
+holiday=datetime.date(year=2023, month=12, day=10)
 todays=datetime.date.today()
 
 difference=datetime.timedelta(days=365) 
@@ -1679,6 +1679,13 @@ newDate=todays+difference
 print(myDate)
 print(todays) # this can be used in the to do list in a way that it defines the day an action has been taken.
 print(newDate) # here we will get the date after 14 days, that is because we added the todays date with the time delta.
+
+# WE CAN ALSO USES IF STATEMENTS TO COMPARE THE DATES:
+
+if holiday>todays: # as you can see, we can also use if statements to check wether what date comes after the other and act according to the results.
+  print("Am coming soon")
+else:
+  print("ohh noo, i missed it")
 
 
     
