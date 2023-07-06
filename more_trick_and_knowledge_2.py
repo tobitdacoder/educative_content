@@ -1620,23 +1620,52 @@ while True:
 #################################################
 
 # CHALLENGE DAY 59: PALYNDROME DETECTOR
-sentense1 = "am here"
-
-list1 = []  # this is the list that will store the first sentense form (first order)
-list2 = []  # then this list will store the reversed list of the same sentense ( we used the [::-1] to reverse our sentense)
-for char in sentense1:
-  if char == " ": # condition 1: here we use this condition to remove the space between the words of the sentense so that it will be easy to cpmpare the two sentenses
+while True:
+  welcome="\ntry to see if you know a palindrome word or sentense\n"
+  print(f"{welcome:^12}")
+  sentense1 = input("> ") # this is our sample sentense (but we can get one from the user with the input feature)
+  
+  list1 = []  # this is the list that will store the first sentense form (first order)
+  list2 = []  # then this list will store the reversed list of the same sentense ( we used the [::-1] to reverse our sentense)
+  for char in sentense1:
+    if char == " ": # condition 1: here we use this condition to remove the space between the words of the sentense so that it will be easy to cpmpare the two sentenses
+      continue
+    list1.append(char)
+  print(list1)
+  
+  sentense2 = sentense1[::-1]  # this is how we read backward from the last charcter to the first
+  for chars in sentense2:
+    if chars == " ": # this condition 2 works the same as condition 1
+      continue # if the char is a space, then we remove it with the continue in the loop, means (skip it)
+    list2.append(chars)
+  print(list2)
+  
+  # here we will use a boolean to define wether it is or not a palindrome:
+  
+  is_palindrome=True # we set it to True by default
+  for i in range (len(list1)):
+    #print(letter1,end='')
+    if list1[i]!=list2[i]:
+      is_palindrome=False
+      break
+      
+  if is_palindrome:
+    print("\nthis is a palyndrome")
+    continues=input("\nwanna play again😃?")
+    if continues.strip().lower()[0]=="y":
+      continue
+    else:
+      break
+  else:
+    print("\nthis is not a palyndrome, try again")
     continue
-  list1.append(char)
-print(list1)
+    
+    
+      
+    
+    
 
-sentense2 = sentense1[::
-                      -1]  # thisa is how we read backward from the last charcter to the first
-for chars in sentense2:
-  if chars == " ": # this condition 2 works the same as condition 1
-    continue # if the char is a space, then we remove it with the continue in the loop, means (skip it)
-  list2.append(chars)
-print(list2)
+      
 
 
 
