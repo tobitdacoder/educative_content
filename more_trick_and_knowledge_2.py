@@ -1671,8 +1671,7 @@ todays=datetime.date.today()
 
 difference=datetime.timedelta(days=365) 
 newDate=todays+difference
-# means, current date plus the time deltat to get the date after the days of difference exactly
-#after (timeDelta) days
+# means, current date plus the time deltat to get the date after the days of difference exactly after (timeDelta) days. 
 
 # we can also use IF statement to compare two dates or more
 
@@ -1684,8 +1683,35 @@ print(newDate) # here we will get the date after 14 days, that is because we add
 
 if holiday>todays: # as you can see, we can also use if statements to check wether what date comes after the other and act according to the results.
   print("Am coming soon")
-else:
+elif holiday<todays: 
   print("ohh noo, i missed it")
+else:
+  print("HOLIDAY TIME!!")
+  
+  
+######################################################
+
+#DAY 60 CHALLENGE: EVENT COUNTDOWN TIMER
+
+import datetime
+
+todaysDate = datetime.date.today()
+name=input("what is the event's name please: ")
+
+year=int(input("which year > "))
+month=int(input("which month > "))
+day=int(input("which day > "))
+
+eventDate=datetime.date(year,month,day)
+if eventDate>todaysDate:
+  remainingDays=eventDate-todaysDate
+  print(f"{remainingDays} days REMAINING to the {name} EVENT🥳")
+elif eventDate<todaysDate:
+  passedDays=todaysDate-eventDate
+  print(f"ohhh, the {name} event has passed {passedDays} days ago😥")
+else:
+  print("IT IS TODAYYYY🥳🥳🥳🥳🥳")
+  
 
 
     
