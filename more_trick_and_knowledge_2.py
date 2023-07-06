@@ -1620,22 +1620,24 @@ while True:
 #################################################
 
 # CHALLENGE DAY 59: PALYNDROME DETECTOR
+sentense1 = "am here"
 
-sentense1="am here" 
-list1=[]
-list2=[]
+list1 = []  # this is the list that will store the first sentense form (first order)
+list2 = []  # then this list will store the reversed list of the same sentense ( we used the [::-1] to reverse our sentense)
 for char in sentense1:
-  if char==" ":
+  if char == " ": # condition 1: here we use this condition to remove the space between the words of the sentense so that it will be easy to cpmpare the two sentenses
     continue
   list1.append(char)
 print(list1)
 
-sentense2=sentense1[::-1] # thisa is how we read backward from the last charcter to the first
+sentense2 = sentense1[::
+                      -1]  # thisa is how we read backward from the last charcter to the first
 for chars in sentense2:
-  if chars==" ":
-    continue
+  if chars == " ": # this condition 2 works the same as condition 1
+    continue # if the char is a space, then we remove it with the continue in the loop, means (skip it)
   list2.append(chars)
 print(list2)
+
 
 
     
