@@ -1633,7 +1633,7 @@ while True:
     list1.append(char)
   print(list1)
   
-  sentense2 = sentense1[::-1]  # this is how we read backward from the last charcter to the first
+  sentense2 = sentense1[::-1]  # this is how we read backward from the last charcter to the first ... this was learned in the string splitting course.
   for chars in sentense2:
     if chars == " ": # this condition 2 works the same as condition 1
       continue # if the char is a space, then we remove it with the continue in the loop, means (skip it)
@@ -1643,7 +1643,7 @@ while True:
   # here we will use a boolean to define wether it is or not a palindrome:
   
   is_palindrome=True # we set it to True by default
-  for i in range (len(list1)):
+  for i in range (len(list1)): # this will loop in the two lists we have
     #print(letter1,end='')
     if list1[i]!=list2[i]:
       is_palindrome=False
