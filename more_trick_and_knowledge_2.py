@@ -1661,6 +1661,16 @@ while True:
     continue
     
     
+##################################################
+
+#DAY 60: TIME LIBRARY .. datetime etc
+import datetime 
+
+myDate=datetime.date(year=1999, month=12, day=10)
+print(myDate)
+
+
+    
       
     
     
