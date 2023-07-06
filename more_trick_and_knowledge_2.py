@@ -1668,8 +1668,17 @@ import datetime
 
 myDate=datetime.date(year=1999, month=12, day=10)
 todays=datetime.date.today()
+
+difference=datetime.timedelta(days=365) 
+newDate=todays+difference
+# means, current date plus the time deltat to get the date after the days of difference exactly
+#after (timeDelta) days
+
+# we can also use IF statement to compare two dates or more
+
 print(myDate)
 print(todays) # this can be used in the to do list in a way that it defines the day an action has been taken.
+print(newDate) # here we will get the date after 14 days, that is because we added the todays date with the time delta.
 
 
     
