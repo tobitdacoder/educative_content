@@ -1611,7 +1611,7 @@ while True:
     menu = int(input("\n1: Guess the random number game\n2: Total Score\n3: Exit\n> "))
 
     if menu == 1:
-        game()
+        game() #here is where the recusrsionis happening. We are calling the function if the condition is met, we can call it anywhere to do a specifoic action that has been created inside its body
     elif menu == 2:
         print(f"You've had {totalAttempts} attempts")
     else:
