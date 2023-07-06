@@ -1667,7 +1667,9 @@ while True:
 import datetime 
 
 myDate=datetime.date(year=1999, month=12, day=10)
+todays=datetime.date.today()
 print(myDate)
+print(todays) # this can be used in the to do list in a way that it defines the day an action has been taken.
 
 
     
