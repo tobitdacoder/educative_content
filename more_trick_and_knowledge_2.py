@@ -1741,7 +1741,7 @@ print(BigDict["tobit"]["Genre"])
 
 #     NOW NOW NOW, LET US DIVE INTO THE MAIN TOPIC OF DATABASE
 
-from replit import db # HERE WE IMPORT FIRST THE DB
+from replit import db
 
 #   db["key"]="value"
 
@@ -1749,8 +1749,16 @@ db["test"]="hello there"
 #here, behind the scenes, what happened is that we saved "hello there" to the key "test"
 
 #to print the content we do almost like dictionaries
-keys=db.keys()
+keys=db.keys() # this "keys" is a dictionary that stores the keys in the DB and can be used later.
 print(keys)
+
+for key in keys:
+  print(f"{key}: {db[key]}") # here we print the key and the value from the database
+
+value=db["test"]
+print(value) # this is how we can also access and print only the value stored inside a DB key
+
+del db["test"] # this is how we delete a key in the database
       
     
     
