@@ -1758,7 +1758,26 @@ for key in keys:
 value=db["test"]
 print(value) # this is how we can also access and print only the value stored inside a DB key
 
-del db["test"] # this is how we delete a key in the database
+del db["test"] # this is how we delete a key in the database.
+
+# WE CAN ALSO ACCESS ALL THE KEYS WHICH HAS A CERTAIN PREFIX:
+#     this is when we have a bunch of keys that look similar or start with similar text but have diferent last text or value ... like certain topics or messages
+
+db["login1"]='david'
+db["login2"]='dando'
+db["login3"]='martina'
+db["login4"]='malaika'
+
+keys=db.keys()
+if "test" in keys:
+  del db["test"]
+
+print(keys)
+
+matches=db.prefix("log")
+print(matches) # this will print a dictionary containing the keys names that have the same prefix ... in this case it is "log"
+
+# KEYS and dictionaries
       
     
     
