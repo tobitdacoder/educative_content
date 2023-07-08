@@ -1798,20 +1798,55 @@ print(value["pseudo"]) # here we access the sub-dictionary and print some value 
 from replit import db
 import datetime
 
+
+
 while True:
-  
+  try:
+    del db["login4"]
+    del db["login3"]
+    del db["login2"]
+    del db["login1"]
+    del db["toby"]
+  except:
+    pass
+  #archiveKeys=[]
   option=input("\nadd tweet or view tweets? > ")
+  
   if option.strip().lower()[0]=="a":
     print("\ntype your tweet please: \n")
     print()
     tweet=input("> ")
     
-    timestamp=datetime.datetime.now() #this is how we find the timestamp by using the datetime library
-    db[str(timestamp)]=tweet
+    timestamps=datetime.datetime.now()#this is how we find the timestamp by using the datetime library
+    timestamp_int=int(timestamps.timestamp())
+    #this turn the time stamp into the number of seconds since 1968 (universal timestamp)
+    
+    db[str(timestamp_int)]=tweet
     continue
     
   elif option.strip().lower()[0]=="v":
-    keys=db.keys()
+    keys_int=[] #this will store the keys transformed in integer
+    keys=list(db.keys()) # here is a list of the timestamps_int turned back into integer
+    for key in keys: #here keys is already a list containing strings
+      key_int=int(key)
+      keys_int.append(key_int)
+      
+    sorted_keys=sorted(keys_int,reverse=True) # descendent order, to start from the latest tweet with the highest timestamps_int, to the oldest tweet with the lowest timestamps_int.THE LATEST IS THE ONE WITH THE HIGHER timestamps_int (the highest number of seconds)
+    print()
+    for key in sorted_keys:
+      key_str=str(key)
+      #smallest=min(int(db.keys()))
+      print(f"{key_str}: {db[key_str]}")
+      
+  
+    
+  # here is a list of the timestamps_int turned back into integer
+
+      
+"""elif option.strip().lower()[0]=="v":
+    keys=list(db.keys())
+    print(int(keys[0]))"""  
+    
     
 
       
