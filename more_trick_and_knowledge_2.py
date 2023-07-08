@@ -1791,8 +1791,27 @@ print(value["pseudo"]) # here we access the sub-dictionary and print some value 
 # NOW YOU CAN TELL THAT, THE POINT OF USUNG 2D DICTIONARIES IS WE USE IT TO BUILD A PERSISTENT DATABASE THAT IS ALWAYS THERE AND DOES NOT DISSAPEAR WHILE THE REPL IS OFF... so we can store dictionary values in it !!!!
 
 # you can only store 5000 different items 😥,however, THOSE CAN BE 5000 DICTIONARIES 😊
-      
+
+
+# DAY 61 CHALLENGE: TWEETS RECORDING IN DATABASE, USING TIMESTAMPS 
+
+from replit import db
+import datetime
+
+while True:
+  
+  option=input("\nadd tweet or view tweets? > ")
+  if option.strip().lower()[0]=="a":
+    print("\ntype your tweet please: \n")
+    print()
+    tweet=input("> ")
     
+    timestamp=datetime.datetime.now() #this is how we find the timestamp by using the datetime library
+    db[str(timestamp)]=tweet
+    continue
+    
+  elif option.strip().lower()[0]=="v":
+    keys=db.keys()
     
 
       
