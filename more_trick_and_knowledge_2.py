@@ -1714,7 +1714,30 @@ else:
   
 
 
-    
+############################################################
+
+#DAY 61 REPLIT: DATABASE
+
+#first, this is how we store data in a dictionary    
+
+
+BigDict={}
+
+while True:
+  name=input("name > ")
+  genre=input("genre > ")
+  age=input("age > ")
+
+  BigDict[name]={"Genre":genre,"Age":age}
+  add=input("add?: ")
+  if add.strip().lower()[0]=="y":
+    continue
+  else:
+    break
+
+print(BigDict)
+
+print(BigDict["tobit"]["Genre"])
       
     
     
