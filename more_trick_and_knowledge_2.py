@@ -1777,7 +1777,20 @@ print(keys)
 matches=db.prefix("log")
 print(matches) # this will print a dictionary containing the keys names that have the same prefix ... in this case it is "log"
 
-# KEYS and dictionaries
+# NEXT: keys and dictionaries...................
+
+# in the database, we can store in a database key, a dictionary or a list, here is how we do:
+
+db["toby"]={"pseudo": "DaMan","psssword":"DaMan1999"}
+keys=db.keys()
+print(keys)
+value=db["toby"]
+print(value) # to print the value (which is a dictionary) of the key "toby"
+print(value["pseudo"]) # here we access the sub-dictionary and print some value rom it
+
+# NOW YOU CAN TELL THAT, THE POINT OF USUNG 2D DICTIONARIES IS WE USE IT TO BUILD A PERSISTENT DATABASE THAT IS ALWAYS THERE AND DOES NOT DISSAPEAR WHILE THE REPL IS OFF... so we can store dictionary values in it !!!!
+
+# you can only store 5000 different items 😥,however, THOSE CAN BE 5000 DICTIONARIES 😊
       
     
     
