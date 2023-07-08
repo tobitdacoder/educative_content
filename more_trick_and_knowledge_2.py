@@ -1738,6 +1738,19 @@ while True:
 print(BigDict)
 
 print(BigDict["tobit"]["Genre"])
+
+#     NOW NOW NOW, LET US DIVE INTO THE MAIN TOPIC OF DATABASE
+
+from replit import db # HERE WE IMPORT FIRST THE DB
+
+#   db["key"]="value"
+
+db["test"]="hello there"
+#here, behind the scenes, what happened is that we saved "hello there" to the key "test"
+
+#to print the content we do almost like dictionaries
+keys=db.keys()
+print(keys)
       
     
     
