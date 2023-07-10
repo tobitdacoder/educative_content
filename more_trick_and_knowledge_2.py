@@ -1801,14 +1801,14 @@ import datetime
 
 
 while True:
-  try:
+  try: # this try and except close was to manually remove the data inside the database usind the del db["name on key"] 
     del db["login4"]
     del db["login3"]
     del db["login2"]
     del db["login1"]
     del db["toby"]
   except:
-    pass
+    pass  # we used this pass here in order to just tell to the code, don't do any thing, just pass to the next of the code.
   #archiveKeys=[]
   option=input("\nadd tweet or view tweets? > ")
   
