@@ -1856,6 +1856,25 @@ from replit import db
 import datetime
 
 # first we ask for the personal password (since it is a personal diary, so the password has to be different)
+
+password=101299
+
+while True:
+  try:
+    password_check=int(input("\nYour pass to the heaven please 😉: "))
+  except:
+    pass
+  
+  if password_check==password:
+    print("welcomeeee")
+    time.sleep(1)
+    break
+    
+  else:
+    print("wrong password, try again later")
+    time.sleep(1)
+    os.system("clear")
+    continue
     
 
       
