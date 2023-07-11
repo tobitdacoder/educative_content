@@ -1879,6 +1879,18 @@ while True:
       except:
         pass
       if choice.strip().lower()[0]=="a":
+        print("\n you can write:")
+        text=input("> ")
+        
+        timestamps=datetime.datetime.now()
+        timestamp_int=int(timestamps.timestamp())
+
+        db[str(timestamp_int)]=text
+        print("text added!\n")
+
+      
+      elif choice.strip().lower()[0]=="v":
+        pass
         
     
   else:
