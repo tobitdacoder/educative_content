@@ -1890,7 +1890,26 @@ while True:
 
       
       elif choice.strip().lower()[0]=="v":
-        pass
+        
+        keys_int=[]
+        keys=list(db.keys())
+        
+        for key in keys:
+          key_int=int(key)
+          keys_int.append(key_int)
+          
+        sorted_keys_int=sorted(keys_int, reverse=True)
+        print()
+        for key in sorted_keys_int:
+          key_str=str(key)
+          print(f"{key_str} : {db[key_str]}")
+          print()
+        print()
+        continue
+
+      else:
+        print("this choice does not exist")
+        continue
         
     
   else:
