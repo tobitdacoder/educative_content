@@ -1793,7 +1793,7 @@ print(value["pseudo"]) # here we access the sub-dictionary and print some value 
 # you can only store 5000 different items 😥,however, THOSE CAN BE 5000 DICTIONARIES 😊
 
 
-# DAY 61 CHALLENGE: TWEETS RECORDING IN DATABASE, USING TIMESTAMPS 
+# DAY 61 CHALLENGE: TWEETS RECORDING IN DA TABASE, USING TIMESTAMPS 
 
 from replit import db
 import datetime
@@ -1821,7 +1821,7 @@ while True:
     timestamp_int=int(timestamps.timestamp())
     #this turn the time stamp into the number of seconds since 1968 (universal timestamp)
     
-    db[str(timestamp_int)]=tweet
+    db[str(timestamp_int)]=tweet # here we automatically turn our timestamp into a string that will be used as the key to store the tweet.
     continue
     
   elif option.strip().lower()[0]=="v":
@@ -1847,6 +1847,15 @@ while True:
     keys=list(db.keys())
     print(int(keys[0]))"""  
     
+    
+#################################################################### 
+
+# DAY 62 CHALLENGE: CREATE A PERSONNAL DIARY
+
+from replit import db
+import datetime
+
+# first we ask for the personal password (since it is a personal diary, so the password has to be different)
     
 
       
