@@ -1858,6 +1858,8 @@ import datetime
 # first we ask for the personal password (since it is a personal diary, so the password has to be different)
 
 password=101299
+# INFORMATIONS TO HELP:
+# !!!!  db.clear()  this will clear all the database content
 
 while True:
   try:
@@ -1866,9 +1868,18 @@ while True:
     pass
   
   if password_check==password:
-    print("welcomeeee")
-    time.sleep(1)
-    break
+    while True:
+      name="tobit bushenyula kabuya"
+      print("\nwelcome back mr",name.split()[0])
+      print()
+      print("1. view your secrets")
+      print("2. add new secret\n")
+      try:
+        choice=input("> ")
+      except:
+        pass
+      if choice.strip().lower()[0]=="a":
+        
     
   else:
     print("wrong password, try again later")
