@@ -1955,8 +1955,12 @@ def factorial(value):
   else:
     result = value * factorial(value - 1)
     return result
-    # to use this subroutine, in other files, use the name of this 
+    # to use this subroutine, in other files, use like this:
+    
+    #import MyFirstLibrary
+    #
     # print(MyFirstLibrary.factorial([put here a number]))
+    # this is because we used the return in the subroutine, so we need to call the subroutine by printing it with the name of the library inside
 """
 
 
