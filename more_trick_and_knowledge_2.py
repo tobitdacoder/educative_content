@@ -1928,6 +1928,9 @@ while True:
 import test # here we have imported the file containing the code, and we dont need to put the .py coz, it is automatically known by the pc.
 # THIS ONLY WORK IN REPLIT SINCE THE main.py FILE IS IN REPLIT, but this is how we do to import python files inside the main file.
 
+print("essaie")
+
+test.countdown() # this is how we use the code from the other files wisely, first we make sure that the code in the other files is putted into functions or subroutine and then we can now call the function just like we call other functions in other libraries.
     
 
     
