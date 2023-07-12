@@ -1925,7 +1925,8 @@ while True:
 
 # as you can see, there is not any code in the main.py file, and that is because we have transfered the code in another python file, but we cannot run that code if we click on RUN, and that is because the RUN buton is only designed to run the code insie the main.py file. So, to run the code from another python file, we have to import that file code using "import".
 
-
+import test # here we have imported the file containing the code, and we dont need to put the .py coz, it is automatically known by the pc.
+# THIS ONLY WORK IN REPLIT SINCE THE main.py FILE IS IN REPLIT, but this is how we do to import python files inside the main file.
 
     
 
