@@ -1938,10 +1938,12 @@ t.countdown() # this is how we use the code from the other files wisely, first w
     
 #MAIN TAKEAWAY:
 
-# now, you know how to create a library of your best subroutines or functions you've used before, and you can now use them in your code just by calling them by importing first  the pthon file (as the library containing your functions), then you can use any function from that file by using this structure:
+# now, you know how to create a library of your best subroutines or functions you've used before, and you can now use them in your code just by calling them by importing first  the python file (as the library containing your functions), then you can use any function from that file by using this structure:
 
 # import [file name] eg. file
-# file.countdown() ... this is how you use the function countdown from that file or library you've created for your self
+# file.countdown() ... this is how you use the function countdown from that file or library you've created for your self.add()
+
+# devellopers tend to create such files containing their favorite subroutine or functions and use them in their code as wanted. 
     
  
   
