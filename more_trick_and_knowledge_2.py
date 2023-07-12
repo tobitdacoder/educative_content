@@ -1961,14 +1961,17 @@ def factorial(value):
     #
     # print(MyFirstLibrary.factorial([put here a number]))
     # this is because we used the return in the subroutine, so we need to call the subroutine by printing it with the name of the library inside
+    
 """
 
 
 # then this is how we use that library and one of the subroutine inside:
 
-import MyFirstLibrary as my
+import MyFirstLibrary as my # here is how we import the library (the python file we've created)
 
-print(my.factorial(5)) 
+print(my.factorial(5)) # this is how we print the function which initially required a print
+                       # !!! not all functions need the print, only the ones which does not have 
+                       # the print function in their body.
   
 
 
