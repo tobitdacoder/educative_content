@@ -1945,7 +1945,26 @@ t.countdown() # this is how we use the code from the other files wisely, first w
 
 # devellopers tend to create such files containing their favorite subroutine or functions and use them in their code as wanted. 
     
- 
+#CHALLENGE 63:
+
+# THIS IS THE CODE IN THE LIBRARY WE CREATED (the python file we created with lots of subroutine inside it)
+"""
+def factorial(value):
+  if value == 1:
+    return 1
+  else:
+    result = value * factorial(value - 1)
+    return result
+    # to use this subroutine, in other files, use the name of this 
+    # print(MyFirstLibrary.factorial([put here a number]))
+"""
+
+
+# then this is how we use that library and one of the subroutine inside:
+
+import MyFirstLibrary as my
+
+print(my.factorial(5)) 
   
 
 
