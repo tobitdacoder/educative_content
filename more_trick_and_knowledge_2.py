@@ -1919,7 +1919,11 @@ while True:
     continue
     
 
-      
+######################################################
+
+# DAY 63: splitting our code into multiple files
+
+# as you can see, there is not any code in the main.py file, and that is because we have transfered the code in another python file, but we cannot run that code if we click on RUN, and that is because the RUN buton is only designed to run the code insie the main.py file. So, to run the code from another python file, we have to import that file code using "import".
 
 
 
