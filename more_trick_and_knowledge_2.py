@@ -1921,7 +1921,7 @@ while True:
 
 ######################################################
 
-# DAY 63: splitting our code into multiple files
+#DAY 63: splitting our code into multiple files
 
 # as you can see, there is not any code in the main.py file, and that is because we have transfered the code in another python file, but we cannot run that code if we click on RUN, and that is because the RUN buton is only designed to run the code insie the main.py file. So, to run the code from another python file, we have to import that file code using "import".
 
@@ -1936,7 +1936,12 @@ t.countdown() # this is how we use the code from the other files wisely, first w
 
 # as you can see we also used "as t", t is the nickname of our test.py file or library. so we can give nicknames to libraries and sill use the functions inside.
     
+#MAIN TAKEAWAY:
 
+# now, you know how to create a library of your best subroutines or functions you've used before, and you can now use them in your code just by calling them by importing first  the pthon file (as the library containing your functions), then you can use any function from that file by using this structure:
+
+# import [file name] eg. file
+# file.countdown() ... this is how you use the function countdown from that file or library you've created for your self
     
  
   
