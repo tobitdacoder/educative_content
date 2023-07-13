@@ -2030,20 +2030,24 @@ class Cars:  # here is another class we have created, which is categorizing cars
 
 #now, this new clas is using INHRITANCE feature, It is using the previous class code and we can easilly use the functions from the previous class in the new class [like the function describe()]
 
-class supercar(Cars): # By putting the previous class name inside the brackets of the new one, the features of the previous one are directy inherited in the new one.
+class supercar(Cars): # By putting the previous class name inside the brackets of the new one, the features of the previous one are directy inherited in the new one. 
   
-  def __init__(self):
+  cost=None # 1. here is how we expanded on the class existing, by adding a new parameter "cost"
+  def __init__(self,cost):
     self.types="business class car"
     self.size="medium"
     self.color="night blue"
+    self.cost=cost # 2. then we create a self of that cost 
 
 Car1 = Cars("luxe", "medium", "black")
 print(Car1.size)
 
 Car1.describe()
 
-ferrari=supercar()
-ferrari.describe()
+ferrari=supercar(34) # 3. then here the 34 will be automatically to the variable without any previous value which is cost: self.cost=cost
+ferrari.describe() # this will use the function describe() from the previous class and will apply it inside this new class
+
+print(ferrari.cost) #then here we can now print the cost.
 
 
 
