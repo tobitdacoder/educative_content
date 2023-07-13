@@ -1980,33 +1980,37 @@ print(my.factorial(5)) # this is how we print the function which initially requi
 
 
 class animal:
+
+  # these ones down here, we can work without them becose they are automatically initiated once we use them in the init function and give them to self. ...
   species = None
   name = None
   sound = None
 
-
-#Now let us tell to the class what to do once we call it or initialize it.
+  #Now let us tell to the class what to do once we call it or initialize it.
   def __init__(self, species, name, sound):
     #here "self" is a implicit declaration whih says "me as an object"
-    
+
     self.species = species
     self.name = name
     self.sound = sound
 
-  def talk(self): #this is the new function, and it is used a bit differently
+  def talk(self):  #this is the new function, and it is used a bit differently
     print(f"{self.name} says {self.sound}")
 
 
 # now let us create objects:
 
-animalOne = animal("canine","Dog", "whof")
+dog = animal("canine", "Dog", "whof")
 # animalOne is the object name
-print(animalOne.species)
+print(dog.species)
 
-animalTwo= animal("Bo Taurus","Cow","Moo")
-print(animalTwo.sound)
+cow = animal("Bo Taurus", "Cow", "Moo")
+print(cow.sound)
 
-animalOne.talk() #here we are using the second function we have created, we have created the function talk inside the class animal, and we have used the iniiators with self, self.name and self.sound... So that, if we call that function with the prefix of a specific animal, it will print "[name of animal] says [sound of animal]" ... here our animal is animalOne (dog)
+dog.talk(
+)  #here we are using the second function we have created, we have created the function talk inside the class animal, and we have used the iniiators with self, self.name and self.sound... So that, if we call that function with the prefix of a specific animal, it will print "[name of animal] says [sound of animal]" ... here our animal is animalOne (dog)
+
+# Object Orientation in creating classes, is all about creating templates of how something should work, and getting it to spin out from there
 
 
 
