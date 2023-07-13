@@ -2029,7 +2029,8 @@ class Cars:  # here is another class we have created, which is categorizing cars
     print(f"this is a {self.types} car, of size {self.size}, and is a {self.color} car")
 
 #now, this new clas is using INHRITANCE feature, It is using the previous class code and we can easilly use the functions from the previous class in the new class [like the function describe()]
-class supercar(Cars):
+
+class supercar(Cars): # By putting the previous class name inside the brackets of the new one, the features of the previous one are directy inherited in the new one.
   
   def __init__(self):
     self.types="business class car"
