@@ -2004,7 +2004,7 @@ dog = animal("canine", "Dog", "whof")
 # animalOne is the object name
 print(dog.species)
 
-cow = animal("Bo Taurus", "Cow", "Moo")
+cow = animal("Bo Taurus", "Cow", "Moo") 
 print(cow.sound)
 
 dog.talk(
@@ -2012,19 +2012,37 @@ dog.talk(
 
 # Object Orientation in creating classes, is all about creating templates of how something should work, and getting it to spin out from there
 
-class Cars: # here is another class we have created, which is categorizing cars based on their type,size,colour.
-  types=None
-  size=None
-  color=None
-  # these three above are what we are going to store in our class
-  
-  def __init__(self,types,size,color): # here we are telling the class what to do once we instenciate it, once we initialize it.
-    self.types=types
-    self.size=size
-    self.color=color
+class Cars:  # here is another class we have created, which is categorizing cars based on their type,size,colour.
+  types = None
+  size = None
+  color = None
 
-Car1=Cars("luxe","medium","bkack")
+  # these three above are what we are going to store in our class
+
+  def __init__(self, types, size, color):
+
+    self.types = types
+    self.size = size
+    self.color = color
+
+  def describe(self):
+    print(f"this is a {self.types} car, of size {self.size}, and is a {self.color} car")
+
+#now, this new clas is using INHRITANCE feature, It is using the previous class code and we can easilly use the functions from the previous class in the new class [like the function describe()]
+class supercar(Cars):
+  
+  def __init__(self):
+    self.types="business class car"
+    self.size="medium"
+    self.color="night blue"
+
+Car1 = Cars("luxe", "medium", "black")
 print(Car1.size)
+
+Car1.describe()
+
+ferrari=supercar()
+ferrari.describe()
 
 
 
