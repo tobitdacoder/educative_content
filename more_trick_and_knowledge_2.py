@@ -1978,10 +1978,27 @@ print(my.factorial(5)) # this is how we print the function which initially requi
 # Object Oriented Programing
 # Class and objects
 
+
 class animal:
-  species=None
-  name=None
-  sound=None 
+  species = None
+  name = None
+  sound = None
+
+
+  #Now let us tell to the class what to do once we call it or initialize it.
+  def __init__(self, species, name, sound):
+  #here "self" is a implicit declaration whih says "me as an object"
+    
+    self.species = species
+    self.name = name
+    self.sound = sound
+
+
+# now let us create objects:
+
+dog = animal("canine","Dog", "whof")
+# dog is the object name
+print(dog.species)
 
 
 
