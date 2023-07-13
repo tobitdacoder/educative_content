@@ -2013,12 +2013,12 @@ dog.talk(
 # Object Orientation in creating classes, is all about creating templates of how something should work, and getting it to spin out from there
 
 class Cars: # here is another class we have created, which is categorizing cars based on their type,size,colour.
-  types=Nope
-  size=Nope
-  color=Nope
+  types=None
+  size=None
+  color=None
   # these three above are what we are going to store in our class
   
-  def __init__(self,types,size,color):
+  def __init__(self,types,size,color): # here we are telling the class what to do once we instenciate it, once we initialize it.
     self.types=types
     self.size=size
     self.color=color
