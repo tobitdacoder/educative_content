@@ -1985,20 +1985,28 @@ class animal:
   sound = None
 
 
-  #Now let us tell to the class what to do once we call it or initialize it.
+#Now let us tell to the class what to do once we call it or initialize it.
   def __init__(self, species, name, sound):
-  #here "self" is a implicit declaration whih says "me as an object"
+    #here "self" is a implicit declaration whih says "me as an object"
     
     self.species = species
     self.name = name
     self.sound = sound
 
+  def talk(self): #this is the new function, and it is used a bit differently
+    print(f"{self.name} says {self.sound}")
+
 
 # now let us create objects:
 
-dog = animal("canine","Dog", "whof")
-# dog is the object name
-print(dog.species)
+animalOne = animal("canine","Dog", "whof")
+# animalOne is the object name
+print(animalOne.species)
+
+animalTwo= animal("Bo Taurus","Cow","Moo")
+print(animalTwo.sound)
+
+animalOne.talk() #here we are using the second function we have created, we have created the function talk inside the class animal, and we have used the iniiators with self, self.name and self.sound... So that, if we call that function with the prefix of a specific animal, it will print "[name of animal] says [sound of animal]" ... here our animal is animalOne (dog)
 
 
 
