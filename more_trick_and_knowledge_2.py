@@ -1973,8 +1973,15 @@ print(my.factorial(5)) # this is how we print the function which initially requi
                        # !!! not all functions need the print, only the ones which does not have 
                        # the print function in their body.
   
+#####################################################
 
+# Object Oriented Programing
+# Class and objects
 
+class animal:
+  species=None
+  name=None
+  sound=None 
 
 
 
