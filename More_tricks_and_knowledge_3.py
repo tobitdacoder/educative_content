@@ -24,7 +24,9 @@ class MyCharacter:
     
 # 4. then we now inherit by creating a new class called PlayerClass, and it is going to help us create the Player object or character.
 class PlayerClass(MyCharacter):
-
+  
+  Lives=None # number of lives remaining
+    
   def __init__(self,Lives):
     
     self.Lives=Lives
@@ -33,3 +35,16 @@ class PlayerClass(MyCharacter):
     if int(self.Lives) <= 0:
       print("you are dead")
       quit() # this is the same as exit() but is more friendly
+
+class EnemyClass(MyCharacter):
+
+  Type=None # type of enemy
+  Strength=None # his strength
+
+  def __init__(self,Type,Strength):
+    
+    self.Type=Type
+    self.Strength=Strength
+
+  def EnemyDescribe(self):
+    print(f"This enemy is called {self.Name}, His/her health is at level {self.Health} and has {self.MagicPoints} Magic points, He/she is of type {self.Type} and has a strength level of {self.Strength}")
