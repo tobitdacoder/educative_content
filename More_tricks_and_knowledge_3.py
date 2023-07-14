@@ -77,4 +77,20 @@ class Vampire(EnemyClass): # inheritance here !!
   Day=None # has to be a boolean
   
   def __init__(self):
+    self.Type=Type
     self.Day=Day
+
+# NOW WE CREATE CHARACTERS OBJECTS!!!!!:
+
+# for the player we have to define: Name,Health,MagicPoints,Lives,NickName
+PlayerOne=PlayerClass("Gandalf","80","650","6","SwordLord")
+
+# for the orc we have to define: Name,Health,MagicPoints,Type,Strength,speed
+OrcOne=Orc("Orkana","65","460","Orc","70","50")
+OrcTwo=Orc("Karag","70","550","Orc","68","56")
+OrcThree=Orc("Yintana","69","490","Orc","75","56")
+
+# for the vampires we have to define:Name,Health,MagicPoints,Type,Strength,Day
+
+VampireOne=Vampire("Klaus","76","800","Vampire","84",True)
+VampireTwo=Vampire("Stephan","72","751","Vampire","79",True)
