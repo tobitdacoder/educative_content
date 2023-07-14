@@ -8,38 +8,46 @@ REMEMBER THAT, THIS IS A COMPILLATION OF MULTIPLE PROGRAMS. IF YOU WANT TO TRY O
 
 class MyCharacter:
   # 1. we create our variables to be used in our objects
-  Name = None
-  Health = None
-  MagicPoints = None
+  Name = None # a string 
+  Health = None # an integer
+  MagicPoints = None # an integer
 
   def __init__(self, Name, Health, MagicPoints):
-    # 2. now we are innitiating the variables for them to be used on our objects
-    self.Name = Name
+    #now we are innitiating the variables for them to be used on our objects
+    self.Name = Name 
     self.Health = Health
     self.MagicPoints = MagicPoints
-    
+
   # 3. we then create a function that will print for us the Information about the character.
   def CharacterInfo(self):
     print(f" This is {self.Name}, He/she has Got %{self.Health} of health level and has {self.MagicPoints} magic points")
-    
-# 4. then we now inherit by creating a new class called PlayerClass, and it is going to help us create the Player object or character.
+
+# 4. then we now inherit by creating a new class called PlayerClass, and it is going to help us create the Player object or character
 class PlayerClass(MyCharacter):
   
   Lives=None # number of lives remaining
+             # an integer
+  NickName=None # an integer
     
-  def __init__(self,Lives):
+  def __init__(self,Lives,NickName):
     
     self.Lives=Lives
+    self.NickName=NickName
 
   def AmIAlive(self):
     if int(self.Lives) <= 0:
       print("you are dead")
       quit() # this is the same as exit() but is more friendly
 
-class EnemyClass(MyCharacter):
+# 5. then we create an Enemy class that will help us create Enemies objects or characters 
+
+class EnemyClass(MyCharacter): # inheritance here !!
 
   Type=None # type of enemy
+            # a string
   Strength=None # his strength
+            # an integer
+  # and all the other characteristic from the principal class
 
   def __init__(self,Type,Strength):
     
@@ -53,9 +61,20 @@ class EnemyClass(MyCharacter):
 
 class Orc(EnemyClass): # inheritance here !!
 
-  Speed=None
+  Speed=None # has to be an integer.
+             # is an integer
+  
   #and all the other above characteristic from the principal class and the EnemyClass class.
 
   def __init__(self,Speed):
     self.Speed=Speed
     #and automatically all the other characteristic from the previous classes
+
+# 7. then we also create a vampire class that is also inheriting all the characteristics from the EnemyClass class, plus its own characteristics
+
+class Vampire(EnemyClass): # inheritance here !!
+
+  Day=None # has to be a boolean
+  
+  def __init__(self):
+    self.Day=Day
