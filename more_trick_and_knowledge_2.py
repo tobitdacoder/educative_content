@@ -2121,6 +2121,11 @@ print()
 print(Teacher1.subject)
 print()
 Teacher1.TeacherResume() #Here we are printing the resume of the Teacher by using the "TeacherResume(self)" function.
+
+"""
+THE NEXT PART IS IN THE more_tricks_and_knowledge_3.py file
+"""
+  
   
 
 
