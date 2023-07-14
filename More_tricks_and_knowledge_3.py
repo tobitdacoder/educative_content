@@ -17,3 +17,7 @@ class MyCharacter:
     self.Name = Name
     self.Health = Health
     self.MagicPoints = MagicPoints
+    
+  # 3. we then create a function that will print for us the Information about the character.
+  def CharacterInfo(self):
+    print(f" This is {self.Name}, He/she has Got %{self.Health} of health level and has {self.MagicPoints} magic points")
