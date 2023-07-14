@@ -2050,7 +2050,31 @@ ferrari.describe() # this will use the function describe() from the previous cla
 print(ferrari.cost) #then here we can now print the cost.
 
 
+###############################################################
 
+# DAY 64 CHALLENGE: USING CLASSES AND INHERITTED CLASSES
+
+###### this 👇🏾 is the PRINCIPAL CLASS
+class Job: 
+  
+  nameOfJob=None
+  salary=None
+  hoursOfWork=None
+
+  def __init__(self,nameOfJob,salary,hoursOfWork):
+    self.nameOfJob=nameOfJob
+    self.salary=salary
+    self.hoursOfWork=hoursOfWork
+    
+  #this is the extra function for printing nicelly the content of an object once created
+  def resume(self):
+    print(f"He is a {self.nameOfJob}, he is making ${self.salary} a year and works {self.hoursOfWork}hours a week")
+
+LawyerJob=Job("lawyer","80,000","40")
+LawyerJob.resume() # here we are printing using the resume function to have a nice and logical output
+
+
+print("\n")
 
 
 
