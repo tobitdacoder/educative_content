@@ -2077,6 +2077,29 @@ LawyerJob.resume() # here we are printing using the resume function to have a ni
 print("\n")
 
 
+# now INHERITANCE: 
+
+###### this 👇🏾 is the SECOND CLASS
+
+class DoctorJob(Job): # this is how we inherit the content of the main class called "Job"
+  def __init__(self,speciality,YearsOfExperience):
+    
+    self.nameOfJob="Doctor"
+    self.salary="80,000"
+    self.hoursOfWork="50"
+    self.speciality=speciality
+    self.YearsOfExperience=YearsOfExperience
+
+  def DoctorResume(self):
+    
+    print(f"He is a {self.nameOfJob}, he is making ${self.salary} a year and works {self.hoursOfWork}hours a week, he is specialized in {self.speciality} and has {self.YearsOfExperience} years of experience")
+
+doctor1=DoctorJob("pediatric consultant","7") # this is the first object we created for the DoctorJob class
+print()
+print("\n",doctor1.speciality) # here we print another object content (test)
+print()
+doctor1.DoctorResume() # here we are just printing the resume of the doctor in a nice way
+
 
 
 
