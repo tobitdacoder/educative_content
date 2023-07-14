@@ -5,8 +5,15 @@ REMEMBER THAT, THIS IS A COMPILLATION OF MULTIPLE PROGRAMS. IF YOU WANT TO TRY O
 
 # DAY 65 CHALLENGE: create a game using Object Oriented Programming
 
+
 class MyCharacter:
-  # 1. we innitiate our variables to be used in our objects
-  Name=None
-  Health=None
-  MagicPoints=None
+  # 1. we create our variables to be used in our objects
+  Name = None
+  Health = None
+  MagicPoints = None
+
+  def __init__(self, Name, Health, MagicPoints):
+    # 2. now we are innitiating the variables for them to be used on our objects
+    self.Name = Name
+    self.Health = Health
+    self.MagicPoints = MagicPoints
