@@ -2070,7 +2070,7 @@ class Job:
   def resume(self):
     print(f"He is a {self.nameOfJob}, he is making ${self.salary} a year and works {self.hoursOfWork}hours a week")
 
-LawyerJob=Job("lawyer","80,000","40")
+LawyerJob=Job("lawyer","80,000","40") # this is one of the objects that we can create from the Job class
 LawyerJob.resume() # here we are printing using the resume function to have a nice and logical output
 
 
@@ -2096,9 +2096,9 @@ class DoctorJob(Job): # this is how we inherit the content of the main class cal
 
 doctor1=DoctorJob("pediatric consultant","7") # this is the first object we created for the DoctorJob class
 print()
-print("\n",doctor1.speciality) # here we print another object content (test)
+print("\n",doctor1.speciality) # here we print another object content or argument (speciality)
 print()
-doctor1.DoctorResume() # here we are just printing the resume of the doctor in a nice way
+doctor1.DoctorResume() # here we are just printing the resume of the doctor in a nice way, We created a function for this printing.
 
 
 ###### this 👇🏾 is the THIRD CLASS  
@@ -2120,7 +2120,7 @@ Teacher1=TeacherJob("Computer science","head of department")
 print()
 print(Teacher1.subject)
 print()
-Teacher1.TeacherResume()
+Teacher1.TeacherResume() #Here we are printing the resume of the Teacher by using the "TeacherResume(self)" function.
   
 
 
