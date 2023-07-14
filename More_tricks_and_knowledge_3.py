@@ -21,3 +21,15 @@ class MyCharacter:
   # 3. we then create a function that will print for us the Information about the character.
   def CharacterInfo(self):
     print(f" This is {self.Name}, He/she has Got %{self.Health} of health level and has {self.MagicPoints} magic points")
+    
+# 4. then we now inherit by creating a new class called PlayerClass, and it is going to help us create the Player object or character.
+class PlayerClass(MyCharacter):
+
+  def __init__(self,Lives):
+    
+    self.Lives=Lives
+
+  def AmIAlive(self):
+    if int(self.Lives) <= 0:
+      print("you are dead")
+      quit() # this is the same as exit() but is more friendly
