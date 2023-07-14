@@ -48,3 +48,14 @@ class EnemyClass(MyCharacter):
 
   def EnemyDescribe(self):
     print(f"This enemy is called {self.Name}, His/her health is at level {self.Health} and has {self.MagicPoints} Magic points, He/she is of type {self.Type} and has a strength level of {self.Strength}")
+
+# 6. then we create another class that is inheriting from the EnemyClass class. we will add more informations for it:
+
+class Orc(EnemyClass): # inheritance here !!
+
+  Speed=None
+  #and all the other above characteristic from the principal class and the EnemyClass class.
+
+  def __init__(self,Speed):
+    self.Speed=Speed
+    #and automatically all the other characteristic from the previous classes
