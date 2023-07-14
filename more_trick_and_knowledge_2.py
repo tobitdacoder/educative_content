@@ -2101,6 +2101,27 @@ print()
 doctor1.DoctorResume() # here we are just printing the resume of the doctor in a nice way
 
 
+###### this 👇🏾 is the THIRD CLASS  
+
+class TeacherJob(Job): # this is how we inherit the content of the main class called "Job"
+  def __init__(self,subject,position):
+    
+    self.nameOfJob="Teacher"
+    self.salary="60,000"
+    self.hoursOfWork="35"
+    self.subject=subject
+    self.position=position
+    
+  def TeacherResume(self):
+    
+    print(f"He is a {self.nameOfJob}, he is making ${self.salary} a year and works {self.hoursOfWork}hours a week, he is teaching {self.subject} and is the {self.position}")
+
+Teacher1=TeacherJob("Computer science","head of department")
+print()
+print(Teacher1.subject)
+print()
+Teacher1.TeacherResume()
+  
 
 
 
