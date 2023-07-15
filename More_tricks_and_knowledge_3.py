@@ -7,90 +7,108 @@ REMEMBER THAT, THIS IS A COMPILLATION OF MULTIPLE PROGRAMS. IF YOU WANT TO TRY O
 
 
 class MyCharacter:
-  # 1. we create our variables to be used in our objects
-  Name = None # a string 
-  Health = None # an integer
-  MagicPoints = None # an integer
+  Name = None  # a string
+  Health = None  # an integer
+  MagicPoints = None  # an integer
 
   def __init__(self, Name, Health, MagicPoints):
-    #now we are innitiating the variables for them to be used on our objects
-    self.Name = Name 
+    self.Name = Name
     self.Health = Health
     self.MagicPoints = MagicPoints
 
-  # 3. we then create a function that will print for us the Information about the character.
   def CharacterInfo(self):
-    print(f" This is {self.Name}, He/she has Got %{self.Health} of health level and has {self.MagicPoints} magic points")
+    print(f"This is {self.Name}, He/she has {self.Health}% of health level and has {self.MagicPoints} magic points")
 
-# 4. then we now inherit by creating a new class called PlayerClass, and it is going to help us create the Player object or character
+
 class PlayerClass(MyCharacter):
-  
-  Lives=None # number of lives remaining
-             # an integer
-  NickName=None # an integer
-    
-  def __init__(self,Lives,NickName):
-    
-    self.Lives=Lives
-    self.NickName=NickName
+  Lives = None  # number of lives remaining (an integer)
+  NickName = None  # a string
+
+  def __init__(self, Name, Lives, NickName):
+    #super().__init__(Name, 100, 100)  # Initialize the inherited attributes
+    self.Name=Name
+    self.Health=100
+    self.MagicPoints=100
+    self.Lives = Lives
+    self.NickName = NickName
+
+  def PlayerResume(self):
+    print(f"He/she is called {self.Name}, His/her nickname is {self.NickName} and I still have {self.Lives} lives remaining and has the health percentage of {self.Health}")
 
   def AmIAlive(self):
     if int(self.Lives) <= 0:
-      print("you are dead")
-      quit() # this is the same as exit() but is more friendly
+      print("You are dead")
+      quit()  # this is the same as exit() but is more friendly
+    else:
+      print(f"\nYou are still alive and you have {self.Lives} lives remaining")
 
-# 5. then we create an Enemy class that will help us create Enemies objects or characters 
 
-class EnemyClass(MyCharacter): # inheritance here !!
+class EnemyClass(MyCharacter):
+  Type = None  # type of enemy (a string)
+  Strength = None  # his strength (an integer)
 
-  Type=None # type of enemy
-            # a string
-  Strength=None # his strength
-            # an integer
-  # and all the other characteristic from the principal class
-
-  def __init__(self,Type,Strength):
-    
-    self.Type=Type
-    self.Strength=Strength
+  def __init__(self, Name, Type, Strength):
+    #super().__init__(Name, 100, 100)  # Initialize the inherited attributes
+    self.Name=Name
+    self.Health=100
+    self.MagicPoints=100
+    self.Type = Type
+    self.Strength = Strength
 
   def EnemyDescribe(self):
-    print(f"This enemy is called {self.Name}, His/her health is at level {self.Health} and has {self.MagicPoints} Magic points, He/she is of type {self.Type} and has a strength level of {self.Strength}")
+    print(f"This enemy is called {self.Name}, His/her health is at level {self.Health} and has {self.MagicPoints} Magic points. He/she is of type {self.Type} and has a strength level of {self.Strength}")
 
-# 6. then we create another class that is inheriting from the EnemyClass class. we will add more informations for it:
 
-class Orc(EnemyClass): # inheritance here !!
+class Orc(EnemyClass):
+  Speed = None  # has to be an integer
 
-  Speed=None # has to be an integer.
-             # is an integer
-  
-  #and all the other above characteristic from the principal class and the EnemyClass class.
+  def __init__(self, Name, Speed):
+    #super().__init__(Name, "Orc", 100)  # Initialize the inherited attributes
+    self.Name=Name
+    self.Type="Orc"
+    self.Strength=100
+    self.Speed = Speed
 
-  def __init__(self,Speed):
-    self.Speed=Speed
-    #and automatically all the other characteristic from the previous classes
+  def OrcResume(self):
+    print(f"\nI present you {self.Name} the {self.Type}. He has a speed of {self.Speed} and a level of {self.Strength} in strength")
 
-# 7. then we also create a vampire class that is also inheriting all the characteristics from the EnemyClass class, plus its own characteristics
 
-class Vampire(EnemyClass): # inheritance here !!
+class Vampire(EnemyClass):
+  Day = None  # has to be a boolean
 
-  Day=None # has to be a boolean
-  
-  def __init__(self):
-    self.Type=Type
-    self.Day=Day
+  def __init__(self, Name, Day):
+    #super().__init__(Name, Type, 100)  # Initialize the inherited attributes
+    self.Name=Name
+    self.Type="Vampire"
+    self.Strength=100
+    self.Day = Day
 
-# NOW WE CREATE CHARACTERS OBJECTS!!!!!:
+  def VampireResume(self):
+    if self.Day:
+      print(f"\n{self.Name} is a {self.Type} and since it is day, he is weak. His power is no longer {self.Strength}, but {int(self.Strength)-20}")
+    else:
+      print(f"\n{self.Name} is a {self.Type} and since it is night, he is stronger. His power is no longer {self.Strength}, but {int(self.Strength)+20}")
 
-# for the player we have to define: Name,Health,MagicPoints,Lives,NickName
-PlayerOne=PlayerClass("Gandalf","80","650","6","SwordLord")
 
-# for the orc we have to define: Name,Health,MagicPoints,Type,Strength,speed
-OrcOne=Orc("Orkana","65","460","Orc","70","50")
-OrcTwo=Orc("Karag","70","550","Orc","68","56")
-OrcThree=Orc("Yintana","69","490","Orc","75","56")
+# Create player object
+PlayerOne = PlayerClass("Zenda", 6, "SwordLord")
 
-# for the vampires we have to define:Name,Health,MagicPoints,Type,Strength,Day
+PlayerOne.Health=90
+PlayerOne.MagicPoints=95
 
-VampireOne=Vampire("Klaus","76","800","Vampire","84",True)
-VampireTwo=Vampire("Stephan","72","751","Vampire","79",True)
+print(PlayerOne.Health)
+PlayerOne.PlayerResume()
+
+# Create orc objects
+OrcOne = Orc("Orkana", 50)
+print(OrcOne.Type)
+
+# Create vampire objects
+VampireOne = Vampire("Klaus", True)
+VampireTwo = Vampire("Stephan", True)
+print(VampireTwo.Type)
+
+# Access object attributes and methods
+print(VampireOne.Type)
+VampireOne.VampireResume()
+
