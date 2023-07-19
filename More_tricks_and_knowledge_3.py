@@ -237,35 +237,69 @@ else:
 # DAY 71 CHALLENGE: BUILD A SIMPLE LOGIN SYSTEM USING hash() function and probably os.environ[key] keyword
 
 from replit import db
-import os,time
+import os, time
 import random
 
+NumberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+Existing = []
 
-NumberList=[1,2,3,4,5,6,7,8,9,0]
 while True:
-  
+
   print()
   print("1. New User")
   print("2. Log-in")
   print()
-  
-  choice=input("> ")
-  
-  if choice=='1':
-    New_username=input("new username > ")
-    New_password=input("new password > ")
-    Salt=''
+
+  choice = input("> ")
+
+  if choice == '1': # SIGN-UP CASE
+    New_username = input("new username > ")
+    New_password = input("new password > ")
+    Salt = ''
 
     for i in range(5):
-      num=str(random.choice(NumberList))
-      Salt+=num
+      num = str(random.choice(NumberList))
+      Salt += num
+
+    New_strong_password = New_password + Salt
+    Hashed_New_strong_password = hash(New_strong_password)
     
-    
-  elif choice=='2':
-    pass
-    
+    db[New_username] = {
+      "hashed_pass": Hashed_New_strong_password,
+      "username": New_username,"salt":Salt
+    }
+
+    print(
+      f"thank you, your hashed password in the database is {db[New_username]}")
+
+    time.sleep(3)
+    os.system("clear")
+    continue
+
+    if New_username not in Existing:
+      Existing.append(New_username)
+    else:
+      pass
+
+  elif choice == '2': # LOG-IN CASE
+    print()
+    Username = input("your username > ")
+    Password = input("your password please > ")
+    Strong_hashed_pass=hash(Password + db[New_username]['salt'])
+
+    if Username == db[New_username]['username'] and Strong_hashed_pass == db[New_username]["hashed_pass"]:
+      print()
+      print("you belong here")
+      time.sleep(3)
+      
+    else:
+      print()
+      print("you are nooooooot from heeeeeeere")
+      print()
+
   else:
     print()
     print("wrong choice, try again ")
-    time.sleep()
-    
+    time.sleep(4)
+    os.system("clear")
+    continue
