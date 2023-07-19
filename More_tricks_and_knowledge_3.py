@@ -112,3 +112,15 @@ print(VampireTwo.Type)
 print(VampireOne.Type)
 VampireOne.VampireResume()
 
+################################################################
+
+# JUST A SMALL TRICK TO GET SECRET INPUT FROM USERS AND USE THEM IN OUR PROGRAM
+#      EITHER NUMBERS OR STRINGS.
+import getpass
+
+task1=int(getpass.getpass("first strenght: "))
+task2=int(getpass.getpass("second strenght: "))
+print(task1*task2)
+
+################################################################
+
