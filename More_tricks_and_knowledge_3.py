@@ -206,3 +206,30 @@ if hashed_ask==db[username]:
   print('yeeeess')
 else:
   print("Noooooo")
+
+
+
+# ANOTHER EXAMPLE OF HOW WE ARE USING THE hash() FUNCTION ALONG WITH THE DATABASE STORING METHOD to store the password and the salt that we add to the password to make it even tricky for the hacker to hack. 
+
+from replit import db
+
+password='tobit1'
+salt=1433954
+
+salted_pass=password+str(salt)
+hashed_salted_pass=hash(salted_pass)
+
+db["tobit"]={"password":hashed_salted_pass,"Salt": salt}
+#print(db["tobit"]["password"])
+
+ask=input("password > ")
+ask_salt=db["tobit"]["Salt"]
+
+trial_Password=ask+str(ask_salt)
+hashed_trial_password=hash(trial_Password)
+
+if hashed_trial_password==db['tobit']['password']:
+  print("yeahh")
+
+else: 
+  print("nooooo")
