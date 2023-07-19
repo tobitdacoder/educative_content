@@ -126,7 +126,7 @@ print(task1*task2)
 
 #DAY 70: SECRET (Password from the system os)
 
-import os 
+import os # we are using the os in order to gt the password saved inside the operating system (os);
 
-true_password=os.environ['password1']
-user_pass=input("password> ")
+true_password=os.environ['password1'] #then here we take that password from the system and we store it inside the variable "true_password";
+user_pass=input("password> ") #then e get the input from the user, and we will authentify it by comparing it to the true_password that came from the system.
