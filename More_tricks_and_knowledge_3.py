@@ -233,3 +233,39 @@ if hashed_trial_password==db['tobit']['password']:
 
 else: 
   print("nooooo")
+  
+# DAY 71 CHALLENGE: BUILD A SIMPLE LOGIN SYSTEM USING hash() function and probably os.environ[key] keyword
+
+from replit import db
+import os,time
+import random
+
+
+NumberList=[1,2,3,4,5,6,7,8,9,0]
+while True:
+  
+  print()
+  print("1. New User")
+  print("2. Log-in")
+  print()
+  
+  choice=input("> ")
+  
+  if choice=='1':
+    New_username=input("new username > ")
+    New_password=input("new password > ")
+    Salt=''
+
+    for i in range(5):
+      num=str(random.choice(NumberList))
+      Salt+=num
+    
+    
+  elif choice=='2':
+    pass
+    
+  else:
+    print()
+    print("wrong choice, try again ")
+    time.sleep()
+    
