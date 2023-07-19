@@ -128,5 +128,15 @@ print(task1*task2)
 
 import os # we are using the os in order to gt the password saved inside the operating system (os);
 
-true_password=os.environ['password1'] #then here we take that password from the system and we store it inside the variable "true_password";
-user_pass=input("password> ") #then e get the input from the user, and we will authentify it by comparing it to the true_password that came from the system.
+true_password=os.environ['password1'] #then here we take that password from the system and we store it inside the variable "true_password"; This is basically asking to the system for the password that was stored in it, When you fork a repl, this password will not go with it, they are yours.
+while True:
+  print()
+  user_pass=input("password> ")
+  #then e get the input from the user, and we will authentify it by comparing it to the true_password that came from the system 
+  
+  if user_pass==true_password:
+    print("welcom to the adventure my GEEE!!!")
+    break
+  else:
+    print("try latter my brother")
+    continue
