@@ -122,6 +122,18 @@ task1=int(getpass.getpass("first strenght: "))
 task2=int(getpass.getpass("second strenght: "))
 print(task1*task2)
 
+
+#THIS CODE BELLOW JUST GENERATE A RANDOM PASSWORD THAT WILL BE USED ONLY ONCE:
+import random 
+
+password=""
+listt=["#","!","$","*","|","\\",")","("]
+
+for i in range(len(listt)):
+  letter=random.choice(listt)
+  password+=(letter)
+print(password)
+
 ################################################################
 
 #DAY 70: SECRET (Password from the system os)
