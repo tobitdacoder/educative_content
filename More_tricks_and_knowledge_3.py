@@ -124,3 +124,9 @@ print(task1*task2)
 
 ################################################################
 
+#DAY 70: SECRET (Password from the system os)
+
+import os 
+
+true_password=os.environ['password1']
+user_pass=input("password> ")
