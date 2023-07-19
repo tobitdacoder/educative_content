@@ -148,15 +148,19 @@ import os
 userList=["luna"]
 adminUserList=["toby"]
 
-true_userPass=os.environ['userPass']
+true_userPass=os.environ['userPass'] 
 true_adminPass=os.environ['adminPass']
+# these words inside [] are the keys that are soring the password as a value, and in order to access them, we need to use the key name and the os library: os.environ[name of the key storing the value]
 
 while True:
   
-  username=input("name > ")
-  userpassword=input("pass > ")
+  username=input("name > ") # we get the name 
+  userpassword=input("pass > ") # we get the password that we are going to compare with the one that we asked for to the system
   
+  # now we are just checking the details before to give any access to the program.
+  # remember, this is inside the loop, so that we can specify thre trial number etc.
   if username.strip().lower() in userList and userpassword==true_userPass:
+    
     print(f"you're welcome {username}, you are our new user")
     
   elif username.strip().lower() in adminUserList and userpassword==true_adminPass:
