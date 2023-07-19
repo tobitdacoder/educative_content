@@ -184,11 +184,25 @@ while True:
 ########################################################################
 
 #DAY 71: HASHING PASSWORD 
+from replit import db
 
+username='toby' # the one that will be the key in our database
 password="tobit1" # here is our naked password that can be easily seen because it is not "hashed"
 
 hashed_password=hash(password)
 # here we encrypt the password using the hash function
+
+db[username]=hashed_password # here we are creating a key in the database and store in the hashed_password we've got. 
+
+print(db[username]) # here is how we print the content of the database using the key.
 print(hashed_password) # when we print the hashed_password, we will get a suit of numbers that are the encrypted verion of the password we generated.
 
+# here we are basically showing how we can store the hashed_pass in the dstabase and then reuse them for authntification by comparing them to the hashed_version of the user password.
+ask=input("pass> ")
+hashed_ask=hash(ask)
 
+
+if hashed_ask==db[username]:
+  print('yeeeess')
+else:
+  print("Noooooo")
