@@ -127,9 +127,9 @@ print(task1*task2)
 import random 
 
 password=""
-listt=["#","!","$","*","|","\\",")","("]
+listt=["#","!","$","*","|","\\","(",")",'1','2','3','4','5','6','7','8','9']
 
-for i in range(len(listt)):
+for i in range(len(listt)+4):
   letter=random.choice(listt)
   password+=(letter)
 print(password)
