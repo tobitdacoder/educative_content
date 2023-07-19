@@ -122,7 +122,6 @@ task1=int(getpass.getpass("first strenght: "))
 task2=int(getpass.getpass("second strenght: "))
 print(task1*task2)
 
-
 #THIS CODE BELLOW JUST GENERATE A RANDOM PASSWORD THAT WILL BE USED ONLY ONCE:
 import random 
 
@@ -140,11 +139,12 @@ print(password)
 
 import os # we are using the os in order to gt the password saved inside the operating system (os);
 
-true_password=os.environ['password1'] #then here we take that password from the system and we store it inside the variable "true_password"; This is basically asking to the system for the password that was stored in it, When you fork a repl, this password will not go with it, they are yours.
+true_password=os.environ['password1'] # then here we take that password from the system and we store it inside the variable "true_password"; This is basically asking to the system for the password that was stored in it, When you fork a repl, this password will not go with it, they are yours.
+
 while True:
   print()
   user_pass=input("password> ")
-  #then e get the input from the user, and we will authentify it by comparing it to the true_password that came from the system 
+  # then get the input from the user, and we will authentify it by comparing it to the true_password that came from the system. 
   
   if user_pass==true_password:
     print("welcom to the adventure my GEEE!!!")
@@ -181,3 +181,14 @@ while True:
   else:
     print("that was wrong, come later")
     
+########################################################################
+
+#DAY 71: HASHING PASSWORD 
+
+password="tobit1" # here is our naked password that can be easily seen because it is not "hashed"
+
+hashed_password=hash(password)
+# here we encrypt the password using the hash function
+print(hashed_password) # when we print the hashed_password, we will get a suit of numbers that are the encrypted verion of the password we generated.
+
+
