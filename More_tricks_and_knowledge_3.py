@@ -140,3 +140,28 @@ while True:
   else:
     print("try latter my brother")
     continue
+  
+#DAY 70 CHALLENGE:
+
+import os
+
+userList=["luna"]
+adminUserList=["toby"]
+
+true_userPass=os.environ['userPass']
+true_adminPass=os.environ['adminPass']
+
+while True:
+  
+  username=input("name > ")
+  userpassword=input("pass > ")
+  
+  if username.strip().lower() in userList and userpassword==true_userPass:
+    print(f"you're welcome {username}, you are our new user")
+    
+  elif username.strip().lower() in adminUserList and userpassword==true_adminPass:
+    print(f"welcome back MR/mrs admin {username}")
+    break
+  else:
+    print("that was wrong, come later")
+    
