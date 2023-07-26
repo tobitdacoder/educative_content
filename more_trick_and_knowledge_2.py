@@ -1882,23 +1882,23 @@ while True:
         print("\n you can write:")
         text=input("> ")
         
-        timestamps=datetime.datetime.now()
-        timestamp_int=int(timestamps.timestamp())
+        timestamps=datetime.datetime.now() # here we are now collecting the time now by using the datetime library.
+        timestamp_int=int(timestamps.timestamp()) # then here we turn it into an integer.
 
-        db[str(timestamp_int)]=text
+        db[str(timestamp_int)]=text # then herewe use the timestamp_int as our new key to store the text that has been entered.
         print("text added!\n")
 
       
       elif choice.strip().lower()[0]=="v":
         
         keys_int=[]
-        keys=list(db.keys())
+        keys=list(db.keys()) # here we use the list to turn the dictionary db.keys() into a list so that we can easily use its content.
         
-        for key in keys:
+        for key in keys: 
           key_int=int(key)
           keys_int.append(key_int)
           
-        sorted_keys_int=sorted(keys_int, reverse=True)
+        sorted_keys_int=sorted(keys_int, reverse=True) 
         print()
         for key in sorted_keys_int:
           key_str=str(key)
