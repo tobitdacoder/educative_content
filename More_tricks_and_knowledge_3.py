@@ -304,3 +304,20 @@ while True:
     os.system("clear")
     continue
 
+#####################################################
+
+from replit import db as database
+
+# this small program helps us to verify if the database is empty by checking the number of keys inside the database. 
+
+"""db.clear() : ceci nous aide lorsque on veut efacer tout le contenu du dictionaire si on le veut"""
+#db["username"]={"User":"tobit","age":"18"}
+
+if len(database)==0: # this is where we are checking the number of keys inside the database by checking the length of the database (samething as checking the content of a list, by checking its length)
+  print("it is empty")
+  
+else:
+  keys=list(database.keys())
+  print("there is something in it")
+  for key in keys:
+    print(f"""{key} : {database[key]}""")
