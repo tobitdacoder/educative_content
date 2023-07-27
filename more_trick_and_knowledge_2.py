@@ -1878,7 +1878,7 @@ while True:
         choice=input("> ")
       except:
         pass
-      if choice.strip().lower()[0]=="a":
+      if choice.strip().lower()[0]=="a": # here is when we choose to add a new text in the diary
         print("\n you can write:")
         text=input("> ")
         
