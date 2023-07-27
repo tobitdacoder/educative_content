@@ -285,9 +285,9 @@ while True:
     print()
     Username = input("your username > ")
     Password = input("your password please > ")
-    Strong_hashed_pass=hash(Password + db[New_username]['salt'])
+    Strong_hashed_pass=hash(Password + db[Username]['salt'])
 
-    if Username == db[New_username]['username'] and Strong_hashed_pass == db[New_username]["hashed_pass"]:
+    if Username == db[Username]['username'] and Strong_hashed_pass == db[Username]["hashed_pass"]:
       print()
       print("you belong here")
       time.sleep(3)
@@ -303,3 +303,4 @@ while True:
     time.sleep(4)
     os.system("clear")
     continue
+
