@@ -510,22 +510,33 @@ else:
 #DAY 76: we are introduced to flask, the tool that will help us create our web server. This web server will help us make our website dynamic (can change, based on the person or even based on what the person what it to show ). Now this is the introduction to flask and how to start using it. 
 
 from flask import Flask # here we are first importing Flask from the flask library 
+import datetime
 
 app = Flask(__name__) # here we are now creating our web server with the variable name "app", here is where we start the flask aplication up. we will need this later on 
 
+""" we will always be taken on the messsage wrotten inside the subroutine below each @app.route()"""
 
 @app.route('/') # the page adress inside the parenthesis, this describes where on your domain this code refers.
 def index():
-    return 'Hello from Tobit!' # here is the message that will b retourned or sent to the web browser page once the adress has been opened.
+  today=datetime.date.today()
+  return f"""<html>
+    <body> <p> Hello from Tobit! todaay is {today}
+      <a href="/home"> click here to Go home</a>
+    </p></body>
+  </html>""" # here is the message that will b retourned or sent to the web browser page once the adress has been opened.
 
 @app.route('/home') # Creates the path to the home page
 def home(): # Subroutine to create the home page
-  page = """"""
+  page = """ <html>
+    <body> <h1> HERE IS YOUR HOME</h1></body>
+  </html>"""
   # Three quotes - I'm going to write or paste my HTML code here. The HTML gets assigned to the page variable
   return page # returns the contents of the page variable
 
 
 app.run(host='0.0.0.0', port=81) # this is the line that should always come last. This is the line that starts the web server, after this line is run, you can access your website through th web view or the repl.co web address
+
+""" above here is the update of our flask introduction code. Here you can see that we have modified a bit what is suposed to be returned and we returned full web pages, Here you can see that we can BUILD A COMPLETE WEBSITE INSIDE ONE PYTHON FILE WHERE WE CAN BRING VARIABLES ALSO USING THE "f string method on the quotes and variables containing the web pages to be returned. DON'T forget to use the { } inside the HTML code by putting them inside tags."""
 
   
   
