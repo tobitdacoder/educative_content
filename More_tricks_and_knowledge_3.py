@@ -507,14 +507,16 @@ else:
 
 #################################################################### 
 
-from flask import Flask
+#DAY 76: we are introduced to flask, the tool that will help us create our web server. This web server will help us make our website dynamic (can change, based on the person or even based on what the person what it to show ). Now this is the introduction to flask and how to start using it. 
 
-app = Flask(__name__)
+from flask import Flask # here we are first importing Flask from the flask library 
+
+app = Flask(__name__) # here we are now creating our web server with the variable name "app", here is where we start the flask aplication up. we will need this later on 
 
 
-@app.route('/')
+@app.route('/') # the page adress inside the parenthesis, this describes where on your domain this code refers.
 def index():
-    return 'Hello from Flask!'
+    return 'Hello from Tobit!' # here is the message that will b retourned or sent to the web browser page once the adress has been opened.
 
 @app.route('/home') # Creates the path to the home page
 def home(): # Subroutine to create the home page
@@ -523,7 +525,7 @@ def home(): # Subroutine to create the home page
   return page # returns the contents of the page variable
 
 
-app.run(host='0.0.0.0', port=81)
+app.run(host='0.0.0.0', port=81) # this is the line that should always come last. This is the line that starts the web server, after this line is run, you can access your website through th web view or the repl.co web address
 
   
   
