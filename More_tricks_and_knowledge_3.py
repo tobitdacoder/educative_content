@@ -321,3 +321,191 @@ else:
   print("there is something in it")
   for key in keys:
     print(f"""{key} : {database[key]}""")
+    
+
+################################################################################
+
+# DAY 72: CHALLENGE, UPDATED DIARY PROGRAM
+
+from replit import db
+import os,time,random
+import datetime
+
+"""db.clear() : THIS WILL BE USED WHEN WE WANT TO ERASE THE DATABASE CONTENT"""
+
+#db["username"]={"User":"tobit","age":"18"}
+
+
+
+if len(db)==0:
+
+  print("you're a new user, please, create an acount: ")
+  time.sleep(1)
+  print()
+  
+  Numbers=[1,2,3,4,5,6,7,8,9,0]
+  New_Username=input("New Username > ")
+  New_Password=input("New password > ")
+  Salt=''
+  
+  for i in range(6):
+    num=random.choice(Numbers)
+    Salt+=str(num)
+    
+  Salted_password=New_Password+Salt
+  hashed_password=hash(Salted_password)
+  db[New_Username]={"Username":New_Username,"salt":Salt,"Hashed_password":hashed_password}
+  print()
+  print("you now have an acount ... CONGRATULATIONS!!!")
+  print()
+
+  time.sleep(1)
+  
+  
+
+  #NOW WE CAN EASILY PROCEED INTO THE DIARY WITH THE NEW PASSWORD ENTERED:
+
+  # first we ask for the personal password (since it is a personal diary, so the password has to be different)
+
+  #password=101299
+  # INFORMATIONS TO HELP:
+  # !!!!  db.clear()  this will clear all the database content
+  
+  while True:
+    
+    try:
+      username_check=input("your username please > ")
+      password_check=input("also your password please > ")
+      
+    except:
+      pass
+      
+    Salted_password_check=password_check+db[username_check]["salt"]
+    hashed=hash(Salted_password_check)
+    
+    if hashed==db[username_check]["Hashed_password"] and username_check==db[username_check]["Username"]:
+      
+      while True:
+        #name="tobit bushenyula kabuya"
+        print("\nwelcome back mr/mrs")
+        print()
+        print("1. view your secrets")
+        print("2. add new secret\n")
+        try:
+          choice=input("> ")
+        except:
+          pass
+        if choice.strip().lower()[0]=="a": # here is when we choose to add a new text in the diary
+          print("\n you can write:")
+          text=input("> ")
+          
+          timestamps=datetime.datetime.now() # here we are now collecting the time now by using the datetime library.
+          timestamp_int=int(timestamps.timestamp()) # then here we turn it into an integer.
+  
+          db[str(timestamp_int)]=text # then herewe use the timestamp_int as our new key to store the text that has been entered.
+          print("text added!\n")
+  
+        
+        elif choice.strip().lower()[0]=="v":
+          
+          keys_int=[]
+          keys=list(db.keys()) # here we use the list to turn the dictionary db.keys() into a list so that we can easily use its content.
+          
+          for key in keys: 
+            key_int=int(key)
+            keys_int.append(key_int)
+            
+          sorted_keys_int=sorted(keys_int, reverse=True) 
+          print()
+          for key in sorted_keys_int:
+            key_str=str(key)
+            print(f"{key_str} : {db[key_str]}")
+            print()
+          print()
+          continue
+  
+        else:
+          print("this choice does not exist")
+          continue
+          
+      
+    else:
+      print("wrong password or username, try again later")
+      time.sleep(1)
+      os.system("clear")
+      continue
+  
+else:
+  
+  while True:
+
+    print()
+    print("welcome back")
+    print()
+    
+    try:
+      username_check=input("your username please > ")
+      password_check=input("also your password please > ")
+      
+    except:
+      pass
+      
+    Salted_password_check=password_check+db[username_check]["salt"]
+    hashed=hash(Salted_password_check)
+    
+    if hashed==db[username_check]["Hashed_password"] and username_check==db[username_check]["Username"]:
+      
+      while True:
+        #name="tobit bushenyula kabuya"
+        print("\nwelcome back mr/mrs")
+        print()
+        print("1. view your secrets")
+        print("2. add new secret\n")
+        try:
+          choice=input("> ")
+        except:
+          pass
+        if choice.strip().lower()[0]=="a": # here is when we choose to add a new text in the diary
+          print("\n you can write:")
+          text=input("> ")
+          
+          timestamps=datetime.datetime.now() # here we are now collecting the time now by using the datetime library.
+          timestamp_int=int(timestamps.timestamp()) # then here we turn it into an integer.
+  
+          db[str(timestamp_int)]=text # then herewe use the timestamp_int as our new key to store the text that has been entered.
+          print("text added!\n")
+  
+        
+        elif choice.strip().lower()[0]=="v":
+          
+          keys_int=[]
+          keys=list(db.keys()) # here we use the list to turn the dictionary db.keys() into a list so that we can easily use its content.
+          
+          for key in keys: 
+            key_int=int(key)
+            keys_int.append(key_int)
+            
+          sorted_keys_int=sorted(keys_int, reverse=True) 
+          print()
+          for key in sorted_keys_int:
+            key_str=str(key)
+            print(f"{key_str} : {db[key_str]}")
+            print()
+          print()
+          continue
+  
+        else:
+          print("this choice does not exist")
+          continue
+          
+      
+    else:
+      print("wrong password or username, try again later")
+      time.sleep(1)
+      os.system("clear")
+      continue
+  
+  
+  
+  
+  
