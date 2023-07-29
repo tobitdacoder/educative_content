@@ -507,6 +507,51 @@ else:
 
 #################################################################### 
 
+# this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
+"""<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+  <script src="script.js"></script>
+  <h1>Tobit's Portfolio</h1>
+  <p>go to <a href="about.html">this page</a>, in case you want to know me more</p>
+    <br> </br>
+  <h2>SOME OF THE MANY PROGRAM I'VE CREATED SO FAR</h2>
+    <br> </br>
+  <h3>Day 72 Solution</h3>
+  
+    </p>So, Day 72, This was the final version of the secret Diary I've created, I added the feature to create an account in case it was a new person who want to create his/her personal Diary. If they already have an account, then they will be asked to LOG IN. The features that has been aded to this program (comparing to the DAY 62 Diary program), is that if a user is opening the program for the first time, it will ask him/her to create a new password and user name, and will store them inside the database. We will first hash the password to make it unusable for hackers</p>
+
+<h4>These are the features for that program</h4>
+  <ol>
+    <li>Create your secret diary</li>
+    <li>Add new text to your diary whenever you want</li>
+    <li>View the content of your diary</li>
+    <li>a secret pass is always needed before any action is taken on th diary</li>
+  </ol>
+
+  <img src="images/Day72.png" width=80%>
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>"""
+
+
+################################################################
+
 #DAY 76: we are introduced to flask, the tool that will help us create our web server. This web server will help us make our website dynamic (can change, based on the person or even based on what the person what it to show ). Now this is the introduction to flask and how to start using it. 
 
 from flask import Flask # here we are first importing Flask from the flask library 
