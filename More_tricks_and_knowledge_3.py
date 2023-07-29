@@ -550,6 +550,26 @@ else:
 </html>"""
 
 
+
+########### 
+
+# this is the second page of the web app we are creating, we will use both of them in the coming days in flask
+
+"""<!DOCTYPE html>
+<html>
+  <head>
+    <title>About me</title>
+    <link href="style.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <h2>INTRODUCTION</h2>
+    <br> </br>
+    <p>Hey, I am Tobit BUSHENYULA, a computer science student. This is my portfolio website where you will find all my projects and see what am currently working on as a student. I am interested to work remotely. Thanks in advance</p>
+                      
+  </body>
+</html>"""
+
+
 ################################################################
 
 #DAY 76: we are introduced to flask, the tool that will help us create our web server. This web server will help us make our website dynamic (can change, based on the person or even based on what the person what it to show ). Now this is the introduction to flask and how to start using it. 
