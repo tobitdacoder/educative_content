@@ -1611,7 +1611,7 @@ while True:
     menu = int(input("\n1: Guess the random number game\n2: Total Score\n3: Exit\n> "))
 
     if menu == 1:
-        game() #here is where the recusrsionis happening. We are calling the function if the condition is met, we can call it anywhere to do a specifoic action that has been created inside its body
+        game() #here is where the recusrsion is happening. We are calling the function if the condition is met, we can call it anywhere to do a specifoic action that has been created inside its body
     elif menu == 2:
         print(f"You've had {totalAttempts} attempts")
     else:
@@ -1923,7 +1923,7 @@ while True:
 
 #DAY 63: splitting our code into multiple files
 
-# as you can see, there is not any code in the main.py file, and that is because we have transfered the code in another python file, but we cannot run that code if we click on RUN, and that is because the RUN buton is only designed to run the code insie the main.py file. So, to run the code from another python file, we have to import that file code using "import".
+# as you can see, there is not any code in the main.py file, and that is because we have transfered the code in another python file, but we cannot run that code if we click on RUN, and that is because the RUN button is only designed to run the code inside the main.py file. So, to run the code from another python file, we have to import that file code using "import".
 
 import test # here we have imported the file containing the code, and we dont need to put the .py coz, it is automatically known by the pc.
 # THIS ONLY WORK IN REPLIT SINCE THE main.py FILE IS IN REPLIT, but this is how we do to import python files inside the main file.
@@ -1934,14 +1934,14 @@ print("essaie")
 
 t.countdown() # this is how we use the code from the other files wisely, first we make sure that the code in the other files is putted into functions or subroutine and then we can now call the function just like we call other functions in other libraries.
 
-# as you can see we also used "as t", t is the nickname of our test.py file or library. so we can give nicknames to libraries and sill use the functions inside.
+# as you can see we also used "as t", t is the nickname of our test.py file or library. so we can give nicknames to libraries and still use the functions inside.
     
 #MAIN TAKEAWAY:
 
 # now, you know how to create a library of your best subroutines or functions you've used before, and you can now use them in your code just by calling them by importing first  the python file (as the library containing your functions), then you can use any function from that file by using this structure:
 
 # import [file name] eg. file
-# file.countdown() ... this is how you use the function countdown from that file or library you've created for your self.add()
+# file.countdown() ... this is how you use the function "countdown" from that file or library you've created for your self.
 
 # devellopers tend to create such files containing their favorite subroutine or functions and use them in their code as wanted. 
     
@@ -2001,14 +2001,13 @@ class animal:
 # now let us create objects:
 
 dog = animal("canine", "Dog", "whof")
-# animalOne is the object name
+# dog is the object name
 print(dog.species)
 
 cow = animal("Bo Taurus", "Cow", "Moo") 
 print(cow.sound)
 
-dog.talk(
-)  #here we are using the second function we have created, we have created the function talk inside the class animal, and we have used the iniiators with self, self.name and self.sound... So that, if we call that function with the prefix of a specific animal, it will print "[name of animal] says [sound of animal]" ... here our animal is animalOne (dog)
+dog.talk()  #here we are using the second function we have created, we have created the function talk inside the class animal, and we have used the iniiators with self, self.name and self.sound... So that, if we call that function with the prefix of a specific animal, it will print "[name of animal] says [sound of animal]" ... here our animal is animalOne (dog)
 
 # Object Orientation in creating classes, is all about creating templates of how something should work, and getting it to spin out from there
 
@@ -2044,7 +2043,7 @@ print(Car1.size)
 
 Car1.describe()
 
-ferrari=supercar(34) # 3. then here the 34 will be automatically to the variable without any previous value which is cost: self.cost=cost
+ferrari=supercar(200400) # 3. then here the 200400 will be automatically to the variable without any previous value which is cost: self.cost=cost
 ferrari.describe() # this will use the function describe() from the previous class and will apply it inside this new class
 
 print(ferrari.cost) #then here we can now print the cost.

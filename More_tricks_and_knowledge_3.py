@@ -105,7 +105,7 @@ print(OrcOne.Type)
 
 # Create vampire objects
 VampireOne = Vampire("Klaus", True)
-VampireTwo = Vampire("Stephan", True)
+VampireTwo = Vampire("GiGi", True)
 print(VampireTwo.Type)
 
 # Access object attributes and methods
@@ -116,10 +116,10 @@ VampireOne.VampireResume()
 
 # JUST A SMALL TRICK TO GET SECRET INPUT FROM USERS AND USE THEM IN OUR PROGRAM
 #      EITHER NUMBERS OR STRINGS.
-import getpass
+from getpass import getpass as input
 
-task1=int(getpass.getpass("first strenght: "))
-task2=int(getpass.getpass("second strenght: "))
+task1=int(input("first strenght: "))
+task2=int(input("second strenght: "))
 print(task1*task2)
 
 #THIS CODE BELLOW JUST GENERATE A RANDOM PASSWORD THAT WILL BE USED ONLY ONCE:
@@ -508,6 +508,9 @@ else:
 #################################################################### 
 
 # this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
+ 
+#this is the first step to create a website using slack.
+
 """<!DOCTYPE html>
 <html>
 
