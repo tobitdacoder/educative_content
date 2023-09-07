@@ -29,7 +29,7 @@ for letter in striing:
   if letter.lower() in vowels: 
     print("\033[32m",end='') #these end="" are helping us to eliminate the space in between the letters after the color text is writen
   print(letter,end='') #this end here helps us to print an horizontal sentense by eliminating the default \n 
-  print("\033[0m",end='')  #Hehe we comw back to white
+  print("\033[0m",end='')  #Hehe we come back to white
 
   #the if condition here will help us capture any vowel that is found in our string provided by the user. (this is sooo helpful)
   
@@ -726,7 +726,7 @@ while True:
   clue[name] = {"Location": location, "weapon": weapon}
   #here name is the key, clue[name] is the variable to contain the value, and the rest is the value (which is a dictionary)
 
-  #here we are implementing the @d aspect by creating a key containing another dictionary...  "name" is the name of the dictionary ... it can be a person name wth his characteristic beibg the content of the sub-dictionary
+  #here we are implementing the 2D aspect by creating a key containing another dictionary...  "name" is the name of the dictionary ... it can be a person name wth his characteristic beibg the content of the sub-dictionary
 
   # THIS IS HOW WE APPEND a dictionary IN A DICTIONARY, we furst give it a key then we assign a sub-dictionary to that key as the value of it.
 
