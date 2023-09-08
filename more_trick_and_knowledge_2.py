@@ -1509,17 +1509,17 @@ ToDo()
 
 #DAY 56 challenge: 
 
-import csv
-import ast
-import os
-import time
+import csv # to read csv files
+import ast # for security reasons
+import os 
+import time # for some wanted delay of displaying
 
-songs=[] # we will store our song playlist in this
-artists=[] 
+songs=[] # we will store our song playlist in this list.
+artists=[] # we will store the artist names in this list.
 Directories=[] # this will be used to store the artists names in order to use them as sub-playlists folders
 artistSongs=[] 
 
-#first, we open the csv file in order to get what is inside
+#first, we open the csv file in order to get what is inside.
 
 with open("100MostStreamedSongs.csv") as Songs:
   songs=csv.DictReader(Songs)
@@ -1555,18 +1555,18 @@ def reverse(value):
     for i in range(value):
       print("🥳", end="")
     print() # here we just go to another line before we call the function with a new value
-    reverse(value-1) # here is where the fuction calls itself
+    reverse(value-1) # here is where the fuction calls itself (where recursion happens).
 reverse(30)
 
 # ITERATION COMES IN WHEN WE WANT TO USE THE SAME PROGRAM BUT WITH A DIFFERENT NUMBER. IT ALSO COMES TO SOLVE MATH PROBLEMS IN A MUCH HUMAN WAY.
 
-# COMMON ERROR
+# COMMON ERROR !!!!
 
-# when dealing with recursion, NEVER FORGET THE CONDITION THAT WILL INSURE THE RECURSION ( the "if statement" to check if our value is still usable, like <=0)
+# when dealing with recursion, NEVER FORGET THE CONDITION THAT WILL INSURE THE RECURSION ( the "if statement" to check if our value is still usable, like "if <=0: pass")
 
-###################################################
+###########################################################################################
 
-#here is the DAY 57: challenge, calculating the factorial of a number of
+#here is the DAY 57: challenge, calculating the factorial of a number.
 
 def factorial(value):
   if value == 1:
@@ -1575,9 +1575,9 @@ def factorial(value):
     return value*factorial(value-1) # = 6*5! and so on until it reaches 1!
 print(factorial(6))
 
-# this program works in this way: first, it takes the value we provided and multiply it by the factorial of the same value minius 1. By calling the function inside the function, it will automatically redo the function after multiplying the current value by the function (factorial of the value -1) 
+# this program works in this way: first, it takes the value we provided and multiply it by the factorial of the same value minius 1. By calling the function inside the function, it will automatically redo the function after multiplying the current value by the function (factorial of the value -1).
 
-###############################################
+###########################################################################################
 
 import random
 
@@ -1628,7 +1628,7 @@ while True:
     list1.append(char)
   print(list1)
   
-  sentense2 = sentense1[::-1]  # this is how we read backward from the last charcter to the first ... this was learned in the string splitting course.
+  sentense2 = sentense1[::-1]  # this is how we read backward from the last character to the first ... this was learned in the string splitting course.
   for chars in sentense2:
     if chars == " ": # this condition 2 works the same as condition 1
       continue # if the char is a space, then we remove it with the continue in the loop, means (skip it)
@@ -1658,7 +1658,7 @@ while True:
     
 ##################################################
 
-#DAY 60: TIME LIBRARY .. datetime etc
+#DAY 60: TIME LIBRARY ... datetime etc
 import datetime 
 
 holiday=datetime.date(year=2023, month=12, day=10)
