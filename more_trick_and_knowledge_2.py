@@ -896,13 +896,13 @@ f.write("hello there, am tobit")  #anything inside this bracket will be
 #the data should be a string, idealy, so cast it with str() if you get error
 
 #WE CAN USE MULTIPLE OF THESE "f.write" if we want too
-# te inforation we are adding here is going into the RAM
+# the inforation we are adding here is going into the RAM
 f.close() # this is the line that will help us save our file after we've added new content to it. if we don't use this f.cloe(), the new content will  dissapear once we stop. 
 # THIS f.close() is the function that will send back the information to the file. it is the just oposite of "open()", which we started with.
 
 #########################################
 
-"""THIS IS A SMALL PROGRAM THAT STORES scores and innitials in a local file so that they can be used later, hre we are using the 3 spets for using a local file (open the file, write in the file, and close the file to save the content)"""
+"""THIS IS A SMALL PROGRAM THAT STORES scores and innitials in a local file so that they can be used later, here we are using the 3 steps for using a local file (open the file, write in the file, and close the file to save the content)"""
  
 FilePointer=open("HighScore.txt","a+")
 
@@ -1009,7 +1009,7 @@ while True: #this loop will go through the file and print each line of content t
   print(content.split()) #then we print that line after splitting it to make that line a small list
   lists.append(content.split()) #then we append that small list in a bigger one to use later.
 print()
-print(lists) #here we print that filal big list containing the other sub-lists... THIS IS OPTIONAL
+print(lists) #here we print that final big list containing the other sub-lists... THIS IS OPTIONAL
 
 for list in lists: #then now we are introducing the comparison to find the highest of the three scores in each of the lines of the file
   if int(list[1]) > highest:
@@ -1030,7 +1030,7 @@ myEvents = [] #this is the i=one in the program
 # NOW THIS IS THE AUTO-LOAD (So, we load the content of the file into the myEvents list by using the eval())
 
 f = open("myEvents.txt", "r")
-myEvents = eval(f.read())  #here we are using the reading method we learned, but here we are basiclly taking the list created before and read after it is alredy converted back into code (here, back into list) and is then re-assigned to myEvents so that, even after the end of the program, the content will already be saved in myEvents... so that it cnnot be erased. NOW THE 2D LIST IS ASSIGNED TO "mtEvents" and can later be prettyPrinted. 
+myEvents = eval(f.read())  #here we are using the reading method we learned, but here we are basiclly taking the list created before and read after it is alredy converted back into code (here, back into list) and is then re-assigned to myEvents so that, even after the end of the program, the content will already be saved in myEvents... so that it cnnot be erased. NOW THE 2D LIST IS ASSIGNED TO "myEvents" and can later be prettyPrinted. 
 f.close()
 
 def prettyPrint(): #this is our simple prety printing subroutine
@@ -1295,7 +1295,7 @@ while True: #this is where our program stars ... here we are just making sure to
   try:
     choice = int(input("\n> "))
   except Exception as err:
-    print("ERROR: only an integer in the range: 1-3")
+    print("ERROR: only an integer in the range: 1-4")
     print(err)
     time.sleep(2)
     
@@ -1305,11 +1305,11 @@ while True: #this is where our program stars ... here we are just making sure to
     Inventory.append(Item)
 
     for Item in Inventory:
-      count=Inventory.count(Item)
+      count=Inventory.count(Item) #this helps us to see how many of this particular item are in the inventory list, so we have to count them first.
       if count<=1:
         UniqueInventory.append(Item)
     
-    #here we deliberatelly allow duplicate of items
+    #here we deliberatelly allow duplicate of items inside the ivento inventory list.
   elif choice == 2: # view
     
     print("Inventory with Counts:\n")
