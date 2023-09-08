@@ -1315,7 +1315,7 @@ while True: #this is where our program stars ... here we are just making sure to
     print("Inventory with Counts:\n")
     
     for item in UniqueInventory: 
-      count=Inventory.count(item)
+      count=Inventory.count(item) #this is how we count again.
       print(f"{item} : {count}")
     print()
     print(UniqueInventory) #this is the list we created to contain only the element once, not repeated ones.
@@ -1329,7 +1329,7 @@ while True: #this is where our program stars ... here we are just making sure to
     iitem = input("what item do you want to remove: ")
     if iitem in Inventory:
       print(iitem, "has been removed from the inventory")
-      Inventory.remove(iitem)
+      Inventory.remove(iitem) #this is the contrary of append. 
     print()
     time.sleep(3)
     os.system("clear")
@@ -1355,7 +1355,7 @@ with open("January.csv") as file:
 """ 
 
 
-import csv
+import csv # always remember to import that csv function.
 
 total=0.0
 
@@ -1383,7 +1383,7 @@ with open("Day54Totals.csv") as file: # here we open the csv file we were given
   for row in reader: #then we are now computing the result by using the key names for each row
     ProductRevenue=float(row["Cost"])*int(row["Quantity"])
     DayRevenue+=ProductRevenue
-print(f"The total for this day is: ${DayRevenue:.2f}")
+print(f"The total for this day is: ${DayRevenue:.2f}") #this .2f is saying, two digits after .  
 
 ###############################################################
 
@@ -1394,7 +1394,7 @@ import os
 print (os.listdir()) #we are going to use os.listdir() to print all the files in the directory or folder you are curently in. this is to check if a file is in a directory we think it is in.
 
 # this is saved as a list and can be accessed as a list after we stored os.listdir() in a variable (a list variable)
-listt = os.listdir() #here we are storing the conent in a list variable name
+listt = os.listdir() #here we are storing the content in a list variable name.
 if "rere.py" not in listt:
   print("\nERROR: file not found")
 
@@ -1406,38 +1406,33 @@ os.rename("{name of file to rename}","{the new name here}") #here is when we wan
 filename=os.path.join(" DirectoryX "," FileX.txt ")
 #filename=os.path.join(" name of folder or path "," file  name ")
 
-#here we are storing the text file in thew filename variable, and to reach it, we need to open the folder "like ours, "the DirectoryX" .. here, we are joining the directory and the file, using the os.path.join(" "," "), thi will join the folder and the file in a chronological way (just the way we see in the terminal)
+#here we are storing the text file in thew filename variable, and to reach it, we need to open the folder "like ours, "the DirectoryX" ... here, we are joining the directory and the file, using the os.path.join(" "," "), this will join the folder and the file in a chronological way (just the way we see in the terminal).
 f=open(filename,"w")
-f.write("hi") # here we are basicaly addinng "hi" to the file FileX.txt which is in the drectory DirectoryX 
-              # then we can now write something in it  
+f.write("hi") # here we are basicaly addinng "hi" to the file FileX.txt which is in the drectory DirectoryX. 
+              # then we can now write something in it.
 f.close()
 
 ###########################################
 
 import os
 import time
-import ast
+import ast #By using ast.literal_eval() in stead of eval(), it ensures that only safe Python literals are evaluated, preventing the execution of potentially harmful code.
 
 ToDoLiiist = []
 
 ###here is THE AUTO-LOADING of the text file content###
 
-if not os.path.exists("backupFolderr"):
+if not os.path.exists("backupFolderr"): # here is how we check if the backup folder exists
   os.mkdir("backupFolderr")
   #now, our folder has been created, now let us create the file using the os
 filename = os.path.join("backupFolderr", "NewFile.txt")
 #this is the filenae that we will use as our text file to write in using the auto-save feature at the end of the code ... here NewFile.txt is the one which is used everytime we will use "filename" the os.path.join just shows the path to use
 
 try:
-  with open(
-      filename, "r"
-  ) as f:  #this is the easiest way to open and automatically close a local file
-    ToDoLiiist = ast.literal_eval(
-      f.read()
-    )  # By using ast.literal_eval() in stead of eval(), it ensures that only safe Python literals are evaluated, preventing the execution of potentially harmful code. It provides a safer alternative for evaluating the content of the file as compared to using eval()
+  with open(filename, "r") as f:  #this is the easiest way to open and automatically close a local file
+    ToDoLiiist = ast.literal_eval(f.read())  # By using ast.literal_eval() in stead of eval(), it ensures that only safe Python literals are evaluated, preventing the execution of potentially harmful code. It provides a safer alternative for evaluating the content of the file as compared to using eval().
 except Exception as err:
   print(err)
-
 
 def ToDo():
   title = "ToDo list manager"
