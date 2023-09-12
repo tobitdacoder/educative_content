@@ -325,6 +325,40 @@ else:
 
 ################################################################################
 
+
+
+StudentDict={}
+
+while True:
+   fname=input("First name: ") # first name
+   Lname=input("Last name: ") # last name
+   course=input("what course: ") # BSCS 2
+   courseUnit=input("the course unit: ") #OOP
+   reg=input("your registration number: ") # your registration number
+   dep=input("the department: ") # COMPUTING & IT
+   Faculty=input("which faculty: ") # SCIENCE AND TECHNOLOGY
+   Email=input("your email please: ")
+   phone=int(input("your phone numbr please "))
+   StudentDict={"fname":fname,"Lname":Lname,"course":course,"courseunut":courseUnit,"regNumber":reg,"department":dep,"faculty":Faculty,"Email":Email,"phone":phone}
+   print()
+   
+   print()
+   print(f"hey {fname}, here are your details: ")
+   print()
+   
+   for keys,values in StudentDict.items():
+      print(f"{keys} :{values}")
+   print()
+   
+   add=input("wanna add another student? ")
+   if add.strip()[0]=="y":
+       continue
+   else:
+       break
+     
+     
+#########################################################################
+
 # DAY 72: CHALLENGE, UPDATED DIARY PROGRAM
 
 from replit import db
@@ -605,6 +639,17 @@ def home(): # Subroutine to create the home page
 app.run(host='0.0.0.0', port=81) # this is the line that should always come last. This is the line that starts the web server, after this line is run, you can access your website through th web view or the repl.co web address
 
 """ above here is the update of our flask introduction code. Here you can see that we have modified a bit what is suposed to be returned and we returned full web pages, Here you can see that we can BUILD A COMPLETE WEBSITE INSIDE ONE PYTHON FILE WHERE WE CAN BRING VARIABLES ALSO USING THE "f string method on the quotes and variables containing the web pages to be returned. DON'T forget to use the { } inside the HTML code by putting them inside tags."""
+
+
+
+
+
+
+
+
+
+
+
 
   
   
