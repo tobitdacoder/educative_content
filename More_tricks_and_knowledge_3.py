@@ -359,6 +359,38 @@ while True:
      
 #########################################################################
 
+
+while True:
+    try:
+        answer=int(input("enter an integer between 1 and 9 😃: "))
+    except Exception as err:
+        print(err)
+    
+    if 1<=answer<=9:
+        print()
+        def intPrint(value):
+            for num in range(value):
+                print(value,end="") 
+            print()
+            value-=1
+            if value<=0:
+                print("we are done 😁")
+                print()
+                
+            else:
+                intPrint(value)
+        intPrint(answer)          
+        
+    else:
+        print()
+        print("the value entered is not in the range 1-9 😢😢😢 , try again! 😉")
+        print()
+
+
+
+
+#########################################################################
+
 # DAY 72: CHALLENGE, UPDATED DIARY PROGRAM
 
 from replit import db
