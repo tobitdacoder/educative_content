@@ -1661,10 +1661,10 @@ while True:
 #DAY 60: TIME LIBRARY ... datetime etc
 import datetime 
 
-holiday=datetime.date(year=2023, month=12, day=10)
+holiday=datetime.date(year=2023, month=12, day=10) # the vacation date
 todays=datetime.date.today()
 
-difference=datetime.timedelta(days=365) 
+difference=datetime.timedelta(days=365) # this is the number of days we are adding to the todays date.
 newDate=todays+difference
 # means, current date plus the time deltat to get the date after the days of difference exactly after (timeDelta) days. 
 
@@ -1738,10 +1738,10 @@ print(BigDict["tobit"]["Genre"])
 
 from replit import db
 
-#   db["key"]="value"
+#   db["key"]="value" : this is the structure of how to add content inside a database object.
 
 db["test"]="hello there"
-#here, behind the scenes, what happened is that we saved "hello there" to the key "test"
+#here, behind the scenes, what happened is that we saved the value "hello there" to the key "test"
 
 #to print the content we do almost like dictionaries
 keys=db.keys() # this "keys" is a dictionary that stores the keys in the DB and can be used later.
@@ -1770,7 +1770,7 @@ if "test" in keys:
 print(keys)
 
 matches=db.prefix("log")
-print(matches) # this will print a dictionary containing the keys names that have the same prefix ... in this case it is "log"
+print(matches) # this will print a dictionary containing the keys names that have the same prefix ... in this case the prefix is "log".
 
 # NEXT: keys and dictionaries...................
 

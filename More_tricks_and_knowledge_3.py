@@ -20,7 +20,7 @@ class MyCharacter:
     print(f"This is {self.Name}, He/she has {self.Health}% of health level and has {self.MagicPoints} magic points")
 
 
-class PlayerClass(MyCharacter):
+class PlayerClass(MyCharacter): # here is where inheritence is happening (we inherit from the class <yCharacter).
   Lives = None  # number of lives remaining (an integer)
   NickName = None  # a string
 
