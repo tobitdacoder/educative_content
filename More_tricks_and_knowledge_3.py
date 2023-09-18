@@ -4,7 +4,7 @@ REMEMBER THAT, THIS IS A COMPILLATION OF MULTIPLE PROGRAMS. IF YOU WANT TO TRY O
 ################################################################ 
 
 # DAY 65 CHALLENGE: create a game using Object Oriented Programming. Classes and Objects.
-
+# today we will see how to create a simple game avatar using classes and objects.
 
 class MyCharacter:
   Name = None  # a string
