@@ -3,7 +3,7 @@ REMEMBER THAT, THIS IS A COMPILLATION OF MULTIPLE PROGRAMS. IF YOU WANT TO TRY O
 
 ################################################################ 
 
-# DAY 65 CHALLENGE: create a game using Object Oriented Programming
+# DAY 65 CHALLENGE: create a game using Object Oriented Programming. Classes and Objects.
 
 
 class MyCharacter:
