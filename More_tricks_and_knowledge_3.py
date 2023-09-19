@@ -637,7 +637,8 @@ while True:
             count+=1
     
     except Exception as err:
-        print(err)
+        print("invalid input")
+        #even if the true error is ""invalid literal for int() with base 10: 'r' ""
         continue
 
 #################################################################### 
