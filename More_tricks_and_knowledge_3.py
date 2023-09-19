@@ -568,6 +568,39 @@ else:
 
 #################################################################### 
 
+MaxDays=30
+
+
+while True:
+    print()
+    name=input("what is your full name: ")
+    Loan=int(input("enter amount of loan: "))
+    Days=int(input("Enter days with loan: "))
+    
+    if Days<=MaxDays:
+        interest=Loan*(10/100)
+        payment=Loan+interest
+        
+        
+        print()
+        print(f"Dear {name.split()[0]} ,after {Days} days, you will pay an amount of {payment}")
+        print("thank you!!😁")
+    
+    else:
+        interest=Loan*(10/100)
+        
+        extraDays=Days-MaxDays
+        TotalFine=extraDays*(Loan*(1/100))
+        payment=Loan+interest+(TotalFine)
+        
+        print(f"because of the extra {extraDays} days, you will be charged a fine of {TotalFine} on top of the interest")
+        print()
+        print(f"So,Dear {name.split()[0]} , after {Days} days, you will pay an amount of {payment} which include the {Loan} of loan , the interest of {interest} plus a fine of {TotalFine}")
+        print()
+        print("thank you!!😁")
+
+
+#################################################################### 
 
     
 numberList=[]
