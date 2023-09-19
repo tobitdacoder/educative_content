@@ -384,6 +384,7 @@ while True:
 
 #########################################################################
 
+
 # DAY 72: CHALLENGE, UPDATED DIARY PROGRAM
 
 from replit import db
@@ -563,6 +564,48 @@ else:
       time.sleep(1)
       os.system("clear")
       continue
+
+
+#################################################################### 
+
+
+    
+numberList=[]
+
+count=0
+total=0
+
+
+while True:
+    
+    try:
+        num=input("enter a number: ")
+        
+        if num.strip().lower()[0]=="d":
+            
+            for num in numberList:
+                total+=num
+                
+            average=total/count
+            print(f"the total is {total}")
+            print(f"the count is {count}")
+            print(f" and the average is {average}")
+            
+            print()
+            again=input("\n wanna try again ? ")
+            
+            if again.strip().lower()[0]=="y":
+                continue
+            else:
+                break
+        
+        else:
+            numberList.append(int(num))
+            count+=1
+    
+    except Exception as err:
+        print(err)
+        continue
 
 #################################################################### 
 
