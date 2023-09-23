@@ -451,7 +451,8 @@ if len(db)==0:
         print()
         print("1. view your secrets")
         print("2. add new secret\n")
-        try:
+        
+        try: # here we are using the try and except in order to avoid any wrong input from the user while asking for his choice
           choice=input("> ")
         except:
           pass
@@ -460,7 +461,7 @@ if len(db)==0:
           text=input("> ")
           
           timestamps=datetime.datetime.now() # here we are now collecting the time now by using the datetime library.
-          timestamp_int=int(timestamps.timestamp()) # then here we turn it into an integer.
+          timestamp_int=int(timestamps.timestamp()) # then here we turn it into an integerfor it to be used later in the printing proccess.
   
           db[str(timestamp_int)]=text # then herewe use the timestamp_int as our new key to store the text that has been entered.
           print("text added!\n")
@@ -475,7 +476,7 @@ if len(db)==0:
             key_int=int(key)
             keys_int.append(key_int)
             
-          sorted_keys_int=sorted(keys_int, reverse=True) 
+          sorted_keys_int=sorted(keys_int, reverse=True)  #here we are sorting the keys in the list to get them in order. either Ascendent or decendent.
           print()
           for key in sorted_keys_int:
             key_str=str(key)
