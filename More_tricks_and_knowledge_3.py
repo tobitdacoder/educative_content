@@ -735,6 +735,8 @@ def index():
       <a href="/home"> click here to Go home</a>
     </p></body>
   </html>""" # here is the message that will b retourned or sent to the web browser page once the adress has been opened.
+  # you can also notice that we used "f" like the one we use in the print function to allow us to use variables between 
+  # a set of printed strings.
 
 @app.route('/home') # Creates the path to the home page
 def home(): # Subroutine to create the home page
