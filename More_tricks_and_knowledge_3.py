@@ -639,8 +639,14 @@ while True:
     
     except Exception as err:
         print("invalid input")
-        #even if the true error is ""invalid literal for int() with base 10: 'r' ""
+        #even if the true error is ""invalid literal for int() with base 10: 'r' "
         continue
+    
+      # here basically, we are telling the program to take the input and verify if 
+          # it is not equal to "done" or an integer number. If it is equal to the string "done"
+          # then we know what to output, IF it is not "done" and it is an integer, then we also know what to do with it.
+          # BUT If it is neither "done" or an integer, then it will be a string by default and it will automatically 
+          # being used as an integer and that will generate an error that we capture with the exception.
 
 #################################################################### 
 
