@@ -669,7 +669,7 @@ print("Value Total: ",sum(10,20))
 # this kind of function does not need to be defined and we are using "lambda" 
 
 
-###### 
+###################################################################
 
 Fname=input("your first name please: ")
 Lname=input("your last name please: ")
@@ -678,6 +678,30 @@ def Names(NameOne,NameTwo):
     
     return NameOne+" "+NameTwo
 print(Names(Fname,Lname))
+
+###################################################################
+
+
+# HERE WE ARE LEARNING THE BASICS OF MODULE CREATION AND HOW TO REUSE 
+# THE FUNCTIONS IN THAT MODULE IN ANOTHER MODULE OR FILE
+
+# THIS IS THE MODULE STORING OUR FUNCTIONS:
+
+def add(Num1,Num2):
+    return Num1+Num2
+
+def substract(Num1,Num2):
+    return Num1-Num2
+
+def multiply(Num1,Num2):
+    return Num1*Num2
+
+def divide(Num1,Num2):
+    if Num2==0:
+        return("invalid input for division")
+    else:
+        return Num1/Num2
+
 
 #################################################################### 
 
