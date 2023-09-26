@@ -701,6 +701,15 @@ def divide(Num1,Num2):
         return("invalid input for division")
     else:
         return Num1/Num2
+    
+# AND HERE IS THE PROGRAM IN WHICH WE REUSED THE FUNCTIONS FROM THE OTHER MODULE:
+
+import docc # THIS IS THE NAME OF THE PYTHON FILE WHERE WE STORED THE FUNCTIONS WE ARE USING
+
+numOne=int(input("first number: "))
+numTwo=int(input("second number: "))
+
+print(docc.add(numOne,numTwo))
 
 
 #################################################################### 
