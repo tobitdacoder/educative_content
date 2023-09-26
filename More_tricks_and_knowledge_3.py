@@ -660,6 +660,14 @@ def printinfo(arg1,*vartuple):
     return
 printinfo(123,12,65,34,54,34,3)
 
+
+##### Anonymus functions:
+
+sum=lambda arg1,arg2: arg1+arg2
+print("Value Total: ",sum(10,20))
+
+# this kind of function does not need to be defined and we are using "lambda" 
+
 #################################################################### 
 
 # this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
