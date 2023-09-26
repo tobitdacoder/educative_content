@@ -668,6 +668,17 @@ print("Value Total: ",sum(10,20))
 
 # this kind of function does not need to be defined and we are using "lambda" 
 
+
+###### 
+
+Fname=input("your first name please: ")
+Lname=input("your last name please: ")
+
+def Names(NameOne,NameTwo):
+    
+    return NameOne+" "+NameTwo
+print(Names(Fname,Lname))
+
 #################################################################### 
 
 # this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
