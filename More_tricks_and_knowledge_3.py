@@ -648,6 +648,18 @@ while True:
           # BUT If it is neither "done" or an integer, then it will be a string by default and it will automatically 
           # being used as an integer and that will generate an error that we capture with the exception.
 
+####################################################################
+
+# this is a small program where we learn how to use "Variable-length argument"
+# ... a function where the number of argument or values of the argument can later change without us to modify the function.
+
+def printinfo(arg1,*vartuple):
+    print(arg1)
+    for var in vartuple:
+        print(f"{var}")
+    return
+printinfo(123,12,65,34,54,34,3)
+
 #################################################################### 
 
 # this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
