@@ -720,6 +720,10 @@ print(docc.Maximum(listt))
 
 #################################################################### 
 
+# TASK: python program creting a class called person, containing name, sex and proffesion
+#  as states or (attributes) and working study and live as its behavious. 
+# Demonstrate with examples the uses of classes and objects.
+
 
 class person:
     
