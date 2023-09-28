@@ -701,6 +701,9 @@ def divide(Num1,Num2):
         return("invalid input for division")
     else:
         return Num1/Num2
+def Maximum(listTemplate):
+   res=max(listTemplate)
+   return res
     
 # AND HERE IS THE PROGRAM IN WHICH WE REUSED THE FUNCTIONS FROM THE OTHER MODULE:
 
