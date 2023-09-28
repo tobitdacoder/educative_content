@@ -720,6 +720,37 @@ print(docc.Maximum(listt))
 
 #################################################################### 
 
+
+class person:
+    
+    Name=None
+    Sex=None
+    Profession=None
+    
+    def __init__(self,Name,Sex,Profession):
+        
+        self.Name=Name
+        self.Sex=Sex
+        self.Profession=Profession
+    
+    def behaviours(self):
+        
+        if self.Profession!=None and self.Profession!="student":
+            print(f"{self.Name} is working as a {self.Profession}")
+        elif self.Profession!=None and self.Profession=="student":
+            course=input("what course: ")
+            print(f"{self.Name} is a student and pursuing {course}")
+        else:
+            print(f"{self.Name} is neither a student or a worker")
+    
+personOne=person("tobit","Male","Photographer")
+
+print(personOne.Sex)
+personOne.behaviours()
+
+
+#################################################################### 
+
 # this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
  
 #this is the first step to create a website using slack.
