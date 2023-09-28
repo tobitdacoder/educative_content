@@ -709,10 +709,13 @@ def Maximum(listTemplate):
 
 import docc # THIS IS THE NAME OF THE PYTHON FILE WHERE WE STORED THE FUNCTIONS WE ARE USING
 
+listt=[12,54,72,223,65,45,65,767,32]
+
 numOne=int(input("first number: "))
 numTwo=int(input("second number: "))
 
 print(docc.add(numOne,numTwo))
+print(docc.Maximum(listt))
 
 
 #################################################################### 
