@@ -721,7 +721,7 @@ print(docc.Maximum(listt))
 #################################################################### 
 
 lisst=[12,32,6545,532,72,35,443,76,45,643]
-
+#this list above is just used to demonstrate how the function is working, but we can use any list or array.
 
 def maxi(ListDemo):
     max=0
@@ -730,6 +730,10 @@ def maxi(ListDemo):
             max=element
     return max
 
+# STEPS OF THIS ALGORITHM:
+
+# to use this function, you need to provide any list of numbers(either float or integers) to the function maxi() and print that function like this "print(maxi([name of the list]))"
+# example: print(maxi(lisst))   here lisst is the list we are using to find the maximum number in it. 
 
 #################################################################### 
 
