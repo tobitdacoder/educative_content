@@ -720,6 +720,19 @@ print(docc.Maximum(listt))
 
 #################################################################### 
 
+lisst=[12,32,6545,532,72,35,443,76,45,643]
+
+
+def maxi(ListDemo):
+    max=0
+    for element in ListDemo:
+        if element>max:
+            max=element
+    return max
+
+
+#################################################################### 
+
 # TASK: python program creting a class called person, containing name, sex and proffesion
 #  as states or (attributes) and working study and live as its behavious. 
 # Demonstrate with examples the uses of classes and objects.
