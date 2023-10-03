@@ -772,7 +772,10 @@ personOne.behaviours()
 
 ####################################################################
 
-def Average(initial,*varlist): 
+# this program is just introducing us in how to allocate multiple ...
+# ... to a single variable which is converted initialy into a list with the symbole *
+
+def Average(*varlist): 
     total=0
     validNum=[]
     for num in varlist:
@@ -784,7 +787,7 @@ def Average(initial,*varlist):
     result=(f"the average of all the number of the list which are valid or between 1-50 is {average}")
     return result
     
-print(Average(1 ))
+print(Average(1,4,2,7,12,82,26,-34,-4,5,73,-3,52))
 
 
 #################################################################### 
