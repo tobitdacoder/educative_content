@@ -823,13 +823,15 @@ class CalculateTheAverage:
         
 
 
-
+# first we initiate the object so that we can use it to access the functions inside the class
 calculator= CalculateTheAverage()
 
+# then we ask for inputs by using the AddNumber() function from the class
 for i in range(5):
     num=int(input("give me valid numbers: "))
     calculator.AddNumber(num)
 
+# then at the end we print the result using the CalculateAv() function inside the class
 print(calculator.CalculateAv())
 
 
