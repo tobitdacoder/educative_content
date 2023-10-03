@@ -792,8 +792,15 @@ print(Average(1,4,2,7,12,82,26,-34,-4,5,73,-3,52))
 
 #################################################################### 
 
-
+#this is The OOP version of our average function. Basically here we have 
+# created a function for every task to be done in order to get the average number. 
+# First we collect the valid numbers with the AddNum() function, Then we use the 
+# collected values in our second function called CalculateAv(). THEN we initiate 
+# our Object so that we can use it to access all the functions of the class. 
+# Then at the end we are printing the average by using the name of the object 
+# then the name of the calculator function CalculateAv().
 class CalculateTheAverage:
+    
     
     def __init__(self):
         self.total=0
