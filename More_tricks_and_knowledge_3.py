@@ -770,6 +770,23 @@ print(personOne.Sex)
 personOne.behaviours()
 
 
+####################################################################
+
+def Average(initial,*varlist): 
+    total=0
+    validNum=[]
+    for num in varlist:
+        if 1<=num<=50:
+            total+=num
+            validNum.append(num)
+            
+    average=total/len(validNum)
+    result=(f"the average of all the number of the list which are valid or between 1-50 is {average}")
+    return result
+    
+print(Average(1 ))
+
+
 #################################################################### 
 
 # this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
