@@ -792,6 +792,43 @@ print(Average(1,4,2,7,12,82,26,-34,-4,5,73,-3,52))
 
 #################################################################### 
 
+
+class CalculateTheAverage:
+    
+    def __init__(self):
+        self.total=0
+        self.ValidNum=[]
+        self.NonValid=[]
+
+    def AddNumber(self,num):
+        self.num=num
+        
+        if 1<=num<=50:
+            self.total+=num
+            self.ValidNum.append(num)           
+            
+    def CalculateAv(self):
+        if len(self.ValidNum)==0:
+            return "No available number to calculate average with"
+        else:
+            Average=float(self.total)/len(self.ValidNum)
+            return f"the average of those {len(self.ValidNum)} numbers is {Average}"
+        
+
+
+
+calculator= CalculateTheAverage()
+
+for i in range(5):
+    num=int(input("give me valid numbers: "))
+    calculator.AddNumber(num)
+
+print(calculator.CalculateAv())
+
+
+
+####################################################################
+
 # this is the html code of the DAY 73 lesson, we are going to learn how to use flask by integrating these web pages inside the flask code in the comming lessons
  
 #this is the first step to create a website using slack.
