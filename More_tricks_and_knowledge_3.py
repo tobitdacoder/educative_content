@@ -342,7 +342,8 @@ class Fraction:
 
 if __name__=="__main__":
     
-    Objectone=Fraction(0,0)
+    Objectone=Fraction(0,0) # we have to initiate it like this since we don't 
+    #want a mistate, then these two values will be overwritted by the inputs from the use
     Objectone.GetNumbers()
     print(Objectone.Gcd())
 
