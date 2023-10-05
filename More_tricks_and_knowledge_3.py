@@ -304,6 +304,28 @@ while True:
     os.system("clear")
     continue
 
+
+#####################################################
+
+# BUBBLE SORTING:
+
+def BubleSort(arr):
+    len_arr=len(arr)
+    for j in range(0,len_arr-1): # This outer loop runs from 0 to loop - 1. It
+                                #keeps track of the number of passes through the list.
+        swapped=False
+        for i in range(0,len_arr-1):# This inner loop runs from 0 to loop - 1. It compares
+                                    # adjacent elements in the list and swaps them if they are out of order.
+            if arr[i]>arr[i+1]:
+                arr[i],arr[i+1]=arr[i+1],arr[i]
+                swapped=True
+        len_arr=len_arr-1
+        if not(swapped):
+            break
+arrr=[8,1,3,2,4,9,6,7,5,0]
+print(BubleSort(arrr))
+print(arrr)
+
 #####################################################
 
 # this is a small program that simply get the input of the
