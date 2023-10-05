@@ -306,6 +306,9 @@ while True:
 
 #####################################################
 
+# this is a small program that simply get the input of the
+# numerator and the denominator from the user and then return a simplified version of it.
+
 from math import gcd
 
 class Fraction:
