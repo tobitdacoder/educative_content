@@ -313,14 +313,18 @@ def BubleSort(arr):
     len_arr=len(arr)
     for j in range(0,len_arr-1): # This outer loop runs from 0 to loop - 1. It
                                 #keeps track of the number of passes through the list.
+                                # here we are talking about the number of times the loop will pass through the entire list
         swapped=False
         for i in range(0,len_arr-1):# This inner loop runs from 0 to loop - 1. It compares
                                     # adjacent elements in the list and swaps them if they are out of order.
+                                    #here we are talking about checking each element to the orevious oi=ne to see if there is 
+                                    # a need of a swapp or not. This is done n times fir each pass.
             if arr[i]>arr[i+1]:
                 arr[i],arr[i+1]=arr[i+1],arr[i]
                 swapped=True
         len_arr=len_arr-1
-        if not(swapped):
+        if not(swapped): # this condition simply check if we swapped
+                         # any elements through the list
             break
 arrr=[8,1,3,2,4,9,6,7,5,0]
 print(BubleSort(arrr))
