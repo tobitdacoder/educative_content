@@ -307,6 +307,36 @@ while True:
 
 #####################################################
 
+# here the list has to be sorted coz we are performing a binary search.
+
+def BinarySearch(NumList,Target):
+
+    left,right=0,len(NumList)-1
+    
+    while left <= right:
+        
+        mid=(left+right)//2
+
+        if Target==mid:
+            return mid
+
+        elif Target< NumList[mid]:
+            right=mid-1
+            
+        elif Target>NumList[mid]:
+            left=mid+1
+
+    return f"{Target} is not in this list sorry"
+
+NumList=[12,32,41,56,58,91,97,101,110]
+Target=57
+
+res=BinarySearch(NumList,Target)
+print(res)
+
+
+#####################################################
+
 # BUBBLE SORTING:
 
 def BubleSort(arr):
