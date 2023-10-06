@@ -341,9 +341,12 @@ print(res)
 # then we define our left and right indexes which will be used to split our list into two at each time by setting boundaries
 # we caltulate the middle of the list wich will help us starting the comoarizon, starting by the middle value
 # then we comparre the target value to the middle value and if they are equal, then we return the number with the middle index.
-#
-#
-#
+# if the target number is not the one at index mid, and the target is less than the middle value, then we split the list into 
+# two by seting the new right (top) as the value coming before the mid, or the index mid-1
+
+# BUT if the target number is not the one at index mid, and the target is more than the middle value, then we split the list into
+# two by seting the new left (bottom) as the value coming after the mid, or the index mid+1
+# then we specify what to return if the value is not in the list, in this case, we will return [ f"{Target} is not in this list sorry" ]
 
 
 #####################################################
