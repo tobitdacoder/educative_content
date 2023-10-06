@@ -317,8 +317,8 @@ def BinarySearch(NumList,Target):
         
         mid=(left+right)//2
 
-        if Target==mid:
-            return mid
+        if Target==NumList[mid]:
+            return NumList[mid]
 
         elif Target< NumList[mid]:
             right=mid-1
@@ -333,6 +333,17 @@ Target=57
 
 res=BinarySearch(NumList,Target)
 print(res)
+
+#This works like this:
+
+# first we make sure we provided a sorted list because that is a must when we want to apply a binary search on a list
+# then we define our function by setting the two atributes to be used (a list and a targeted number)
+# then we define our left and right indexes which will be used to split our list into two at each time by setting boundaries
+# we caltulate the middle of the list wich will help us starting the comoarizon, starting by the middle value
+# then we comparre the target value to the middle value and if they are equal, then we return the number with the middle index.
+#
+#
+#
 
 
 #####################################################
