@@ -330,6 +330,19 @@ arrr=[8,1,3,2,4,9,6,7,5,0]
 print(BubleSort(arrr))
 print(arrr)
 
+
+
+#EXPLANATION: 
+
+#bubble_sort is a function that takes an array arr as input and sorts it in ascending order using Bubble Sort.
+#We first determine the length of the array n.
+#We have two nested loops. The outer loop runs from 0 to n-1, and it represents the number of passes through the list.
+#Inside the outer loop, we initialize swapped to False. This flag helps us determine if any swaps were made during a pass.
+#The inner loop runs from 0 to n-i-1. n-i-1 because after each pass, the largest element is already in its correct place at the end, so we don't need to compare it again.
+#We compare adjacent elements in the list, and if they are in the wrong order, we swap them.
+#After each pass, we check if any swaps were made (swapped is True). If no swaps were made, it means the list is already sorted, and we can break out of the loop early to optimize the algorithm.
+#Finally, we print the sorted list.
+
 #####################################################
 
 # this is a small program that simply get the input of the
