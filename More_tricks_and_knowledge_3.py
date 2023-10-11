@@ -389,6 +389,31 @@ print(arrr)
 
 #####################################################
 
+
+count_list=[11,45,8,11,23,45,23,45,89]
+
+
+finalList=[]
+Mydiction={}
+
+
+for i in range(len(count_list)):
+    if count_list[i] not in finalList:
+        finalList.append(count_list[i])
+print(finalList) # [11, 45, 8, 23, 89]
+
+for i in range(len(finalList)):
+    number=0
+    for j in range (len(count_list)):
+        if finalList[i]==count_list[j]:
+            number+=1
+    Mydiction[finalList[i]]=number
+            
+for keys,values in Mydiction.items():
+    print(f"{keys}: {values}")
+
+#####################################################
+
 # this is a small program that simply get the input of the
 # numerator and the denominator from the user and then return a simplified version of it.
 
