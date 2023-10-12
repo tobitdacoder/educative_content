@@ -389,6 +389,35 @@ print(arrr)
 
 #####################################################
 
+#OOP : introduction to abstraction
+#(more on that later)
+
+from abc import ABC, abstractmethod
+  
+class Father(ABC):
+    def eat(self):
+        print("I can eat")
+        
+    @abstractmethod
+    def work(self):
+        print("I can work")
+        
+class Mother:
+    def givenBirth(self):
+        print("I can give birth OF COURSE")
+    def work(self):
+        print("I can code")
+
+class Girl(Father,Mother):
+    pass
+if __name__=="__main__":
+    girlOne=Girl()
+    girlOne.work()
+    #girlOne.work()
+    #Mother.work(girlOne)
+    #print(Girl.mro())
+
+#####################################################
 # I just wrote a simple python program to iterate a given list and count the occurrence of
 #each element and created a dictionary to show the count of each element.
 
@@ -412,7 +441,7 @@ for i in range(len(finalList)):
     Mydiction[finalList[i]]=number
             
 for keys,values in Mydiction.items():
-    print(f"{keys}: {values}")
+    print(f"{keys}: {values}\t")
 
 #####################################################
 
