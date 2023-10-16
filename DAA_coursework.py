@@ -120,3 +120,55 @@ In this code, we generate lists of various lengths, sort them using merge sort, 
 
 """
 
+import time
+import matplotlib.pyplot as plt
+
+def Merge_Sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+
+        Merge_Sort(left_half)
+        Merge_Sort(right_half)
+
+        i = j = k = 0
+
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+
+        while i < len(left_half):
+            arr[k] = left_half[i]
+            i += 1
+            k += 1
+
+        while j < len(right_half):
+            arr[k] = right_half[j]
+            j += 1
+            k += 1
+
+# Initialize lists of various lengths
+list_lengths = list(range(1, 21))  # Lengths from 1 to 20
+execution_times = []
+
+for length in list_lengths:
+    arr = list(range(length, 0, -1))  # Create a reversed list of a given length
+    start_time = time.time()
+    Merge_Sort(arr)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    execution_times.append(execution_time)
+
+# Plot the results
+plt.plot(list_lengths, execution_times, marker='o')
+plt.xlabel('Length of List')
+plt.ylabel('Execution Time (s)')
+plt.title('Merge Sort Performance')
+plt.grid(True)
+plt.show()
