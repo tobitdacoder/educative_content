@@ -68,3 +68,37 @@ In this code, we generate lists of various lengths, sort them using insertion so
    how the execution time increases as the length of the list grows.
 
 """
+
+import time
+import matplotlib.pyplot as plt
+
+def Insertion_Sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+# Initialize lists of various lengths
+list_lengths = list(range(1, 21))  # Lengths from 1 to 20
+execution_times = []
+
+for length in list_lengths:
+    arr = list(range(length, 0, -1))  # Create a reversed list of given length
+    start_time = time.time()
+    Insertion_Sort(arr)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    execution_times.append(execution_time)
+
+# Plot the results
+plt.plot(list_lengths, execution_times, marker='o')
+plt.xlabel('Length of List')
+plt.ylabel('Execution Time (s)')
+plt.title('Insertion Sort Performance')
+plt.grid(True)
+plt.show()
+
+
