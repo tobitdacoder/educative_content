@@ -102,3 +102,21 @@ plt.grid(True)
 plt.show()
 
 
+#########################################################################################################################
+
+"""
+MERGE SORT
+
+The time complexity of the merge sort algorithm is O(n log n) in the worst case, where "n" is the number of elements in the list. 
+This means that the time it takes to sort a list of "n" elements is roughly proportional to n times the logarithm of n. Merge sort
+ is more efficient than insertion and selection sort, especially for larger lists, and it offers a consistent and predictable time complexity.
+For a list of 20 elements, the time complexity would be approximately 20 * log2(20), which is around 86.46 time units in terms of computational steps.
+ Keep in mind that this is a simplification, as the actual time it takes can vary based on factors like the computer's processing speed, the specific
+   implementation, and the data distribution.
+To create a graph that shows the relationship between the length of the list and the time it takes for merge sort, we can use the following Python code.
+In this code, we generate lists of various lengths, sort them using merge sort, and measure the execution time. We then create a plot with list length
+ on the x-axis and execution time on the y-axis. The resulting graph will show how the execution time increases as the length of the list grows, 
+ illustrating the efficiency of the merge sort algorithm for larger lists.
+
+"""
+
