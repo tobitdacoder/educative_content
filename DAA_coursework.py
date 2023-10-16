@@ -11,3 +11,37 @@ In this code bellow , we generate lists of various lengths, sort them using sele
 We then create a plot with list length on the x-axis and execution time on the y-axis. The resulting graph will show how the 
 execution time increases as the length of the list grows."""
 
+import time
+import matplotlib.pyplot as plt
+
+def Selection_Sort(NumsList):
+    n = len(NumsList)
+
+    for i in range(n-1):
+        minValueIndex = i
+
+        for j in range(i+1, n):
+            if NumsList[j] < NumsList[minValueIndex]:
+                minValueIndex = j
+
+        NumsList[i], NumsList[minValueIndex] = NumsList[minValueIndex], NumsList[i]
+
+# Initialize lists of various lengths
+list_lengths = list(range(1, 21))  # Lengths from 1 to 20
+execution_times = []
+
+for length in list_lengths:
+    arr = list(range(length, 0, -1))  # Create a reversed list of given length
+    start_time = time.time()
+    Selection_Sort(arr)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    execution_times.append(execution_time)
+
+# Plot the results
+plt.plot(list_lengths, execution_times, marker='o')
+plt.xlabel('Length of List')
+plt.ylabel('Execution Time (s)')
+plt.title('Selection Sort Performance')
+plt.grid(True)
+plt.show()
