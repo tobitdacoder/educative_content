@@ -45,3 +45,26 @@ plt.ylabel('Execution Time (s)')
 plt.title('Selection Sort Performance')
 plt.grid(True)
 plt.show()
+
+
+
+
+
+
+##########################################################################################################################
+
+"""
+INSERTION SORT
+
+The time complexity of the insertion sort algorithm is O(n^2) in the worst case, where "n" is the number of elements in the list.
+ This means that the time it takes to sort a list of "n" elements is roughly proportional to n^2.
+For a list of 20 elements, the insertion sort would require approximately 20^2 = 400 time units in terms of computational steps.
+ However, as with selection sort, the actual time it takes can vary depending on factors like the computer's processing speed, 
+ the specific implementation, and the data distribution.
+Here's a simplified example of how we can create a graph in Python to show the relationship between the length of the list and 
+the time it takes for insertion sort.
+In this code, we generate lists of various lengths, sort them using insertion sort, and measure the execution time.
+ We then create a plot with list length on the x-axis and execution time on the y-axis. The resulting graph will show
+   how the execution time increases as the length of the list grows.
+
+"""
