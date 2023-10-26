@@ -508,7 +508,26 @@ else:
 
 ################################################################################
 
+# this is how we calculate the fibonacci number:
 
+def FiboNumber(Numberr):
+    
+    a=0
+    b=1
+    
+    counter=1
+    
+    while counter<=Numberr:
+        c=a+b
+        a=b
+        b=c
+        
+        print(c)
+        counter+=1
+FiboNumber(39)
+
+
+###############################################################################
 
 StudentDict={}
 
