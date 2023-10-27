@@ -583,6 +583,38 @@ while True:
 
 
 
+#########################################################################
+
+# For example, we can define a class “Airplane” with attributes “make”, “model”, “capacity” 
+# and a method “add_passenger” that adds a passenger to the plane’s passenger list.
+
+class Airplane:
+    # Initialize the attributes for the airplane
+    def __init__(self, make, model, capacity):
+        self.make = make
+        self.model = model
+        self.capacity = capacity
+        self.passengers = []
+        
+    # Method for adding a passenger to the passenger list
+    def add_passenger(self, name):
+        self.passengers.append(name)
+        
+    # Method for listing the current passengers
+    def list_passengers(self):
+        print("Passengers:")
+        for passenger in self.passengers:
+            print(passenger)
+
+# Create an instance of the Airplane class
+airplane = Airplane("Boeing", "747", 400)
+
+# Add passengers to the passenger list
+airplane.add_passenger("John Doe")
+airplane.add_passenger("Jane Doe")
+
+# List the current passengers
+airplane.list_passengers()
 
 #########################################################################
 
