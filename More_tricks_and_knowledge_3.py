@@ -585,6 +585,30 @@ while True:
 
 #########################################################################
 
+# here we are talking about the difference between class variables and instalce variable
+# instance variables are unique for each and every instance of the class
+# class variables are common to all the instances of the class, are defined outside all the methods
+class Car:
+    num_wheels = 4
+    
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+car1 = Car("Toyota", "Camry", 2020)
+car2 = Car("Honda", "Civic", 2019)
+
+print(car1.num_wheels)  # 4
+print(car2.num_wheels)  # 4
+
+Car.num_wheels = 6
+
+print(car1.num_wheels)  # 6
+print(car2.num_wheels)  # 6
+
+#############################################################################
+
 # For example, we can define a class “Airplane” with attributes “make”, “model”, “capacity” 
 # and a method “add_passenger” that adds a passenger to the plane’s passenger list.
 
