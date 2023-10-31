@@ -607,6 +607,11 @@ Car.num_wheels = 6
 print(car1.num_wheels)  # 6
 print(car2.num_wheels)  # 6
 
+# In the above code, num_wheels is a class variable, shared among all instances of the Car class.
+#  When we change the value of num_wheels for the Car class, all instances of the Car class are
+#  updated with the new value. This makes class variables a useful way to store information that
+#  is common to all instances of a class.
+
 #############################################################################
 
 # For example, we can define a class “Airplane” with attributes “make”, “model”, “capacity” 
