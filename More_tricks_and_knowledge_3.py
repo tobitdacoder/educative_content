@@ -614,6 +614,26 @@ print(car2.num_wheels)  # 6
 
 #############################################################################
 
+# here is a simple code to find the maximum and minimum element of a list
+
+def MAxElement(listt):
+    
+    max=listt[0]
+    min=listt[0]
+    TheList=[]
+    
+    for i in range(1,len(listt)):
+        if max<listt[i]:
+            max=listt[i]
+        elif min>listt[i]:
+            min=listt[i]
+    return f"{max} is the maximum element and {min} is the miimum element"
+
+TheList=[12,43,64,45,56,154,3]
+
+print(MAxElement(TheList))
+#############################################################################
+
 # For example, we can define a class “Airplane” with attributes “make”, “model”, “capacity” 
 # and a method “add_passenger” that adds a passenger to the plane’s passenger list.
 
