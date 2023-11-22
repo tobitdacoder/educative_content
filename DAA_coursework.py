@@ -167,3 +167,48 @@ plt.ylabel('Execution Time (s)')
 plt.title('Merge Sort Performance')
 plt.grid(True)
 plt.show()
+
+
+
+
+######################################################################################################################
+
+from collections import defaultdict, deque
+
+class Graph:
+    def __init__(self):
+        self.graph = defaultdict(list)
+
+    def add_edge(self, u, v):
+        self.graph[u].append(v)
+        self.graph[v].append(u)
+
+    def bfs(self, start):
+        visited = {start}
+        queue = deque([(start, 0)])  # (node, distance)
+        while queue:
+            node, distance = queue.popleft()
+            for neighbor in self.graph[node]:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append((neighbor, distance + 1))
+        return visited
+
+    def mutual_friends(self, user1, user2):
+        friends_of_user1 = self.bfs(user1)
+        mutual_friends = [friend for friend in self.bfs(user2) if friend in friends_of_user1]
+        return mutual_friends
+
+# Example usage
+social_graph = Graph()
+social_graph.add_edge('Alice', 'Bob')
+social_graph.add_edge('Bob', 'Charlie')
+social_graph.add_edge('Alice', 'Charlie')
+social_graph.add_edge('Charlie', 'David')
+social_graph.add_edge('Eve', 'David')
+
+user1 = 'Alice'
+user2 = 'Charlie'
+
+mutual_friends = social_graph.mutual_friends(user1, user2)
+print(f"Mutual friends between {user1} and {user2}: {mutual_friends}")
