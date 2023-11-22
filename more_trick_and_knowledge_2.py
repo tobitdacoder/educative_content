@@ -114,7 +114,7 @@ print(
   "you will be asked to pick any letter that is contained in a random name of an animal we've created, then if the letter is part of that name, you will get one mark and if you loose, you will have one mark less, IF your marks are equal to zero, then YOU LOOSE!!, so be wise"
 )
 
-time.sleep(4)
+time.sleep(5)
 os.system("clear")
 
 while True:
