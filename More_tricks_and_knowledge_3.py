@@ -1007,6 +1007,7 @@ plt.title("the average height")
 plt.xlabels("Height")
 plt.ylabels("percentage of people")
 plt.grid(True)
+plt.text(145,0.04,"mu = 170, \n sigma = 8")
 plt.show()
 
 ###################################################################
