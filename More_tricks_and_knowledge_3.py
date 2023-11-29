@@ -964,6 +964,8 @@ print(Names(Fname,Lname))
 
 ###################################################################
 
+# PIE CHART
+
 # this is how to generate a pie chart in python for data science and data analysis
 
 import matplotlib.pyplot as plt # here we just import the pyplot function from the matplotlib module
@@ -975,17 +977,36 @@ StudentsNumber=[123,45,12,34]
 # Down here is how we proceed in order to visualize the ploting in a given order (either ascendant or descendant)
 
 pairs=zip(StudentsNumber,Nationalities)  # so first we zip the two lists to form a kind of "number/nationality" tuples
-New_pair=sorted(list(pairs)) # then we now sort it by first turning it into a list then use on it the sorted function
-StudentsNumber,Nationalities=zip(*New_pair) #then here we basically unzip the two lists, if we visualize, they will be arenged in order
+ziped_pair=sorted(list(pairs)) # then we now sort it by first turning it into a list then use on it the sorted function
+StudentsNumber,Nationalities=zip(*ziped_pair) #then here we basically unzip the two lists, if we visualize, they will be arenged in order
 
 explode=[0,0,0.2,0] # this will allow to enphaize visualy one nationality out of all the others
 
-plt.pie(StudentsNumber, labels=Nationalities, autopct="%.2f%%",shadow=False,explode=explode) # and here we now use the pyplot function using the student list 
+plt.pie(StudentsNumber, labels=Nationalities, autopct="%.2f%%",shadow=False,explode=explode,counterclock=False,startangle=90) # and here we now use the pyplot function using the student list 
                              #to know the repartition of different nationalities in the UNIVERSITY, here we have also added the purcentage
                              # so that we can also see more details on the repartition.
                              # the shadow will be added with the shadow turned to True.
                              # the explode will just emphasize on the exploded nationality which was exploded in the explode list (by 20% or 0.2)
+plt.tittle("UCU INTERNATIONAL STUDENTS NATIONALITIES")
 plt.show() # to now print the chart on the screen.
+
+
+
+###################################################################
+
+# HISTOGRAM VISUALIZATION IN PYTHON
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+mu,sigma = 170,8  # here the mu is the mean or the average of heigh, and sigma is the variation or standard deviation from the mean.
+
+x = mu + sigma*np.random.randn(10000) # here the 10000 iia the number of people we are working on
+plt.hist( x , 100 , facecolor="blue")
+plt.title("the average height")
+plt.xlabels("Height")
+plt.ylabels("percentage of people")
+plt.show()
 
 ###################################################################
 
