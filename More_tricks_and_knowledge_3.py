@@ -964,10 +964,13 @@ print(Names(Fname,Lname))
 
 ###################################################################
 
-import matplotlib.pyplot as plt
+# this is how to generate a pie chart in python for data science and data analysis
+
+import matplotlib.pyplot as plt # here we just import the pyplot function from the matplotlib module
 
 StudentsNationality=[123,45,12,34]
-plt.pie(StudentsNationality)
+plt.pie(StudentsNationality) # and here we now use the pyplot function using the student list 
+                             #to know the repartition of different nationalities in the UNIVERSITY
 
 ###################################################################
 
