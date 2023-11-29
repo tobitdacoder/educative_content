@@ -971,9 +971,14 @@ import matplotlib.pyplot as plt # here we just import the pyplot function from t
 Nationalities=["Sudanese","Congolese","nigerians","Others"] # these are the different nationalities 
                                                             # of international students at UCU
 StudentsNationality=[123,45,12,34]
-plt.pie(StudentsNationality, labels=Nationalities, autopct="%.2f%%") # and here we now use the pyplot function using the student list 
+
+explode=[0,0,0.2,0] # this will allow to enphaize visualy one nationality out of all the others
+
+plt.pie(StudentsNationality, labels=Nationalities, autopct="%.2f%%",shadow=False,explode=explode) # and here we now use the pyplot function using the student list 
                              #to know the repartition of different nationalities in the UNIVERSITY, here we have also added the purcentage
                              # so that we can also see more details on the repartition.
+                             # the shadow will be added with the shadow turned to True.
+                             # the explode will just emphasize on the exploded nationality which was exploded in the explode list (by 20% or 0.2)
 plt.show() # to now print the chart on the screen.
 
 ###################################################################
