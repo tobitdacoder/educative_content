@@ -974,6 +974,7 @@ StudentsNationality=[123,45,12,34]
 plt.pie(StudentsNationality, labels=Nationalities, autopct="%.2f%%") # and here we now use the pyplot function using the student list 
                              #to know the repartition of different nationalities in the UNIVERSITY, here we have also added the purcentage
                              # so that we can also see more details on the repartition.
+plt.show() # to now print the chart on the screen.
 
 ###################################################################
 
