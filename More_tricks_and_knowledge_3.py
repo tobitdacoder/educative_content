@@ -971,8 +971,9 @@ import matplotlib.pyplot as plt # here we just import the pyplot function from t
 Nationalities=["Sudanese","Congolese","nigerians","Others"] # these are the different nationalities 
                                                             # of international students at UCU
 StudentsNationality=[123,45,12,34]
-plt.pie(StudentsNationality, labels=Nationalities) # and here we now use the pyplot function using the student list 
-                             #to know the repartition of different nationalities in the UNIVERSITY
+plt.pie(StudentsNationality, labels=Nationalities, autopct="%.2f%%") # and here we now use the pyplot function using the student list 
+                             #to know the repartition of different nationalities in the UNIVERSITY, here we have also added the purcentage
+                             # so that we can also see more details on the repartition.
 
 ###################################################################
 
