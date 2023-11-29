@@ -1006,6 +1006,7 @@ plt.hist( x , 100 , facecolor="blue")
 plt.title("the average height")
 plt.xlabels("Height")
 plt.ylabels("percentage of people")
+plt.grid(True)
 plt.show()
 
 ###################################################################
