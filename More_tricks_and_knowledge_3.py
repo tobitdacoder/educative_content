@@ -1002,13 +1002,14 @@ import matplotlib.pyplot as plt
 mu,sigma = 170,8  # here the mu is the mean or the average of heigh, and sigma is the variation or standard deviation from the mean.
 
 x = mu + sigma*np.random.randn(10000) # here the 10000 iia the number of people we are working on
-plt.hist( x , 100 , facecolor="blue")
+plt.hist( x , 100 , facecolor="blue",density=True)
 plt.title("the average height")
-plt.xlabels("Height")
-plt.ylabels("percentage of people")
+plt.xlabel("Height")
+plt.ylabel("percentage of people")
+plt.text(140,0.04,"mu = 170, sigma = 8")
 plt.grid(True)
-plt.text(145,0.04,"mu = 170, \n sigma = 8")
 plt.show()
+
 
 ###################################################################
 
