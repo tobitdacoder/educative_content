@@ -972,9 +972,11 @@ Nationalities=["Sudanese","Congolese","nigerians","Others"] # these are the diff
                                                             # of international students at UCU
 StudentsNumber=[123,45,12,34]
 
-pairs=zip(StudentsNumber,Nationalities)
-New_pair=sorted(list(pairs))
-StudentsNumber,Nationalities=zip(*New_pair)
+# Down here is how we proceed in order to visualize the ploting in a given order (either ascendant or descendant)
+
+pairs=zip(StudentsNumber,Nationalities)  # so first we zip the two lists to form a kind of "number/nationality" tuples
+New_pair=sorted(list(pairs)) # then we now sort it by first turning it into a list then use on it the sorted function
+StudentsNumber,Nationalities=zip(*New_pair) #then here we basically unzip the two lists, if we visualize, they will be arenged in order
 
 explode=[0,0,0.2,0] # this will allow to enphaize visualy one nationality out of all the others
 
