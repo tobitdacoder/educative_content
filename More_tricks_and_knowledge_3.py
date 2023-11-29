@@ -970,11 +970,15 @@ import matplotlib.pyplot as plt # here we just import the pyplot function from t
 
 Nationalities=["Sudanese","Congolese","nigerians","Others"] # these are the different nationalities 
                                                             # of international students at UCU
-StudentsNationality=[123,45,12,34]
+StudentsNumber=[123,45,12,34]
+
+pairs=zip(StudentsNumber,Nationalities)
+New_pair=sorted(list(pairs))
+StudentsNumber,Nationalities=zip(*New_pair)
 
 explode=[0,0,0.2,0] # this will allow to enphaize visualy one nationality out of all the others
 
-plt.pie(StudentsNationality, labels=Nationalities, autopct="%.2f%%",shadow=False,explode=explode) # and here we now use the pyplot function using the student list 
+plt.pie(StudentsNumber, labels=Nationalities, autopct="%.2f%%",shadow=False,explode=explode) # and here we now use the pyplot function using the student list 
                              #to know the repartition of different nationalities in the UNIVERSITY, here we have also added the purcentage
                              # so that we can also see more details on the repartition.
                              # the shadow will be added with the shadow turned to True.
