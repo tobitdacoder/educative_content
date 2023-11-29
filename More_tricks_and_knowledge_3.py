@@ -964,6 +964,13 @@ print(Names(Fname,Lname))
 
 ###################################################################
 
+import matplotlib.pyplot as plt
+
+StudentsNationality=[123,45,12,34]
+plt.pie(StudentsNationality)
+
+###################################################################
+
 
 # HERE WE ARE LEARNING THE BASICS OF MODULE CREATION AND HOW TO REUSE 
 # THE FUNCTIONS IN THAT MODULE IN ANOTHER MODULE OR FILE
