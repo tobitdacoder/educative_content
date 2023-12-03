@@ -994,6 +994,22 @@ plt.show() # to now print the chart on the screen.
 
 ###################################################################
 
+# SIMPLE IMPLEMENTATION OF ENCAPSULATION USING PRIVACY AND PROTECTION OF VALUES
+
+
+class MAIN:
+  def __init__(self,name,age):
+    self.__name=name
+    self.__age=age
+
+  def PrintIdentity(self):
+    pass
+
+  def PrintAge(self):
+    pass
+
+###################################################################
+
 # HISTOGRAM VISUALIZATION IN PYTHON
 
 import numpy as np
