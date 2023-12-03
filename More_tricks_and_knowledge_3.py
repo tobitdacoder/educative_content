@@ -1019,6 +1019,14 @@ class SECONDss(MAIN):
   def AgeGetter(self):
     return self.__age
 
+SecondOne=SECONDss(None,None)
+SecondOne.NameSetter("Toby Bush")
+SecondOne.AgeSetter(24)
+
+Pname=SecondOne.NameGetter()
+Page=SecondOne.AgeGetter()
+print(Pname)
+print(Page)
 ###################################################################
 
 # HISTOGRAM VISUALIZATION IN PYTHON
