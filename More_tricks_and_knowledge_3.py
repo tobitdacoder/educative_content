@@ -996,7 +996,7 @@ plt.show() # to now print the chart on the screen.
 
 # SIMPLE IMPLEMENTATION OF ENCAPSULATION USING PRIVACY AND PROTECTION OF VALUES
 
-
+# HERE IS THE PARENT CLASS
 class MAIN:
   def __init__(self,name,age):
     self.__name=name
@@ -1007,23 +1007,23 @@ class MAIN:
 
   def PrintAge(self):
     pass
- 
+# HERE IS THE FIRST CHILD CLASS OR SUBCLASS 
 class SECONDss(MAIN):
 
-  def NameSetter(self,Name):
+  def NameSetter(self,Name): # HERE IS A SETTER METHOD
     self.__name=Name
   def AgeSetter(self,Age):
     self.__age=Age
-  def NameGetter(self):
+  def NameGetter(self): # HERE IS A GETTER METHOD
     return self.__name 
   def AgeGetter(self):
     return self.__age
 
-SecondOne=SECONDss(None,None)
-SecondOne.NameSetter("Toby Bush")
+SecondOne=SECONDss(None,None) # THEN HERR WE ARE JUST INSTANCIATING THE CLASS
+SecondOne.NameSetter("Toby Bush") # HERE WE ARE NOW SETTING THE NAME
 SecondOne.AgeSetter(24)
 
-Pname=SecondOne.NameGetter()
+Pname=SecondOne.NameGetter() # AND HERE WE ARE GETTING THAT PRIVATE NAME WE SETTED.
 Page=SecondOne.AgeGetter()
 print(Pname)
 print(Page)
