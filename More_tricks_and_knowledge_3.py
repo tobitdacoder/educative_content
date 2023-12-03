@@ -1007,6 +1007,17 @@ class MAIN:
 
   def PrintAge(self):
     pass
+ 
+class SECONDss(MAIN):
+
+  def NameSetter(self,Name):
+    self.__name=Name
+  def AgeSetter(self,Age):
+    self.__age=Age
+  def NameGetter(self):
+    return self.__name 
+  def AgeGetter(self):
+    return self.__age
 
 ###################################################################
 
